@@ -1,0 +1,353 @@
+Simulator report for AUEB_PROCESSOR
+Tue Apr  5 20:16:16 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 96 nodes     ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                              ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                           ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                 ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                  ;               ;
+; Vector input source                                                                        ; /home/niemand/altera/AUEB_PROCESSOR/ALU/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                   ; On            ;
+; Check outputs                                                                              ; Off                                                  ; Off           ;
+; Report simulation coverage                                                                 ; On                                                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                  ; Off           ;
+; Detect glitches                                                                            ; Off                                                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                  ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                 ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 96           ;
+; Total output ports checked                          ; 96           ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 96           ;
+; Total output ports with no 1-value coverage         ; 96           ;
+; Total output ports with no 0-value coverage         ; 96           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |GEQ_16bit|in1[0]                             ; |GEQ_16bit|in1[0]                             ; out              ;
+; |GEQ_16bit|in1[1]                             ; |GEQ_16bit|in1[1]                             ; out              ;
+; |GEQ_16bit|in1[2]                             ; |GEQ_16bit|in1[2]                             ; out              ;
+; |GEQ_16bit|in1[3]                             ; |GEQ_16bit|in1[3]                             ; out              ;
+; |GEQ_16bit|in1[4]                             ; |GEQ_16bit|in1[4]                             ; out              ;
+; |GEQ_16bit|in1[5]                             ; |GEQ_16bit|in1[5]                             ; out              ;
+; |GEQ_16bit|in1[6]                             ; |GEQ_16bit|in1[6]                             ; out              ;
+; |GEQ_16bit|in1[7]                             ; |GEQ_16bit|in1[7]                             ; out              ;
+; |GEQ_16bit|in1[8]                             ; |GEQ_16bit|in1[8]                             ; out              ;
+; |GEQ_16bit|in1[9]                             ; |GEQ_16bit|in1[9]                             ; out              ;
+; |GEQ_16bit|in1[10]                            ; |GEQ_16bit|in1[10]                            ; out              ;
+; |GEQ_16bit|in1[11]                            ; |GEQ_16bit|in1[11]                            ; out              ;
+; |GEQ_16bit|in1[12]                            ; |GEQ_16bit|in1[12]                            ; out              ;
+; |GEQ_16bit|in1[13]                            ; |GEQ_16bit|in1[13]                            ; out              ;
+; |GEQ_16bit|in1[14]                            ; |GEQ_16bit|in1[14]                            ; out              ;
+; |GEQ_16bit|in1[15]                            ; |GEQ_16bit|in1[15]                            ; out              ;
+; |GEQ_16bit|in2[0]                             ; |GEQ_16bit|in2[0]                             ; out              ;
+; |GEQ_16bit|in2[1]                             ; |GEQ_16bit|in2[1]                             ; out              ;
+; |GEQ_16bit|in2[2]                             ; |GEQ_16bit|in2[2]                             ; out              ;
+; |GEQ_16bit|in2[3]                             ; |GEQ_16bit|in2[3]                             ; out              ;
+; |GEQ_16bit|in2[4]                             ; |GEQ_16bit|in2[4]                             ; out              ;
+; |GEQ_16bit|in2[5]                             ; |GEQ_16bit|in2[5]                             ; out              ;
+; |GEQ_16bit|in2[6]                             ; |GEQ_16bit|in2[6]                             ; out              ;
+; |GEQ_16bit|in2[7]                             ; |GEQ_16bit|in2[7]                             ; out              ;
+; |GEQ_16bit|in2[8]                             ; |GEQ_16bit|in2[8]                             ; out              ;
+; |GEQ_16bit|in2[9]                             ; |GEQ_16bit|in2[9]                             ; out              ;
+; |GEQ_16bit|in2[10]                            ; |GEQ_16bit|in2[10]                            ; out              ;
+; |GEQ_16bit|in2[11]                            ; |GEQ_16bit|in2[11]                            ; out              ;
+; |GEQ_16bit|in2[12]                            ; |GEQ_16bit|in2[12]                            ; out              ;
+; |GEQ_16bit|in2[13]                            ; |GEQ_16bit|in2[13]                            ; out              ;
+; |GEQ_16bit|in2[14]                            ; |GEQ_16bit|in2[14]                            ; out              ;
+; |GEQ_16bit|in2[15]                            ; |GEQ_16bit|in2[15]                            ; out              ;
+; |GEQ_16bit|out1                               ; |GEQ_16bit|out1                               ; pin_out          ;
+; |GEQ_16bit|OR_gate:GEQ10|out1                 ; |GEQ_16bit|OR_gate:GEQ10|out1                 ; out0             ;
+; |GEQ_16bit|AND_gate:GEQ9|out1                 ; |GEQ_16bit|AND_gate:GEQ9|out1                 ; out0             ;
+; |GEQ_16bit|OR_gate:GEQ8|out1                  ; |GEQ_16bit|OR_gate:GEQ8|out1                  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:1:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:1:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:1:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:1:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:2:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:2:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:2:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:2:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:3:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:3:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:3:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:3:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:4:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:4:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:4:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:4:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:5:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:5:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:5:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:5:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:6:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:6:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:6:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:6:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:7:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:7:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:7:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:7:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:8:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:8:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:8:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:8:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:9:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:9:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:9:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:9:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:10:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:10:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:10:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:10:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:11:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:11:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:11:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:11:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:12:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:12:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:12:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:12:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:13:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:13:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:13:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:13:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:GEQ5|out1                 ; |GEQ_16bit|AND_gate:GEQ5|out1                 ; out0             ;
+; |GEQ_16bit|OR_gate:GEQ4|out1                  ; |GEQ_16bit|OR_gate:GEQ4|out1                  ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:0:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:0:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:0:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:0:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:1:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:1:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:1:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:1:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:2:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:2:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:2:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:2:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:3:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:3:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:3:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:3:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:4:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:4:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:4:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:4:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:5:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:5:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:5:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:5:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:6:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:6:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:6:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:6:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:7:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:7:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:7:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:7:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:8:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:8:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:8:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:8:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:9:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:9:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:9:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:9:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:10:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:10:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:10:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:10:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:11:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:11:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:11:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:11:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:12:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:12:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:12:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:12:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:13:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:13:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:13:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:13:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:14:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:14:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:14:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:14:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:15:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:15:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:15:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:15:GEQ1|out1     ; out0             ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |GEQ_16bit|in1[0]                             ; |GEQ_16bit|in1[0]                             ; out              ;
+; |GEQ_16bit|in1[1]                             ; |GEQ_16bit|in1[1]                             ; out              ;
+; |GEQ_16bit|in1[2]                             ; |GEQ_16bit|in1[2]                             ; out              ;
+; |GEQ_16bit|in1[3]                             ; |GEQ_16bit|in1[3]                             ; out              ;
+; |GEQ_16bit|in1[4]                             ; |GEQ_16bit|in1[4]                             ; out              ;
+; |GEQ_16bit|in1[5]                             ; |GEQ_16bit|in1[5]                             ; out              ;
+; |GEQ_16bit|in1[6]                             ; |GEQ_16bit|in1[6]                             ; out              ;
+; |GEQ_16bit|in1[7]                             ; |GEQ_16bit|in1[7]                             ; out              ;
+; |GEQ_16bit|in1[8]                             ; |GEQ_16bit|in1[8]                             ; out              ;
+; |GEQ_16bit|in1[9]                             ; |GEQ_16bit|in1[9]                             ; out              ;
+; |GEQ_16bit|in1[10]                            ; |GEQ_16bit|in1[10]                            ; out              ;
+; |GEQ_16bit|in1[11]                            ; |GEQ_16bit|in1[11]                            ; out              ;
+; |GEQ_16bit|in1[12]                            ; |GEQ_16bit|in1[12]                            ; out              ;
+; |GEQ_16bit|in1[13]                            ; |GEQ_16bit|in1[13]                            ; out              ;
+; |GEQ_16bit|in1[14]                            ; |GEQ_16bit|in1[14]                            ; out              ;
+; |GEQ_16bit|in1[15]                            ; |GEQ_16bit|in1[15]                            ; out              ;
+; |GEQ_16bit|in2[0]                             ; |GEQ_16bit|in2[0]                             ; out              ;
+; |GEQ_16bit|in2[1]                             ; |GEQ_16bit|in2[1]                             ; out              ;
+; |GEQ_16bit|in2[2]                             ; |GEQ_16bit|in2[2]                             ; out              ;
+; |GEQ_16bit|in2[3]                             ; |GEQ_16bit|in2[3]                             ; out              ;
+; |GEQ_16bit|in2[4]                             ; |GEQ_16bit|in2[4]                             ; out              ;
+; |GEQ_16bit|in2[5]                             ; |GEQ_16bit|in2[5]                             ; out              ;
+; |GEQ_16bit|in2[6]                             ; |GEQ_16bit|in2[6]                             ; out              ;
+; |GEQ_16bit|in2[7]                             ; |GEQ_16bit|in2[7]                             ; out              ;
+; |GEQ_16bit|in2[8]                             ; |GEQ_16bit|in2[8]                             ; out              ;
+; |GEQ_16bit|in2[9]                             ; |GEQ_16bit|in2[9]                             ; out              ;
+; |GEQ_16bit|in2[10]                            ; |GEQ_16bit|in2[10]                            ; out              ;
+; |GEQ_16bit|in2[11]                            ; |GEQ_16bit|in2[11]                            ; out              ;
+; |GEQ_16bit|in2[12]                            ; |GEQ_16bit|in2[12]                            ; out              ;
+; |GEQ_16bit|in2[13]                            ; |GEQ_16bit|in2[13]                            ; out              ;
+; |GEQ_16bit|in2[14]                            ; |GEQ_16bit|in2[14]                            ; out              ;
+; |GEQ_16bit|in2[15]                            ; |GEQ_16bit|in2[15]                            ; out              ;
+; |GEQ_16bit|out1                               ; |GEQ_16bit|out1                               ; pin_out          ;
+; |GEQ_16bit|OR_gate:GEQ10|out1                 ; |GEQ_16bit|OR_gate:GEQ10|out1                 ; out0             ;
+; |GEQ_16bit|AND_gate:GEQ9|out1                 ; |GEQ_16bit|AND_gate:GEQ9|out1                 ; out0             ;
+; |GEQ_16bit|OR_gate:GEQ8|out1                  ; |GEQ_16bit|OR_gate:GEQ8|out1                  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:1:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:1:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:1:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:1:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:2:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:2:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:2:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:2:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:3:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:3:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:3:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:3:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:4:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:4:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:4:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:4:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:5:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:5:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:5:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:5:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:6:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:6:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:6:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:6:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:7:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:7:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:7:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:7:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:8:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:8:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:8:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:8:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:9:GEQ7|out1  ; |GEQ_16bit|AND_gate:\result_loop:9:GEQ7|out1  ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:9:GEQ6|out1   ; |GEQ_16bit|OR_gate:\result_loop:9:GEQ6|out1   ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:10:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:10:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:10:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:10:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:11:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:11:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:11:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:11:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:12:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:12:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:12:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:12:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:\result_loop:13:GEQ7|out1 ; |GEQ_16bit|AND_gate:\result_loop:13:GEQ7|out1 ; out0             ;
+; |GEQ_16bit|OR_gate:\result_loop:13:GEQ6|out1  ; |GEQ_16bit|OR_gate:\result_loop:13:GEQ6|out1  ; out0             ;
+; |GEQ_16bit|AND_gate:GEQ5|out1                 ; |GEQ_16bit|AND_gate:GEQ5|out1                 ; out0             ;
+; |GEQ_16bit|OR_gate:GEQ4|out1                  ; |GEQ_16bit|OR_gate:GEQ4|out1                  ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:0:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:0:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:0:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:0:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:1:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:1:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:1:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:1:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:2:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:2:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:2:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:2:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:3:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:3:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:3:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:3:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:4:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:4:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:4:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:4:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:5:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:5:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:5:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:5:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:6:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:6:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:6:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:6:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:7:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:7:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:7:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:7:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:8:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:8:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:8:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:8:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:9:GEQ2|out1      ; |GEQ_16bit|XOR_gate:\in_loop:9:GEQ2|out1      ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:9:GEQ1|out1      ; |GEQ_16bit|AND_gate:\in_loop:9:GEQ1|out1      ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:10:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:10:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:10:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:10:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:11:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:11:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:11:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:11:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:12:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:12:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:12:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:12:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:13:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:13:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:13:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:13:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:14:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:14:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:14:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:14:GEQ1|out1     ; out0             ;
+; |GEQ_16bit|XOR_gate:\in_loop:15:GEQ2|out1     ; |GEQ_16bit|XOR_gate:\in_loop:15:GEQ2|out1     ; out0             ;
+; |GEQ_16bit|AND_gate:\in_loop:15:GEQ1|out1     ; |GEQ_16bit|AND_gate:\in_loop:15:GEQ1|out1     ; out0             ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Apr  5 20:16:15 2022
+Info: Command: quartus_sim --simulation_results_format=VWF AUEB_PROCESSOR -c AUEB_PROCESSOR
+Info (324025): Using vector source file "/home/niemand/altera/AUEB_PROCESSOR/ALU/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       0.00 %
+Info (328052): Number of transitions in simulation is 0
+Info (324045): Vector file AUEB_PROCESSOR.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 645 megabytes
+    Info: Processing ended: Tue Apr  5 20:16:16 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

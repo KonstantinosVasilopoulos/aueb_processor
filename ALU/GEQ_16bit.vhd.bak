@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SUB_16bit is
+port(in1, in2: in std_logic_vector(15 downto 0);
+	borrow_in: in std_logic;
+	diff: out std_logic_vector(15 downto 0);
+	borrow_out: out std_logic);
+end SUB_16bit;
+
+architecture Sub16BitLogic of SUB_16bit is
+	component SUB_1bit is
+	port(in1, in2, borrow_in: in std_logic;
+		diff, borrow_out: out std_logic);
+	end component SUB_1bit;
+
+	signal borrow_vec: std_logic_vector(14 downto 0);
+
+begin
+	S160: SUB_1bit port map(in1(0), in2(0), borrow_in, diff(0), borrow_vec(0));
+	S161: SUB_1bit port map(in1(1), in2(1), borrow_vec(0), diff(1), borrow_vec(1));
+	S162: SUB_1bit port map(in1(2), in2(2), borrow_vec(1), diff(2), borrow_vec(2));
+	S163: SUB_1bit port map(in1(3), in2(3), borrow_vec(2), diff(3), borrow_vec(3));
+	S164: SUB_1bit port map(in1(4), in2(4), borrow_vec(3), diff(4), borrow_vec(4));
+	S165: SUB_1bit port map(in1(5), in2(5), borrow_vec(4), diff(5), borrow_vec(5));
+	S166: SUB_1bit port map(in1(6), in2(6), borrow_vec(5), diff(6), borrow_vec(6));
+	S167: SUB_1bit port map(in1(7), in2(7), borrow_vec(6), diff(7), borrow_vec(7));
+	S168: SUB_1bit port map(in1(8), in2(8), borrow_vec(7), diff(8), borrow_vec(8));
+	S169: SUB_1bit port map(in1(9), in2(9), borrow_vec(8), diff(9), borrow_vec(9));
+	S1610: SUB_1bit port map(in1(10), in2(10), borrow_vec(9), diff(10), borrow_vec(10));
+	S1611: SUB_1bit port map(in1(11), in2(11), borrow_vec(10), diff(11), borrow_vec(11));
+	S1612: SUB_1bit port map(in1(12), in2(12), borrow_vec(11), diff(12), borrow_vec(12));
+	S1613: SUB_1bit port map(in1(13), in2(13), borrow_vec(12), diff(13), borrow_vec(13));
+	S1614: SUB_1bit port map(in1(14), in2(14), borrow_vec(13), diff(14), borrow_vec(14));
+	S1615: SUB_1bit port map(in1(15), in2(15), borrow_vec(14), diff(15), borrow_out);
+end Sub16BitLogic;

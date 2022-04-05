@@ -1,0 +1,606 @@
+|GEQ_16bit
+in1[0] => AND_gate:in_loop:0:GEQ1.in1
+in1[0] => XOR_gate:in_loop:0:GEQ2.in1
+in1[1] => AND_gate:in_loop:1:GEQ1.in1
+in1[1] => XOR_gate:in_loop:1:GEQ2.in1
+in1[2] => AND_gate:in_loop:2:GEQ1.in1
+in1[2] => XOR_gate:in_loop:2:GEQ2.in1
+in1[3] => AND_gate:in_loop:3:GEQ1.in1
+in1[3] => XOR_gate:in_loop:3:GEQ2.in1
+in1[4] => AND_gate:in_loop:4:GEQ1.in1
+in1[4] => XOR_gate:in_loop:4:GEQ2.in1
+in1[5] => AND_gate:in_loop:5:GEQ1.in1
+in1[5] => XOR_gate:in_loop:5:GEQ2.in1
+in1[6] => AND_gate:in_loop:6:GEQ1.in1
+in1[6] => XOR_gate:in_loop:6:GEQ2.in1
+in1[7] => AND_gate:in_loop:7:GEQ1.in1
+in1[7] => XOR_gate:in_loop:7:GEQ2.in1
+in1[8] => AND_gate:in_loop:8:GEQ1.in1
+in1[8] => XOR_gate:in_loop:8:GEQ2.in1
+in1[9] => AND_gate:in_loop:9:GEQ1.in1
+in1[9] => XOR_gate:in_loop:9:GEQ2.in1
+in1[10] => AND_gate:in_loop:10:GEQ1.in1
+in1[10] => XOR_gate:in_loop:10:GEQ2.in1
+in1[11] => AND_gate:in_loop:11:GEQ1.in1
+in1[11] => XOR_gate:in_loop:11:GEQ2.in1
+in1[12] => AND_gate:in_loop:12:GEQ1.in1
+in1[12] => XOR_gate:in_loop:12:GEQ2.in1
+in1[13] => AND_gate:in_loop:13:GEQ1.in1
+in1[13] => XOR_gate:in_loop:13:GEQ2.in1
+in1[14] => AND_gate:in_loop:14:GEQ1.in1
+in1[14] => XOR_gate:in_loop:14:GEQ2.in1
+in1[15] => AND_gate:in_loop:15:GEQ1.in1
+in1[15] => XOR_gate:in_loop:15:GEQ2.in1
+in2[0] => NOT_gate:in_loop:0:GEQ0.in1
+in2[0] => XOR_gate:in_loop:0:GEQ2.in2
+in2[1] => NOT_gate:in_loop:1:GEQ0.in1
+in2[1] => XOR_gate:in_loop:1:GEQ2.in2
+in2[2] => NOT_gate:in_loop:2:GEQ0.in1
+in2[2] => XOR_gate:in_loop:2:GEQ2.in2
+in2[3] => NOT_gate:in_loop:3:GEQ0.in1
+in2[3] => XOR_gate:in_loop:3:GEQ2.in2
+in2[4] => NOT_gate:in_loop:4:GEQ0.in1
+in2[4] => XOR_gate:in_loop:4:GEQ2.in2
+in2[5] => NOT_gate:in_loop:5:GEQ0.in1
+in2[5] => XOR_gate:in_loop:5:GEQ2.in2
+in2[6] => NOT_gate:in_loop:6:GEQ0.in1
+in2[6] => XOR_gate:in_loop:6:GEQ2.in2
+in2[7] => NOT_gate:in_loop:7:GEQ0.in1
+in2[7] => XOR_gate:in_loop:7:GEQ2.in2
+in2[8] => NOT_gate:in_loop:8:GEQ0.in1
+in2[8] => XOR_gate:in_loop:8:GEQ2.in2
+in2[9] => NOT_gate:in_loop:9:GEQ0.in1
+in2[9] => XOR_gate:in_loop:9:GEQ2.in2
+in2[10] => NOT_gate:in_loop:10:GEQ0.in1
+in2[10] => XOR_gate:in_loop:10:GEQ2.in2
+in2[11] => NOT_gate:in_loop:11:GEQ0.in1
+in2[11] => XOR_gate:in_loop:11:GEQ2.in2
+in2[12] => NOT_gate:in_loop:12:GEQ0.in1
+in2[12] => XOR_gate:in_loop:12:GEQ2.in2
+in2[13] => NOT_gate:in_loop:13:GEQ0.in1
+in2[13] => XOR_gate:in_loop:13:GEQ2.in2
+in2[14] => NOT_gate:in_loop:14:GEQ0.in1
+in2[14] => XOR_gate:in_loop:14:GEQ2.in2
+in2[15] => NOT_gate:in_loop:15:GEQ0.in1
+in2[15] => XOR_gate:in_loop:15:GEQ2.in2
+out1 <= OR_gate:GEQ10.out1
+
+
+|GEQ_16bit|NOT_gate:\in_loop:15:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:15:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:15:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:15:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:14:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:14:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:14:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:14:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:13:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:13:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:13:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:13:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:12:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:12:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:12:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:12:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:11:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:11:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:11:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:11:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:10:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:10:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:10:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:10:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:9:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:9:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:9:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:9:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:8:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:8:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:8:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:8:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:7:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:7:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:7:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:7:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:6:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:6:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:6:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:6:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:5:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:5:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:5:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:5:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:4:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:4:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:4:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:4:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:3:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:3:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:3:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:3:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:2:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:2:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:2:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:2:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:1:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:1:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:1:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:1:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:0:GEQ0
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\in_loop:0:GEQ1
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|XOR_gate:\in_loop:0:GEQ2
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|NOT_gate:\in_loop:0:GEQ3
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:GEQ4
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:GEQ5
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:13:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:13:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:12:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:12:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:11:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:11:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:10:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:10:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:9:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:9:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:8:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:8:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:7:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:7:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:6:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:6:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:5:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:5:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:4:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:4:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:3:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:3:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:2:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:2:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:\result_loop:1:GEQ6
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:\result_loop:1:GEQ7
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:GEQ8
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|AND_gate:GEQ9
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|GEQ_16bit|OR_gate:GEQ10
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
