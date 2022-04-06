@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AUEB_PROCESSOR
-Tue Apr  5 20:12:37 2022
+Wed Apr  6 14:28:41 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr  5 20:12:37 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr  6 14:28:41 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; AUEB_PROCESSOR                                  ;
-; Top-level Entity Name              ; GEQ_16bit                                       ;
+; Top-level Entity Name              ; GEQZ_16bit                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 21                                              ;
-;     Total combinational functions  ; 21                                              ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 33                                              ;
+; Total pins                         ; 32                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; GEQ_16bit          ; AUEB_PROCESSOR     ;
+; Top-level entity name                                                      ; GEQZ_16bit         ; AUEB_PROCESSOR     ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,58 +154,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; ALU/OR_gate.vhd                  ; yes             ; User VHDL File  ; /home/niemand/altera/AUEB_PROCESSOR/ALU/OR_gate.vhd   ;         ;
-; ALU/NOT_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/AUEB_PROCESSOR/ALU/NOT_gate.vhd  ;         ;
-; ALU/AND_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/AUEB_PROCESSOR/ALU/AND_gate.vhd  ;         ;
-; ALU/XOR_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/AUEB_PROCESSOR/ALU/XOR_gate.vhd  ;         ;
-; ALU/GEQ_16bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/AUEB_PROCESSOR/ALU/GEQ_16bit.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; ALU/NOT_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/NOT_gate.vhd   ;         ;
+; ALU/GEQZ_16bit.vhd               ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/GEQZ_16bit.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 21      ;
-;                                             ;         ;
-; Total combinational functions               ; 21      ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 21      ;
-;     -- 3 input functions                    ; 0       ;
-;     -- <=2 input functions                  ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 21      ;
-;     -- arithmetic mode                      ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 33      ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; in1[15] ;
-; Maximum fan-out                             ; 2       ;
-; Total fan-out                               ; 85      ;
-; Average fan-out                             ; 1.57    ;
-+---------------------------------------------+---------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+;                                             ;        ;
+; Total combinational functions               ; 0      ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 0      ;
+;     -- 3 input functions                    ; 0      ;
+;     -- <=2 input functions                  ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 0      ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 0      ;
+;     -- Dedicated logic registers            ; 0      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 32     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; in1[0] ;
+; Maximum fan-out                             ; 1      ;
+; Total fan-out                               ; 1      ;
+; Average fan-out                             ; 0.03   ;
++---------------------------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; |GEQ_16bit                 ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |GEQ_16bit               ; work         ;
-;    |AND_gate:GEQ9|         ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GEQ_16bit|AND_gate:GEQ9 ; work         ;
-;    |OR_gate:GEQ10|         ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GEQ_16bit|OR_gate:GEQ10 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |GEQZ_16bit                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |GEQZ_16bit         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -239,7 +233,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr  5 20:12:34 2022
+    Info: Processing started: Wed Apr  6 14:28:40 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUEB_PROCESSOR -c AUEB_PROCESSOR
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ALU/SUB_16bit.vhd
@@ -275,21 +269,61 @@ Info (12021): Found 2 design units, including 1 entities, in source file AUEB_PR
 Info (12021): Found 2 design units, including 1 entities, in source file ALU/GEQ_16bit.vhd
     Info (12022): Found design unit 1: GEQ_16bit-Geq16BitLogic
     Info (12023): Found entity 1: GEQ_16bit
-Info (12127): Elaborating entity "GEQ_16bit" for the top level hierarchy
-Info (12128): Elaborating entity "NOT_gate" for hierarchy "NOT_gate:\in_loop:15:GEQ0"
-Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:\in_loop:15:GEQ1"
-Info (12128): Elaborating entity "XOR_gate" for hierarchy "XOR_gate:\in_loop:15:GEQ2"
-Info (12128): Elaborating entity "OR_gate" for hierarchy "OR_gate:GEQ4"
+Info (12021): Found 2 design units, including 1 entities, in source file ALU/GEQZ_16bit.vhd
+    Info (12022): Found design unit 1: GEQZ_16bit-GeqZ16BitLogic
+    Info (12023): Found entity 1: GEQZ_16bit
+Info (12021): Found 2 design units, including 1 entities, in source file ALU/OR_16bit.vhd
+    Info (12022): Found design unit 1: OR_16bit-Or16BitLogic
+    Info (12023): Found entity 1: OR_16bit
+Info (12021): Found 2 design units, including 1 entities, in source file ALU/AND_16bit.vhd
+    Info (12022): Found design unit 1: AND_16bit-And16BitLogic
+    Info (12023): Found entity 1: AND_16bit
+Info (12021): Found 2 design units, including 1 entities, in source file ALU/NOT_16bit.vhd
+    Info (12022): Found design unit 1: NOT_16bit-Not16BitLogic
+    Info (12023): Found entity 1: NOT_16bit
+Info (12127): Elaborating entity "GEQZ_16bit" for the top level hierarchy
+Info (12128): Elaborating entity "NOT_gate" for hierarchy "NOT_gate:GEQZ0"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out1[1]" is stuck at GND
+    Warning (13410): Pin "out1[2]" is stuck at GND
+    Warning (13410): Pin "out1[3]" is stuck at GND
+    Warning (13410): Pin "out1[4]" is stuck at GND
+    Warning (13410): Pin "out1[5]" is stuck at GND
+    Warning (13410): Pin "out1[6]" is stuck at GND
+    Warning (13410): Pin "out1[7]" is stuck at GND
+    Warning (13410): Pin "out1[8]" is stuck at GND
+    Warning (13410): Pin "out1[9]" is stuck at GND
+    Warning (13410): Pin "out1[10]" is stuck at GND
+    Warning (13410): Pin "out1[11]" is stuck at GND
+    Warning (13410): Pin "out1[12]" is stuck at GND
+    Warning (13410): Pin "out1[13]" is stuck at GND
+    Warning (13410): Pin "out1[14]" is stuck at GND
+    Warning (13410): Pin "out1[15]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 32 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 21 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 635 megabytes
-    Info: Processing ended: Tue Apr  5 20:12:37 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "in1[1]"
+    Warning (15610): No output dependent on input pin "in1[2]"
+    Warning (15610): No output dependent on input pin "in1[3]"
+    Warning (15610): No output dependent on input pin "in1[4]"
+    Warning (15610): No output dependent on input pin "in1[5]"
+    Warning (15610): No output dependent on input pin "in1[6]"
+    Warning (15610): No output dependent on input pin "in1[7]"
+    Warning (15610): No output dependent on input pin "in1[8]"
+    Warning (15610): No output dependent on input pin "in1[9]"
+    Warning (15610): No output dependent on input pin "in1[10]"
+    Warning (15610): No output dependent on input pin "in1[11]"
+    Warning (15610): No output dependent on input pin "in1[12]"
+    Warning (15610): No output dependent on input pin "in1[13]"
+    Warning (15610): No output dependent on input pin "in1[14]"
+    Warning (15610): No output dependent on input pin "in1[15]"
+Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 16 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 630 megabytes
+    Info: Processing ended: Wed Apr  6 14:28:41 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
