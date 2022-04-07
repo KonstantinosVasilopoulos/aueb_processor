@@ -1,40 +1,3720 @@
-|GEQZ_16bit
-in1[0] => NOT_gate:GEQZ0.in1
-in1[1] => ~NO_FANOUT~
-in1[2] => ~NO_FANOUT~
-in1[3] => ~NO_FANOUT~
-in1[4] => ~NO_FANOUT~
-in1[5] => ~NO_FANOUT~
-in1[6] => ~NO_FANOUT~
-in1[7] => ~NO_FANOUT~
-in1[8] => ~NO_FANOUT~
-in1[9] => ~NO_FANOUT~
-in1[10] => ~NO_FANOUT~
-in1[11] => ~NO_FANOUT~
-in1[12] => ~NO_FANOUT~
-in1[13] => ~NO_FANOUT~
-in1[14] => ~NO_FANOUT~
-in1[15] => ~NO_FANOUT~
-out1[0] <= NOT_gate:GEQZ0.out1
-out1[1] <= <GND>
-out1[2] <= <GND>
-out1[3] <= <GND>
-out1[4] <= <GND>
-out1[5] <= <GND>
-out1[6] <= <GND>
-out1[7] <= <GND>
-out1[8] <= <GND>
-out1[9] <= <GND>
-out1[10] <= <GND>
-out1[11] <= <GND>
-out1[12] <= <GND>
-out1[13] <= <GND>
-out1[14] <= <GND>
-out1[15] <= <GND>
+|MULT_3bit
+in1[0] => MULT_1bit:M30.in1[0]
+in1[1] => MULT_1bit:M30.in1[1]
+in1[2] => MULT_1bit:M30.in1[2]
+in1[3] => MULT_1bit:M30.in1[3]
+in1[4] => MULT_1bit:M30.in1[4]
+in1[5] => MULT_1bit:M30.in1[5]
+in1[6] => MULT_1bit:M30.in1[6]
+in1[7] => MULT_1bit:M30.in1[7]
+in1[8] => MULT_1bit:M30.in1[8]
+in1[9] => MULT_1bit:M30.in1[9]
+in1[10] => MULT_1bit:M30.in1[10]
+in1[11] => MULT_1bit:M30.in1[11]
+in1[12] => MULT_1bit:M30.in1[12]
+in1[13] => MULT_1bit:M30.in1[13]
+in1[14] => MULT_1bit:M30.in1[14]
+in1[15] => MULT_1bit:M30.in1[15]
+in2[0] => MULT_1bit:M30.in2[0]
+in2[1] => MULT_1bit:M30.in2[1]
+in2[2] => MULT_1bit:M30.in2[2]
+in2[3] => MULT_1bit:M30.in2[3]
+in2[4] => MULT_1bit:M30.in2[4]
+in2[5] => MULT_1bit:M30.in2[5]
+in2[6] => MULT_1bit:M30.in2[6]
+in2[7] => MULT_1bit:M30.in2[7]
+in2[8] => MULT_1bit:M30.in2[8]
+in2[9] => MULT_1bit:M30.in2[9]
+in2[10] => MULT_1bit:M30.in2[10]
+in2[11] => MULT_1bit:M30.in2[11]
+in2[12] => MULT_1bit:M30.in2[12]
+in2[13] => MULT_1bit:M30.in2[13]
+in2[14] => MULT_1bit:M30.in2[14]
+in2[15] => MULT_1bit:M30.in2[15]
+in3[0] => MULT_1bit:M31.in1[0]
+in3[1] => MULT_1bit:M31.in1[1]
+in3[2] => MULT_1bit:M31.in1[2]
+in3[3] => MULT_1bit:M31.in1[3]
+in3[4] => MULT_1bit:M31.in1[4]
+in3[5] => MULT_1bit:M31.in1[5]
+in3[6] => MULT_1bit:M31.in1[6]
+in3[7] => MULT_1bit:M31.in1[7]
+in3[8] => MULT_1bit:M31.in1[8]
+in3[9] => MULT_1bit:M31.in1[9]
+in3[10] => MULT_1bit:M31.in1[10]
+in3[11] => MULT_1bit:M31.in1[11]
+in3[12] => MULT_1bit:M31.in1[12]
+in3[13] => MULT_1bit:M31.in1[13]
+in3[14] => MULT_1bit:M31.in1[14]
+in3[15] => MULT_1bit:M31.in1[15]
+in4[0] => MULT_1bit:M31.in2[0]
+in4[1] => MULT_1bit:M31.in2[1]
+in4[2] => MULT_1bit:M31.in2[2]
+in4[3] => MULT_1bit:M31.in2[3]
+in4[4] => MULT_1bit:M31.in2[4]
+in4[5] => MULT_1bit:M31.in2[5]
+in4[6] => MULT_1bit:M31.in2[6]
+in4[7] => MULT_1bit:M31.in2[7]
+in4[8] => MULT_1bit:M31.in2[8]
+in4[9] => MULT_1bit:M31.in2[9]
+in4[10] => MULT_1bit:M31.in2[10]
+in4[11] => MULT_1bit:M31.in2[11]
+in4[12] => MULT_1bit:M31.in2[12]
+in4[13] => MULT_1bit:M31.in2[13]
+in4[14] => MULT_1bit:M31.in2[14]
+in4[15] => MULT_1bit:M31.in2[15]
+in5[0] => MULT_1bit:M32.in1[0]
+in5[1] => MULT_1bit:M32.in1[1]
+in5[2] => MULT_1bit:M32.in1[2]
+in5[3] => MULT_1bit:M32.in1[3]
+in5[4] => MULT_1bit:M32.in1[4]
+in5[5] => MULT_1bit:M32.in1[5]
+in5[6] => MULT_1bit:M32.in1[6]
+in5[7] => MULT_1bit:M32.in1[7]
+in5[8] => MULT_1bit:M32.in1[8]
+in5[9] => MULT_1bit:M32.in1[9]
+in5[10] => MULT_1bit:M32.in1[10]
+in5[11] => MULT_1bit:M32.in1[11]
+in5[12] => MULT_1bit:M32.in1[12]
+in5[13] => MULT_1bit:M32.in1[13]
+in5[14] => MULT_1bit:M32.in1[14]
+in5[15] => MULT_1bit:M32.in1[15]
+in6[0] => MULT_1bit:M32.in2[0]
+in6[1] => MULT_1bit:M32.in2[1]
+in6[2] => MULT_1bit:M32.in2[2]
+in6[3] => MULT_1bit:M32.in2[3]
+in6[4] => MULT_1bit:M32.in2[4]
+in6[5] => MULT_1bit:M32.in2[5]
+in6[6] => MULT_1bit:M32.in2[6]
+in6[7] => MULT_1bit:M32.in2[7]
+in6[8] => MULT_1bit:M32.in2[8]
+in6[9] => MULT_1bit:M32.in2[9]
+in6[10] => MULT_1bit:M32.in2[10]
+in6[11] => MULT_1bit:M32.in2[11]
+in6[12] => MULT_1bit:M32.in2[12]
+in6[13] => MULT_1bit:M32.in2[13]
+in6[14] => MULT_1bit:M32.in2[14]
+in6[15] => MULT_1bit:M32.in2[15]
+select_bits[0] => MULT_1bit:M30.select_bit
+select_bits[0] => MULT_1bit:M31.select_bit
+select_bits[0] => MULT_1bit:M32.select_bit
+select_bits[0] => MULT_1bit:M33.select_bit
+select_bits[1] => MULT_1bit:M34.select_bit
+select_bits[1] => MULT_1bit:M35.select_bit
+select_bits[2] => MULT_1bit:M36.select_bit
+out1[0] <= MULT_1bit:M36.out1[0]
+out1[1] <= MULT_1bit:M36.out1[1]
+out1[2] <= MULT_1bit:M36.out1[2]
+out1[3] <= MULT_1bit:M36.out1[3]
+out1[4] <= MULT_1bit:M36.out1[4]
+out1[5] <= MULT_1bit:M36.out1[5]
+out1[6] <= MULT_1bit:M36.out1[6]
+out1[7] <= MULT_1bit:M36.out1[7]
+out1[8] <= MULT_1bit:M36.out1[8]
+out1[9] <= MULT_1bit:M36.out1[9]
+out1[10] <= MULT_1bit:M36.out1[10]
+out1[11] <= MULT_1bit:M36.out1[11]
+out1[12] <= MULT_1bit:M36.out1[12]
+out1[13] <= MULT_1bit:M36.out1[13]
+out1[14] <= MULT_1bit:M36.out1[14]
+out1[15] <= MULT_1bit:M36.out1[15]
 
 
-|GEQZ_16bit|NOT_gate:GEQZ0
+|MULT_3bit|MULT_1bit:M30
+in1[0] => AND_16bit:M11.in1[0]
+in1[1] => AND_16bit:M11.in1[1]
+in1[2] => AND_16bit:M11.in1[2]
+in1[3] => AND_16bit:M11.in1[3]
+in1[4] => AND_16bit:M11.in1[4]
+in1[5] => AND_16bit:M11.in1[5]
+in1[6] => AND_16bit:M11.in1[6]
+in1[7] => AND_16bit:M11.in1[7]
+in1[8] => AND_16bit:M11.in1[8]
+in1[9] => AND_16bit:M11.in1[9]
+in1[10] => AND_16bit:M11.in1[10]
+in1[11] => AND_16bit:M11.in1[11]
+in1[12] => AND_16bit:M11.in1[12]
+in1[13] => AND_16bit:M11.in1[13]
+in1[14] => AND_16bit:M11.in1[14]
+in1[15] => AND_16bit:M11.in1[15]
+in2[0] => AND_16bit:M12.in1[0]
+in2[1] => AND_16bit:M12.in1[1]
+in2[2] => AND_16bit:M12.in1[2]
+in2[3] => AND_16bit:M12.in1[3]
+in2[4] => AND_16bit:M12.in1[4]
+in2[5] => AND_16bit:M12.in1[5]
+in2[6] => AND_16bit:M12.in1[6]
+in2[7] => AND_16bit:M12.in1[7]
+in2[8] => AND_16bit:M12.in1[8]
+in2[9] => AND_16bit:M12.in1[9]
+in2[10] => AND_16bit:M12.in1[10]
+in2[11] => AND_16bit:M12.in1[11]
+in2[12] => AND_16bit:M12.in1[12]
+in2[13] => AND_16bit:M12.in1[13]
+in2[14] => AND_16bit:M12.in1[14]
+in2[15] => AND_16bit:M12.in1[15]
+select_bit => NOT_gate:M10.in1
+select_bit => AND_16bit:M12.in2[15]
+select_bit => AND_16bit:M12.in2[14]
+select_bit => AND_16bit:M12.in2[13]
+select_bit => AND_16bit:M12.in2[12]
+select_bit => AND_16bit:M12.in2[11]
+select_bit => AND_16bit:M12.in2[10]
+select_bit => AND_16bit:M12.in2[9]
+select_bit => AND_16bit:M12.in2[8]
+select_bit => AND_16bit:M12.in2[7]
+select_bit => AND_16bit:M12.in2[6]
+select_bit => AND_16bit:M12.in2[5]
+select_bit => AND_16bit:M12.in2[4]
+select_bit => AND_16bit:M12.in2[3]
+select_bit => AND_16bit:M12.in2[2]
+select_bit => AND_16bit:M12.in2[1]
+select_bit => AND_16bit:M12.in2[0]
+out1[0] <= OR_16bit:M13.out1[0]
+out1[1] <= OR_16bit:M13.out1[1]
+out1[2] <= OR_16bit:M13.out1[2]
+out1[3] <= OR_16bit:M13.out1[3]
+out1[4] <= OR_16bit:M13.out1[4]
+out1[5] <= OR_16bit:M13.out1[5]
+out1[6] <= OR_16bit:M13.out1[6]
+out1[7] <= OR_16bit:M13.out1[7]
+out1[8] <= OR_16bit:M13.out1[8]
+out1[9] <= OR_16bit:M13.out1[9]
+out1[10] <= OR_16bit:M13.out1[10]
+out1[11] <= OR_16bit:M13.out1[11]
+out1[12] <= OR_16bit:M13.out1[12]
+out1[13] <= OR_16bit:M13.out1[13]
+out1[14] <= OR_16bit:M13.out1[14]
+out1[15] <= OR_16bit:M13.out1[15]
+
+
+|MULT_3bit|MULT_1bit:M30|NOT_gate:M10
 in1 => out1.DATAIN
 out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M11|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|AND_16bit:M12|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13
+in1[0] => OR_gate:or_loop:0:OR160.in1
+in1[1] => OR_gate:or_loop:1:OR160.in1
+in1[2] => OR_gate:or_loop:2:OR160.in1
+in1[3] => OR_gate:or_loop:3:OR160.in1
+in1[4] => OR_gate:or_loop:4:OR160.in1
+in1[5] => OR_gate:or_loop:5:OR160.in1
+in1[6] => OR_gate:or_loop:6:OR160.in1
+in1[7] => OR_gate:or_loop:7:OR160.in1
+in1[8] => OR_gate:or_loop:8:OR160.in1
+in1[9] => OR_gate:or_loop:9:OR160.in1
+in1[10] => OR_gate:or_loop:10:OR160.in1
+in1[11] => OR_gate:or_loop:11:OR160.in1
+in1[12] => OR_gate:or_loop:12:OR160.in1
+in1[13] => OR_gate:or_loop:13:OR160.in1
+in1[14] => OR_gate:or_loop:14:OR160.in1
+in1[15] => OR_gate:or_loop:15:OR160.in1
+in2[0] => OR_gate:or_loop:0:OR160.in2
+in2[1] => OR_gate:or_loop:1:OR160.in2
+in2[2] => OR_gate:or_loop:2:OR160.in2
+in2[3] => OR_gate:or_loop:3:OR160.in2
+in2[4] => OR_gate:or_loop:4:OR160.in2
+in2[5] => OR_gate:or_loop:5:OR160.in2
+in2[6] => OR_gate:or_loop:6:OR160.in2
+in2[7] => OR_gate:or_loop:7:OR160.in2
+in2[8] => OR_gate:or_loop:8:OR160.in2
+in2[9] => OR_gate:or_loop:9:OR160.in2
+in2[10] => OR_gate:or_loop:10:OR160.in2
+in2[11] => OR_gate:or_loop:11:OR160.in2
+in2[12] => OR_gate:or_loop:12:OR160.in2
+in2[13] => OR_gate:or_loop:13:OR160.in2
+in2[14] => OR_gate:or_loop:14:OR160.in2
+in2[15] => OR_gate:or_loop:15:OR160.in2
+out1[0] <= OR_gate:or_loop:0:OR160.out1
+out1[1] <= OR_gate:or_loop:1:OR160.out1
+out1[2] <= OR_gate:or_loop:2:OR160.out1
+out1[3] <= OR_gate:or_loop:3:OR160.out1
+out1[4] <= OR_gate:or_loop:4:OR160.out1
+out1[5] <= OR_gate:or_loop:5:OR160.out1
+out1[6] <= OR_gate:or_loop:6:OR160.out1
+out1[7] <= OR_gate:or_loop:7:OR160.out1
+out1[8] <= OR_gate:or_loop:8:OR160.out1
+out1[9] <= OR_gate:or_loop:9:OR160.out1
+out1[10] <= OR_gate:or_loop:10:OR160.out1
+out1[11] <= OR_gate:or_loop:11:OR160.out1
+out1[12] <= OR_gate:or_loop:12:OR160.out1
+out1[13] <= OR_gate:or_loop:13:OR160.out1
+out1[14] <= OR_gate:or_loop:14:OR160.out1
+out1[15] <= OR_gate:or_loop:15:OR160.out1
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:15:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:14:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:13:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:12:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:11:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:10:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:9:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:8:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:7:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:6:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:5:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:4:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:3:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:2:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:1:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M30|OR_16bit:M13|OR_gate:\or_loop:0:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31
+in1[0] => AND_16bit:M11.in1[0]
+in1[1] => AND_16bit:M11.in1[1]
+in1[2] => AND_16bit:M11.in1[2]
+in1[3] => AND_16bit:M11.in1[3]
+in1[4] => AND_16bit:M11.in1[4]
+in1[5] => AND_16bit:M11.in1[5]
+in1[6] => AND_16bit:M11.in1[6]
+in1[7] => AND_16bit:M11.in1[7]
+in1[8] => AND_16bit:M11.in1[8]
+in1[9] => AND_16bit:M11.in1[9]
+in1[10] => AND_16bit:M11.in1[10]
+in1[11] => AND_16bit:M11.in1[11]
+in1[12] => AND_16bit:M11.in1[12]
+in1[13] => AND_16bit:M11.in1[13]
+in1[14] => AND_16bit:M11.in1[14]
+in1[15] => AND_16bit:M11.in1[15]
+in2[0] => AND_16bit:M12.in1[0]
+in2[1] => AND_16bit:M12.in1[1]
+in2[2] => AND_16bit:M12.in1[2]
+in2[3] => AND_16bit:M12.in1[3]
+in2[4] => AND_16bit:M12.in1[4]
+in2[5] => AND_16bit:M12.in1[5]
+in2[6] => AND_16bit:M12.in1[6]
+in2[7] => AND_16bit:M12.in1[7]
+in2[8] => AND_16bit:M12.in1[8]
+in2[9] => AND_16bit:M12.in1[9]
+in2[10] => AND_16bit:M12.in1[10]
+in2[11] => AND_16bit:M12.in1[11]
+in2[12] => AND_16bit:M12.in1[12]
+in2[13] => AND_16bit:M12.in1[13]
+in2[14] => AND_16bit:M12.in1[14]
+in2[15] => AND_16bit:M12.in1[15]
+select_bit => NOT_gate:M10.in1
+select_bit => AND_16bit:M12.in2[15]
+select_bit => AND_16bit:M12.in2[14]
+select_bit => AND_16bit:M12.in2[13]
+select_bit => AND_16bit:M12.in2[12]
+select_bit => AND_16bit:M12.in2[11]
+select_bit => AND_16bit:M12.in2[10]
+select_bit => AND_16bit:M12.in2[9]
+select_bit => AND_16bit:M12.in2[8]
+select_bit => AND_16bit:M12.in2[7]
+select_bit => AND_16bit:M12.in2[6]
+select_bit => AND_16bit:M12.in2[5]
+select_bit => AND_16bit:M12.in2[4]
+select_bit => AND_16bit:M12.in2[3]
+select_bit => AND_16bit:M12.in2[2]
+select_bit => AND_16bit:M12.in2[1]
+select_bit => AND_16bit:M12.in2[0]
+out1[0] <= OR_16bit:M13.out1[0]
+out1[1] <= OR_16bit:M13.out1[1]
+out1[2] <= OR_16bit:M13.out1[2]
+out1[3] <= OR_16bit:M13.out1[3]
+out1[4] <= OR_16bit:M13.out1[4]
+out1[5] <= OR_16bit:M13.out1[5]
+out1[6] <= OR_16bit:M13.out1[6]
+out1[7] <= OR_16bit:M13.out1[7]
+out1[8] <= OR_16bit:M13.out1[8]
+out1[9] <= OR_16bit:M13.out1[9]
+out1[10] <= OR_16bit:M13.out1[10]
+out1[11] <= OR_16bit:M13.out1[11]
+out1[12] <= OR_16bit:M13.out1[12]
+out1[13] <= OR_16bit:M13.out1[13]
+out1[14] <= OR_16bit:M13.out1[14]
+out1[15] <= OR_16bit:M13.out1[15]
+
+
+|MULT_3bit|MULT_1bit:M31|NOT_gate:M10
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M11|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|AND_16bit:M12|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13
+in1[0] => OR_gate:or_loop:0:OR160.in1
+in1[1] => OR_gate:or_loop:1:OR160.in1
+in1[2] => OR_gate:or_loop:2:OR160.in1
+in1[3] => OR_gate:or_loop:3:OR160.in1
+in1[4] => OR_gate:or_loop:4:OR160.in1
+in1[5] => OR_gate:or_loop:5:OR160.in1
+in1[6] => OR_gate:or_loop:6:OR160.in1
+in1[7] => OR_gate:or_loop:7:OR160.in1
+in1[8] => OR_gate:or_loop:8:OR160.in1
+in1[9] => OR_gate:or_loop:9:OR160.in1
+in1[10] => OR_gate:or_loop:10:OR160.in1
+in1[11] => OR_gate:or_loop:11:OR160.in1
+in1[12] => OR_gate:or_loop:12:OR160.in1
+in1[13] => OR_gate:or_loop:13:OR160.in1
+in1[14] => OR_gate:or_loop:14:OR160.in1
+in1[15] => OR_gate:or_loop:15:OR160.in1
+in2[0] => OR_gate:or_loop:0:OR160.in2
+in2[1] => OR_gate:or_loop:1:OR160.in2
+in2[2] => OR_gate:or_loop:2:OR160.in2
+in2[3] => OR_gate:or_loop:3:OR160.in2
+in2[4] => OR_gate:or_loop:4:OR160.in2
+in2[5] => OR_gate:or_loop:5:OR160.in2
+in2[6] => OR_gate:or_loop:6:OR160.in2
+in2[7] => OR_gate:or_loop:7:OR160.in2
+in2[8] => OR_gate:or_loop:8:OR160.in2
+in2[9] => OR_gate:or_loop:9:OR160.in2
+in2[10] => OR_gate:or_loop:10:OR160.in2
+in2[11] => OR_gate:or_loop:11:OR160.in2
+in2[12] => OR_gate:or_loop:12:OR160.in2
+in2[13] => OR_gate:or_loop:13:OR160.in2
+in2[14] => OR_gate:or_loop:14:OR160.in2
+in2[15] => OR_gate:or_loop:15:OR160.in2
+out1[0] <= OR_gate:or_loop:0:OR160.out1
+out1[1] <= OR_gate:or_loop:1:OR160.out1
+out1[2] <= OR_gate:or_loop:2:OR160.out1
+out1[3] <= OR_gate:or_loop:3:OR160.out1
+out1[4] <= OR_gate:or_loop:4:OR160.out1
+out1[5] <= OR_gate:or_loop:5:OR160.out1
+out1[6] <= OR_gate:or_loop:6:OR160.out1
+out1[7] <= OR_gate:or_loop:7:OR160.out1
+out1[8] <= OR_gate:or_loop:8:OR160.out1
+out1[9] <= OR_gate:or_loop:9:OR160.out1
+out1[10] <= OR_gate:or_loop:10:OR160.out1
+out1[11] <= OR_gate:or_loop:11:OR160.out1
+out1[12] <= OR_gate:or_loop:12:OR160.out1
+out1[13] <= OR_gate:or_loop:13:OR160.out1
+out1[14] <= OR_gate:or_loop:14:OR160.out1
+out1[15] <= OR_gate:or_loop:15:OR160.out1
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:15:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:14:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:13:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:12:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:11:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:10:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:9:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:8:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:7:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:6:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:5:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:4:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:3:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:2:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:1:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M31|OR_16bit:M13|OR_gate:\or_loop:0:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32
+in1[0] => AND_16bit:M11.in1[0]
+in1[1] => AND_16bit:M11.in1[1]
+in1[2] => AND_16bit:M11.in1[2]
+in1[3] => AND_16bit:M11.in1[3]
+in1[4] => AND_16bit:M11.in1[4]
+in1[5] => AND_16bit:M11.in1[5]
+in1[6] => AND_16bit:M11.in1[6]
+in1[7] => AND_16bit:M11.in1[7]
+in1[8] => AND_16bit:M11.in1[8]
+in1[9] => AND_16bit:M11.in1[9]
+in1[10] => AND_16bit:M11.in1[10]
+in1[11] => AND_16bit:M11.in1[11]
+in1[12] => AND_16bit:M11.in1[12]
+in1[13] => AND_16bit:M11.in1[13]
+in1[14] => AND_16bit:M11.in1[14]
+in1[15] => AND_16bit:M11.in1[15]
+in2[0] => AND_16bit:M12.in1[0]
+in2[1] => AND_16bit:M12.in1[1]
+in2[2] => AND_16bit:M12.in1[2]
+in2[3] => AND_16bit:M12.in1[3]
+in2[4] => AND_16bit:M12.in1[4]
+in2[5] => AND_16bit:M12.in1[5]
+in2[6] => AND_16bit:M12.in1[6]
+in2[7] => AND_16bit:M12.in1[7]
+in2[8] => AND_16bit:M12.in1[8]
+in2[9] => AND_16bit:M12.in1[9]
+in2[10] => AND_16bit:M12.in1[10]
+in2[11] => AND_16bit:M12.in1[11]
+in2[12] => AND_16bit:M12.in1[12]
+in2[13] => AND_16bit:M12.in1[13]
+in2[14] => AND_16bit:M12.in1[14]
+in2[15] => AND_16bit:M12.in1[15]
+select_bit => NOT_gate:M10.in1
+select_bit => AND_16bit:M12.in2[15]
+select_bit => AND_16bit:M12.in2[14]
+select_bit => AND_16bit:M12.in2[13]
+select_bit => AND_16bit:M12.in2[12]
+select_bit => AND_16bit:M12.in2[11]
+select_bit => AND_16bit:M12.in2[10]
+select_bit => AND_16bit:M12.in2[9]
+select_bit => AND_16bit:M12.in2[8]
+select_bit => AND_16bit:M12.in2[7]
+select_bit => AND_16bit:M12.in2[6]
+select_bit => AND_16bit:M12.in2[5]
+select_bit => AND_16bit:M12.in2[4]
+select_bit => AND_16bit:M12.in2[3]
+select_bit => AND_16bit:M12.in2[2]
+select_bit => AND_16bit:M12.in2[1]
+select_bit => AND_16bit:M12.in2[0]
+out1[0] <= OR_16bit:M13.out1[0]
+out1[1] <= OR_16bit:M13.out1[1]
+out1[2] <= OR_16bit:M13.out1[2]
+out1[3] <= OR_16bit:M13.out1[3]
+out1[4] <= OR_16bit:M13.out1[4]
+out1[5] <= OR_16bit:M13.out1[5]
+out1[6] <= OR_16bit:M13.out1[6]
+out1[7] <= OR_16bit:M13.out1[7]
+out1[8] <= OR_16bit:M13.out1[8]
+out1[9] <= OR_16bit:M13.out1[9]
+out1[10] <= OR_16bit:M13.out1[10]
+out1[11] <= OR_16bit:M13.out1[11]
+out1[12] <= OR_16bit:M13.out1[12]
+out1[13] <= OR_16bit:M13.out1[13]
+out1[14] <= OR_16bit:M13.out1[14]
+out1[15] <= OR_16bit:M13.out1[15]
+
+
+|MULT_3bit|MULT_1bit:M32|NOT_gate:M10
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M11|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|AND_16bit:M12|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13
+in1[0] => OR_gate:or_loop:0:OR160.in1
+in1[1] => OR_gate:or_loop:1:OR160.in1
+in1[2] => OR_gate:or_loop:2:OR160.in1
+in1[3] => OR_gate:or_loop:3:OR160.in1
+in1[4] => OR_gate:or_loop:4:OR160.in1
+in1[5] => OR_gate:or_loop:5:OR160.in1
+in1[6] => OR_gate:or_loop:6:OR160.in1
+in1[7] => OR_gate:or_loop:7:OR160.in1
+in1[8] => OR_gate:or_loop:8:OR160.in1
+in1[9] => OR_gate:or_loop:9:OR160.in1
+in1[10] => OR_gate:or_loop:10:OR160.in1
+in1[11] => OR_gate:or_loop:11:OR160.in1
+in1[12] => OR_gate:or_loop:12:OR160.in1
+in1[13] => OR_gate:or_loop:13:OR160.in1
+in1[14] => OR_gate:or_loop:14:OR160.in1
+in1[15] => OR_gate:or_loop:15:OR160.in1
+in2[0] => OR_gate:or_loop:0:OR160.in2
+in2[1] => OR_gate:or_loop:1:OR160.in2
+in2[2] => OR_gate:or_loop:2:OR160.in2
+in2[3] => OR_gate:or_loop:3:OR160.in2
+in2[4] => OR_gate:or_loop:4:OR160.in2
+in2[5] => OR_gate:or_loop:5:OR160.in2
+in2[6] => OR_gate:or_loop:6:OR160.in2
+in2[7] => OR_gate:or_loop:7:OR160.in2
+in2[8] => OR_gate:or_loop:8:OR160.in2
+in2[9] => OR_gate:or_loop:9:OR160.in2
+in2[10] => OR_gate:or_loop:10:OR160.in2
+in2[11] => OR_gate:or_loop:11:OR160.in2
+in2[12] => OR_gate:or_loop:12:OR160.in2
+in2[13] => OR_gate:or_loop:13:OR160.in2
+in2[14] => OR_gate:or_loop:14:OR160.in2
+in2[15] => OR_gate:or_loop:15:OR160.in2
+out1[0] <= OR_gate:or_loop:0:OR160.out1
+out1[1] <= OR_gate:or_loop:1:OR160.out1
+out1[2] <= OR_gate:or_loop:2:OR160.out1
+out1[3] <= OR_gate:or_loop:3:OR160.out1
+out1[4] <= OR_gate:or_loop:4:OR160.out1
+out1[5] <= OR_gate:or_loop:5:OR160.out1
+out1[6] <= OR_gate:or_loop:6:OR160.out1
+out1[7] <= OR_gate:or_loop:7:OR160.out1
+out1[8] <= OR_gate:or_loop:8:OR160.out1
+out1[9] <= OR_gate:or_loop:9:OR160.out1
+out1[10] <= OR_gate:or_loop:10:OR160.out1
+out1[11] <= OR_gate:or_loop:11:OR160.out1
+out1[12] <= OR_gate:or_loop:12:OR160.out1
+out1[13] <= OR_gate:or_loop:13:OR160.out1
+out1[14] <= OR_gate:or_loop:14:OR160.out1
+out1[15] <= OR_gate:or_loop:15:OR160.out1
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:15:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:14:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:13:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:12:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:11:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:10:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:9:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:8:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:7:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:6:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:5:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:4:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:3:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:2:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:1:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M32|OR_16bit:M13|OR_gate:\or_loop:0:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33
+in1[0] => AND_16bit:M11.in1[0]
+in1[1] => AND_16bit:M11.in1[1]
+in1[2] => AND_16bit:M11.in1[2]
+in1[3] => AND_16bit:M11.in1[3]
+in1[4] => AND_16bit:M11.in1[4]
+in1[5] => AND_16bit:M11.in1[5]
+in1[6] => AND_16bit:M11.in1[6]
+in1[7] => AND_16bit:M11.in1[7]
+in1[8] => AND_16bit:M11.in1[8]
+in1[9] => AND_16bit:M11.in1[9]
+in1[10] => AND_16bit:M11.in1[10]
+in1[11] => AND_16bit:M11.in1[11]
+in1[12] => AND_16bit:M11.in1[12]
+in1[13] => AND_16bit:M11.in1[13]
+in1[14] => AND_16bit:M11.in1[14]
+in1[15] => AND_16bit:M11.in1[15]
+in2[0] => AND_16bit:M12.in1[0]
+in2[1] => AND_16bit:M12.in1[1]
+in2[2] => AND_16bit:M12.in1[2]
+in2[3] => AND_16bit:M12.in1[3]
+in2[4] => AND_16bit:M12.in1[4]
+in2[5] => AND_16bit:M12.in1[5]
+in2[6] => AND_16bit:M12.in1[6]
+in2[7] => AND_16bit:M12.in1[7]
+in2[8] => AND_16bit:M12.in1[8]
+in2[9] => AND_16bit:M12.in1[9]
+in2[10] => AND_16bit:M12.in1[10]
+in2[11] => AND_16bit:M12.in1[11]
+in2[12] => AND_16bit:M12.in1[12]
+in2[13] => AND_16bit:M12.in1[13]
+in2[14] => AND_16bit:M12.in1[14]
+in2[15] => AND_16bit:M12.in1[15]
+select_bit => NOT_gate:M10.in1
+select_bit => AND_16bit:M12.in2[15]
+select_bit => AND_16bit:M12.in2[14]
+select_bit => AND_16bit:M12.in2[13]
+select_bit => AND_16bit:M12.in2[12]
+select_bit => AND_16bit:M12.in2[11]
+select_bit => AND_16bit:M12.in2[10]
+select_bit => AND_16bit:M12.in2[9]
+select_bit => AND_16bit:M12.in2[8]
+select_bit => AND_16bit:M12.in2[7]
+select_bit => AND_16bit:M12.in2[6]
+select_bit => AND_16bit:M12.in2[5]
+select_bit => AND_16bit:M12.in2[4]
+select_bit => AND_16bit:M12.in2[3]
+select_bit => AND_16bit:M12.in2[2]
+select_bit => AND_16bit:M12.in2[1]
+select_bit => AND_16bit:M12.in2[0]
+out1[0] <= OR_16bit:M13.out1[0]
+out1[1] <= OR_16bit:M13.out1[1]
+out1[2] <= OR_16bit:M13.out1[2]
+out1[3] <= OR_16bit:M13.out1[3]
+out1[4] <= OR_16bit:M13.out1[4]
+out1[5] <= OR_16bit:M13.out1[5]
+out1[6] <= OR_16bit:M13.out1[6]
+out1[7] <= OR_16bit:M13.out1[7]
+out1[8] <= OR_16bit:M13.out1[8]
+out1[9] <= OR_16bit:M13.out1[9]
+out1[10] <= OR_16bit:M13.out1[10]
+out1[11] <= OR_16bit:M13.out1[11]
+out1[12] <= OR_16bit:M13.out1[12]
+out1[13] <= OR_16bit:M13.out1[13]
+out1[14] <= OR_16bit:M13.out1[14]
+out1[15] <= OR_16bit:M13.out1[15]
+
+
+|MULT_3bit|MULT_1bit:M33|NOT_gate:M10
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M11|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|AND_16bit:M12|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13
+in1[0] => OR_gate:or_loop:0:OR160.in1
+in1[1] => OR_gate:or_loop:1:OR160.in1
+in1[2] => OR_gate:or_loop:2:OR160.in1
+in1[3] => OR_gate:or_loop:3:OR160.in1
+in1[4] => OR_gate:or_loop:4:OR160.in1
+in1[5] => OR_gate:or_loop:5:OR160.in1
+in1[6] => OR_gate:or_loop:6:OR160.in1
+in1[7] => OR_gate:or_loop:7:OR160.in1
+in1[8] => OR_gate:or_loop:8:OR160.in1
+in1[9] => OR_gate:or_loop:9:OR160.in1
+in1[10] => OR_gate:or_loop:10:OR160.in1
+in1[11] => OR_gate:or_loop:11:OR160.in1
+in1[12] => OR_gate:or_loop:12:OR160.in1
+in1[13] => OR_gate:or_loop:13:OR160.in1
+in1[14] => OR_gate:or_loop:14:OR160.in1
+in1[15] => OR_gate:or_loop:15:OR160.in1
+in2[0] => OR_gate:or_loop:0:OR160.in2
+in2[1] => OR_gate:or_loop:1:OR160.in2
+in2[2] => OR_gate:or_loop:2:OR160.in2
+in2[3] => OR_gate:or_loop:3:OR160.in2
+in2[4] => OR_gate:or_loop:4:OR160.in2
+in2[5] => OR_gate:or_loop:5:OR160.in2
+in2[6] => OR_gate:or_loop:6:OR160.in2
+in2[7] => OR_gate:or_loop:7:OR160.in2
+in2[8] => OR_gate:or_loop:8:OR160.in2
+in2[9] => OR_gate:or_loop:9:OR160.in2
+in2[10] => OR_gate:or_loop:10:OR160.in2
+in2[11] => OR_gate:or_loop:11:OR160.in2
+in2[12] => OR_gate:or_loop:12:OR160.in2
+in2[13] => OR_gate:or_loop:13:OR160.in2
+in2[14] => OR_gate:or_loop:14:OR160.in2
+in2[15] => OR_gate:or_loop:15:OR160.in2
+out1[0] <= OR_gate:or_loop:0:OR160.out1
+out1[1] <= OR_gate:or_loop:1:OR160.out1
+out1[2] <= OR_gate:or_loop:2:OR160.out1
+out1[3] <= OR_gate:or_loop:3:OR160.out1
+out1[4] <= OR_gate:or_loop:4:OR160.out1
+out1[5] <= OR_gate:or_loop:5:OR160.out1
+out1[6] <= OR_gate:or_loop:6:OR160.out1
+out1[7] <= OR_gate:or_loop:7:OR160.out1
+out1[8] <= OR_gate:or_loop:8:OR160.out1
+out1[9] <= OR_gate:or_loop:9:OR160.out1
+out1[10] <= OR_gate:or_loop:10:OR160.out1
+out1[11] <= OR_gate:or_loop:11:OR160.out1
+out1[12] <= OR_gate:or_loop:12:OR160.out1
+out1[13] <= OR_gate:or_loop:13:OR160.out1
+out1[14] <= OR_gate:or_loop:14:OR160.out1
+out1[15] <= OR_gate:or_loop:15:OR160.out1
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:15:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:14:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:13:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:12:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:11:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:10:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:9:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:8:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:7:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:6:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:5:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:4:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:3:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:2:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:1:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M33|OR_16bit:M13|OR_gate:\or_loop:0:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34
+in1[0] => AND_16bit:M11.in1[0]
+in1[1] => AND_16bit:M11.in1[1]
+in1[2] => AND_16bit:M11.in1[2]
+in1[3] => AND_16bit:M11.in1[3]
+in1[4] => AND_16bit:M11.in1[4]
+in1[5] => AND_16bit:M11.in1[5]
+in1[6] => AND_16bit:M11.in1[6]
+in1[7] => AND_16bit:M11.in1[7]
+in1[8] => AND_16bit:M11.in1[8]
+in1[9] => AND_16bit:M11.in1[9]
+in1[10] => AND_16bit:M11.in1[10]
+in1[11] => AND_16bit:M11.in1[11]
+in1[12] => AND_16bit:M11.in1[12]
+in1[13] => AND_16bit:M11.in1[13]
+in1[14] => AND_16bit:M11.in1[14]
+in1[15] => AND_16bit:M11.in1[15]
+in2[0] => AND_16bit:M12.in1[0]
+in2[1] => AND_16bit:M12.in1[1]
+in2[2] => AND_16bit:M12.in1[2]
+in2[3] => AND_16bit:M12.in1[3]
+in2[4] => AND_16bit:M12.in1[4]
+in2[5] => AND_16bit:M12.in1[5]
+in2[6] => AND_16bit:M12.in1[6]
+in2[7] => AND_16bit:M12.in1[7]
+in2[8] => AND_16bit:M12.in1[8]
+in2[9] => AND_16bit:M12.in1[9]
+in2[10] => AND_16bit:M12.in1[10]
+in2[11] => AND_16bit:M12.in1[11]
+in2[12] => AND_16bit:M12.in1[12]
+in2[13] => AND_16bit:M12.in1[13]
+in2[14] => AND_16bit:M12.in1[14]
+in2[15] => AND_16bit:M12.in1[15]
+select_bit => NOT_gate:M10.in1
+select_bit => AND_16bit:M12.in2[15]
+select_bit => AND_16bit:M12.in2[14]
+select_bit => AND_16bit:M12.in2[13]
+select_bit => AND_16bit:M12.in2[12]
+select_bit => AND_16bit:M12.in2[11]
+select_bit => AND_16bit:M12.in2[10]
+select_bit => AND_16bit:M12.in2[9]
+select_bit => AND_16bit:M12.in2[8]
+select_bit => AND_16bit:M12.in2[7]
+select_bit => AND_16bit:M12.in2[6]
+select_bit => AND_16bit:M12.in2[5]
+select_bit => AND_16bit:M12.in2[4]
+select_bit => AND_16bit:M12.in2[3]
+select_bit => AND_16bit:M12.in2[2]
+select_bit => AND_16bit:M12.in2[1]
+select_bit => AND_16bit:M12.in2[0]
+out1[0] <= OR_16bit:M13.out1[0]
+out1[1] <= OR_16bit:M13.out1[1]
+out1[2] <= OR_16bit:M13.out1[2]
+out1[3] <= OR_16bit:M13.out1[3]
+out1[4] <= OR_16bit:M13.out1[4]
+out1[5] <= OR_16bit:M13.out1[5]
+out1[6] <= OR_16bit:M13.out1[6]
+out1[7] <= OR_16bit:M13.out1[7]
+out1[8] <= OR_16bit:M13.out1[8]
+out1[9] <= OR_16bit:M13.out1[9]
+out1[10] <= OR_16bit:M13.out1[10]
+out1[11] <= OR_16bit:M13.out1[11]
+out1[12] <= OR_16bit:M13.out1[12]
+out1[13] <= OR_16bit:M13.out1[13]
+out1[14] <= OR_16bit:M13.out1[14]
+out1[15] <= OR_16bit:M13.out1[15]
+
+
+|MULT_3bit|MULT_1bit:M34|NOT_gate:M10
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M11|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|AND_16bit:M12|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13
+in1[0] => OR_gate:or_loop:0:OR160.in1
+in1[1] => OR_gate:or_loop:1:OR160.in1
+in1[2] => OR_gate:or_loop:2:OR160.in1
+in1[3] => OR_gate:or_loop:3:OR160.in1
+in1[4] => OR_gate:or_loop:4:OR160.in1
+in1[5] => OR_gate:or_loop:5:OR160.in1
+in1[6] => OR_gate:or_loop:6:OR160.in1
+in1[7] => OR_gate:or_loop:7:OR160.in1
+in1[8] => OR_gate:or_loop:8:OR160.in1
+in1[9] => OR_gate:or_loop:9:OR160.in1
+in1[10] => OR_gate:or_loop:10:OR160.in1
+in1[11] => OR_gate:or_loop:11:OR160.in1
+in1[12] => OR_gate:or_loop:12:OR160.in1
+in1[13] => OR_gate:or_loop:13:OR160.in1
+in1[14] => OR_gate:or_loop:14:OR160.in1
+in1[15] => OR_gate:or_loop:15:OR160.in1
+in2[0] => OR_gate:or_loop:0:OR160.in2
+in2[1] => OR_gate:or_loop:1:OR160.in2
+in2[2] => OR_gate:or_loop:2:OR160.in2
+in2[3] => OR_gate:or_loop:3:OR160.in2
+in2[4] => OR_gate:or_loop:4:OR160.in2
+in2[5] => OR_gate:or_loop:5:OR160.in2
+in2[6] => OR_gate:or_loop:6:OR160.in2
+in2[7] => OR_gate:or_loop:7:OR160.in2
+in2[8] => OR_gate:or_loop:8:OR160.in2
+in2[9] => OR_gate:or_loop:9:OR160.in2
+in2[10] => OR_gate:or_loop:10:OR160.in2
+in2[11] => OR_gate:or_loop:11:OR160.in2
+in2[12] => OR_gate:or_loop:12:OR160.in2
+in2[13] => OR_gate:or_loop:13:OR160.in2
+in2[14] => OR_gate:or_loop:14:OR160.in2
+in2[15] => OR_gate:or_loop:15:OR160.in2
+out1[0] <= OR_gate:or_loop:0:OR160.out1
+out1[1] <= OR_gate:or_loop:1:OR160.out1
+out1[2] <= OR_gate:or_loop:2:OR160.out1
+out1[3] <= OR_gate:or_loop:3:OR160.out1
+out1[4] <= OR_gate:or_loop:4:OR160.out1
+out1[5] <= OR_gate:or_loop:5:OR160.out1
+out1[6] <= OR_gate:or_loop:6:OR160.out1
+out1[7] <= OR_gate:or_loop:7:OR160.out1
+out1[8] <= OR_gate:or_loop:8:OR160.out1
+out1[9] <= OR_gate:or_loop:9:OR160.out1
+out1[10] <= OR_gate:or_loop:10:OR160.out1
+out1[11] <= OR_gate:or_loop:11:OR160.out1
+out1[12] <= OR_gate:or_loop:12:OR160.out1
+out1[13] <= OR_gate:or_loop:13:OR160.out1
+out1[14] <= OR_gate:or_loop:14:OR160.out1
+out1[15] <= OR_gate:or_loop:15:OR160.out1
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:15:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:14:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:13:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:12:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:11:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:10:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:9:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:8:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:7:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:6:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:5:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:4:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:3:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:2:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:1:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:0:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35
+in1[0] => AND_16bit:M11.in1[0]
+in1[1] => AND_16bit:M11.in1[1]
+in1[2] => AND_16bit:M11.in1[2]
+in1[3] => AND_16bit:M11.in1[3]
+in1[4] => AND_16bit:M11.in1[4]
+in1[5] => AND_16bit:M11.in1[5]
+in1[6] => AND_16bit:M11.in1[6]
+in1[7] => AND_16bit:M11.in1[7]
+in1[8] => AND_16bit:M11.in1[8]
+in1[9] => AND_16bit:M11.in1[9]
+in1[10] => AND_16bit:M11.in1[10]
+in1[11] => AND_16bit:M11.in1[11]
+in1[12] => AND_16bit:M11.in1[12]
+in1[13] => AND_16bit:M11.in1[13]
+in1[14] => AND_16bit:M11.in1[14]
+in1[15] => AND_16bit:M11.in1[15]
+in2[0] => AND_16bit:M12.in1[0]
+in2[1] => AND_16bit:M12.in1[1]
+in2[2] => AND_16bit:M12.in1[2]
+in2[3] => AND_16bit:M12.in1[3]
+in2[4] => AND_16bit:M12.in1[4]
+in2[5] => AND_16bit:M12.in1[5]
+in2[6] => AND_16bit:M12.in1[6]
+in2[7] => AND_16bit:M12.in1[7]
+in2[8] => AND_16bit:M12.in1[8]
+in2[9] => AND_16bit:M12.in1[9]
+in2[10] => AND_16bit:M12.in1[10]
+in2[11] => AND_16bit:M12.in1[11]
+in2[12] => AND_16bit:M12.in1[12]
+in2[13] => AND_16bit:M12.in1[13]
+in2[14] => AND_16bit:M12.in1[14]
+in2[15] => AND_16bit:M12.in1[15]
+select_bit => NOT_gate:M10.in1
+select_bit => AND_16bit:M12.in2[15]
+select_bit => AND_16bit:M12.in2[14]
+select_bit => AND_16bit:M12.in2[13]
+select_bit => AND_16bit:M12.in2[12]
+select_bit => AND_16bit:M12.in2[11]
+select_bit => AND_16bit:M12.in2[10]
+select_bit => AND_16bit:M12.in2[9]
+select_bit => AND_16bit:M12.in2[8]
+select_bit => AND_16bit:M12.in2[7]
+select_bit => AND_16bit:M12.in2[6]
+select_bit => AND_16bit:M12.in2[5]
+select_bit => AND_16bit:M12.in2[4]
+select_bit => AND_16bit:M12.in2[3]
+select_bit => AND_16bit:M12.in2[2]
+select_bit => AND_16bit:M12.in2[1]
+select_bit => AND_16bit:M12.in2[0]
+out1[0] <= OR_16bit:M13.out1[0]
+out1[1] <= OR_16bit:M13.out1[1]
+out1[2] <= OR_16bit:M13.out1[2]
+out1[3] <= OR_16bit:M13.out1[3]
+out1[4] <= OR_16bit:M13.out1[4]
+out1[5] <= OR_16bit:M13.out1[5]
+out1[6] <= OR_16bit:M13.out1[6]
+out1[7] <= OR_16bit:M13.out1[7]
+out1[8] <= OR_16bit:M13.out1[8]
+out1[9] <= OR_16bit:M13.out1[9]
+out1[10] <= OR_16bit:M13.out1[10]
+out1[11] <= OR_16bit:M13.out1[11]
+out1[12] <= OR_16bit:M13.out1[12]
+out1[13] <= OR_16bit:M13.out1[13]
+out1[14] <= OR_16bit:M13.out1[14]
+out1[15] <= OR_16bit:M13.out1[15]
+
+
+|MULT_3bit|MULT_1bit:M35|NOT_gate:M10
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M11|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|AND_16bit:M12|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13
+in1[0] => OR_gate:or_loop:0:OR160.in1
+in1[1] => OR_gate:or_loop:1:OR160.in1
+in1[2] => OR_gate:or_loop:2:OR160.in1
+in1[3] => OR_gate:or_loop:3:OR160.in1
+in1[4] => OR_gate:or_loop:4:OR160.in1
+in1[5] => OR_gate:or_loop:5:OR160.in1
+in1[6] => OR_gate:or_loop:6:OR160.in1
+in1[7] => OR_gate:or_loop:7:OR160.in1
+in1[8] => OR_gate:or_loop:8:OR160.in1
+in1[9] => OR_gate:or_loop:9:OR160.in1
+in1[10] => OR_gate:or_loop:10:OR160.in1
+in1[11] => OR_gate:or_loop:11:OR160.in1
+in1[12] => OR_gate:or_loop:12:OR160.in1
+in1[13] => OR_gate:or_loop:13:OR160.in1
+in1[14] => OR_gate:or_loop:14:OR160.in1
+in1[15] => OR_gate:or_loop:15:OR160.in1
+in2[0] => OR_gate:or_loop:0:OR160.in2
+in2[1] => OR_gate:or_loop:1:OR160.in2
+in2[2] => OR_gate:or_loop:2:OR160.in2
+in2[3] => OR_gate:or_loop:3:OR160.in2
+in2[4] => OR_gate:or_loop:4:OR160.in2
+in2[5] => OR_gate:or_loop:5:OR160.in2
+in2[6] => OR_gate:or_loop:6:OR160.in2
+in2[7] => OR_gate:or_loop:7:OR160.in2
+in2[8] => OR_gate:or_loop:8:OR160.in2
+in2[9] => OR_gate:or_loop:9:OR160.in2
+in2[10] => OR_gate:or_loop:10:OR160.in2
+in2[11] => OR_gate:or_loop:11:OR160.in2
+in2[12] => OR_gate:or_loop:12:OR160.in2
+in2[13] => OR_gate:or_loop:13:OR160.in2
+in2[14] => OR_gate:or_loop:14:OR160.in2
+in2[15] => OR_gate:or_loop:15:OR160.in2
+out1[0] <= OR_gate:or_loop:0:OR160.out1
+out1[1] <= OR_gate:or_loop:1:OR160.out1
+out1[2] <= OR_gate:or_loop:2:OR160.out1
+out1[3] <= OR_gate:or_loop:3:OR160.out1
+out1[4] <= OR_gate:or_loop:4:OR160.out1
+out1[5] <= OR_gate:or_loop:5:OR160.out1
+out1[6] <= OR_gate:or_loop:6:OR160.out1
+out1[7] <= OR_gate:or_loop:7:OR160.out1
+out1[8] <= OR_gate:or_loop:8:OR160.out1
+out1[9] <= OR_gate:or_loop:9:OR160.out1
+out1[10] <= OR_gate:or_loop:10:OR160.out1
+out1[11] <= OR_gate:or_loop:11:OR160.out1
+out1[12] <= OR_gate:or_loop:12:OR160.out1
+out1[13] <= OR_gate:or_loop:13:OR160.out1
+out1[14] <= OR_gate:or_loop:14:OR160.out1
+out1[15] <= OR_gate:or_loop:15:OR160.out1
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:15:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:14:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:13:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:12:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:11:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:10:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:9:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:8:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:7:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:6:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:5:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:4:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:3:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:2:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:1:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M35|OR_16bit:M13|OR_gate:\or_loop:0:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36
+in1[0] => AND_16bit:M11.in1[0]
+in1[1] => AND_16bit:M11.in1[1]
+in1[2] => AND_16bit:M11.in1[2]
+in1[3] => AND_16bit:M11.in1[3]
+in1[4] => AND_16bit:M11.in1[4]
+in1[5] => AND_16bit:M11.in1[5]
+in1[6] => AND_16bit:M11.in1[6]
+in1[7] => AND_16bit:M11.in1[7]
+in1[8] => AND_16bit:M11.in1[8]
+in1[9] => AND_16bit:M11.in1[9]
+in1[10] => AND_16bit:M11.in1[10]
+in1[11] => AND_16bit:M11.in1[11]
+in1[12] => AND_16bit:M11.in1[12]
+in1[13] => AND_16bit:M11.in1[13]
+in1[14] => AND_16bit:M11.in1[14]
+in1[15] => AND_16bit:M11.in1[15]
+in2[0] => AND_16bit:M12.in1[0]
+in2[1] => AND_16bit:M12.in1[1]
+in2[2] => AND_16bit:M12.in1[2]
+in2[3] => AND_16bit:M12.in1[3]
+in2[4] => AND_16bit:M12.in1[4]
+in2[5] => AND_16bit:M12.in1[5]
+in2[6] => AND_16bit:M12.in1[6]
+in2[7] => AND_16bit:M12.in1[7]
+in2[8] => AND_16bit:M12.in1[8]
+in2[9] => AND_16bit:M12.in1[9]
+in2[10] => AND_16bit:M12.in1[10]
+in2[11] => AND_16bit:M12.in1[11]
+in2[12] => AND_16bit:M12.in1[12]
+in2[13] => AND_16bit:M12.in1[13]
+in2[14] => AND_16bit:M12.in1[14]
+in2[15] => AND_16bit:M12.in1[15]
+select_bit => NOT_gate:M10.in1
+select_bit => AND_16bit:M12.in2[15]
+select_bit => AND_16bit:M12.in2[14]
+select_bit => AND_16bit:M12.in2[13]
+select_bit => AND_16bit:M12.in2[12]
+select_bit => AND_16bit:M12.in2[11]
+select_bit => AND_16bit:M12.in2[10]
+select_bit => AND_16bit:M12.in2[9]
+select_bit => AND_16bit:M12.in2[8]
+select_bit => AND_16bit:M12.in2[7]
+select_bit => AND_16bit:M12.in2[6]
+select_bit => AND_16bit:M12.in2[5]
+select_bit => AND_16bit:M12.in2[4]
+select_bit => AND_16bit:M12.in2[3]
+select_bit => AND_16bit:M12.in2[2]
+select_bit => AND_16bit:M12.in2[1]
+select_bit => AND_16bit:M12.in2[0]
+out1[0] <= OR_16bit:M13.out1[0]
+out1[1] <= OR_16bit:M13.out1[1]
+out1[2] <= OR_16bit:M13.out1[2]
+out1[3] <= OR_16bit:M13.out1[3]
+out1[4] <= OR_16bit:M13.out1[4]
+out1[5] <= OR_16bit:M13.out1[5]
+out1[6] <= OR_16bit:M13.out1[6]
+out1[7] <= OR_16bit:M13.out1[7]
+out1[8] <= OR_16bit:M13.out1[8]
+out1[9] <= OR_16bit:M13.out1[9]
+out1[10] <= OR_16bit:M13.out1[10]
+out1[11] <= OR_16bit:M13.out1[11]
+out1[12] <= OR_16bit:M13.out1[12]
+out1[13] <= OR_16bit:M13.out1[13]
+out1[14] <= OR_16bit:M13.out1[14]
+out1[15] <= OR_16bit:M13.out1[15]
+
+
+|MULT_3bit|MULT_1bit:M36|NOT_gate:M10
+in1 => out1.DATAIN
+out1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12
+in1[0] => AND_gate:and_loop:0:AND160.in1
+in1[1] => AND_gate:and_loop:1:AND160.in1
+in1[2] => AND_gate:and_loop:2:AND160.in1
+in1[3] => AND_gate:and_loop:3:AND160.in1
+in1[4] => AND_gate:and_loop:4:AND160.in1
+in1[5] => AND_gate:and_loop:5:AND160.in1
+in1[6] => AND_gate:and_loop:6:AND160.in1
+in1[7] => AND_gate:and_loop:7:AND160.in1
+in1[8] => AND_gate:and_loop:8:AND160.in1
+in1[9] => AND_gate:and_loop:9:AND160.in1
+in1[10] => AND_gate:and_loop:10:AND160.in1
+in1[11] => AND_gate:and_loop:11:AND160.in1
+in1[12] => AND_gate:and_loop:12:AND160.in1
+in1[13] => AND_gate:and_loop:13:AND160.in1
+in1[14] => AND_gate:and_loop:14:AND160.in1
+in1[15] => AND_gate:and_loop:15:AND160.in1
+in2[0] => AND_gate:and_loop:0:AND160.in2
+in2[1] => AND_gate:and_loop:1:AND160.in2
+in2[2] => AND_gate:and_loop:2:AND160.in2
+in2[3] => AND_gate:and_loop:3:AND160.in2
+in2[4] => AND_gate:and_loop:4:AND160.in2
+in2[5] => AND_gate:and_loop:5:AND160.in2
+in2[6] => AND_gate:and_loop:6:AND160.in2
+in2[7] => AND_gate:and_loop:7:AND160.in2
+in2[8] => AND_gate:and_loop:8:AND160.in2
+in2[9] => AND_gate:and_loop:9:AND160.in2
+in2[10] => AND_gate:and_loop:10:AND160.in2
+in2[11] => AND_gate:and_loop:11:AND160.in2
+in2[12] => AND_gate:and_loop:12:AND160.in2
+in2[13] => AND_gate:and_loop:13:AND160.in2
+in2[14] => AND_gate:and_loop:14:AND160.in2
+in2[15] => AND_gate:and_loop:15:AND160.in2
+out1[0] <= AND_gate:and_loop:0:AND160.out1
+out1[1] <= AND_gate:and_loop:1:AND160.out1
+out1[2] <= AND_gate:and_loop:2:AND160.out1
+out1[3] <= AND_gate:and_loop:3:AND160.out1
+out1[4] <= AND_gate:and_loop:4:AND160.out1
+out1[5] <= AND_gate:and_loop:5:AND160.out1
+out1[6] <= AND_gate:and_loop:6:AND160.out1
+out1[7] <= AND_gate:and_loop:7:AND160.out1
+out1[8] <= AND_gate:and_loop:8:AND160.out1
+out1[9] <= AND_gate:and_loop:9:AND160.out1
+out1[10] <= AND_gate:and_loop:10:AND160.out1
+out1[11] <= AND_gate:and_loop:11:AND160.out1
+out1[12] <= AND_gate:and_loop:12:AND160.out1
+out1[13] <= AND_gate:and_loop:13:AND160.out1
+out1[14] <= AND_gate:and_loop:14:AND160.out1
+out1[15] <= AND_gate:and_loop:15:AND160.out1
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:15:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:14:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:13:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:12:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:11:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:10:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:9:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:8:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:7:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:6:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:5:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:4:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:3:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:2:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:1:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|AND_16bit:M12|AND_gate:\and_loop:0:AND160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13
+in1[0] => OR_gate:or_loop:0:OR160.in1
+in1[1] => OR_gate:or_loop:1:OR160.in1
+in1[2] => OR_gate:or_loop:2:OR160.in1
+in1[3] => OR_gate:or_loop:3:OR160.in1
+in1[4] => OR_gate:or_loop:4:OR160.in1
+in1[5] => OR_gate:or_loop:5:OR160.in1
+in1[6] => OR_gate:or_loop:6:OR160.in1
+in1[7] => OR_gate:or_loop:7:OR160.in1
+in1[8] => OR_gate:or_loop:8:OR160.in1
+in1[9] => OR_gate:or_loop:9:OR160.in1
+in1[10] => OR_gate:or_loop:10:OR160.in1
+in1[11] => OR_gate:or_loop:11:OR160.in1
+in1[12] => OR_gate:or_loop:12:OR160.in1
+in1[13] => OR_gate:or_loop:13:OR160.in1
+in1[14] => OR_gate:or_loop:14:OR160.in1
+in1[15] => OR_gate:or_loop:15:OR160.in1
+in2[0] => OR_gate:or_loop:0:OR160.in2
+in2[1] => OR_gate:or_loop:1:OR160.in2
+in2[2] => OR_gate:or_loop:2:OR160.in2
+in2[3] => OR_gate:or_loop:3:OR160.in2
+in2[4] => OR_gate:or_loop:4:OR160.in2
+in2[5] => OR_gate:or_loop:5:OR160.in2
+in2[6] => OR_gate:or_loop:6:OR160.in2
+in2[7] => OR_gate:or_loop:7:OR160.in2
+in2[8] => OR_gate:or_loop:8:OR160.in2
+in2[9] => OR_gate:or_loop:9:OR160.in2
+in2[10] => OR_gate:or_loop:10:OR160.in2
+in2[11] => OR_gate:or_loop:11:OR160.in2
+in2[12] => OR_gate:or_loop:12:OR160.in2
+in2[13] => OR_gate:or_loop:13:OR160.in2
+in2[14] => OR_gate:or_loop:14:OR160.in2
+in2[15] => OR_gate:or_loop:15:OR160.in2
+out1[0] <= OR_gate:or_loop:0:OR160.out1
+out1[1] <= OR_gate:or_loop:1:OR160.out1
+out1[2] <= OR_gate:or_loop:2:OR160.out1
+out1[3] <= OR_gate:or_loop:3:OR160.out1
+out1[4] <= OR_gate:or_loop:4:OR160.out1
+out1[5] <= OR_gate:or_loop:5:OR160.out1
+out1[6] <= OR_gate:or_loop:6:OR160.out1
+out1[7] <= OR_gate:or_loop:7:OR160.out1
+out1[8] <= OR_gate:or_loop:8:OR160.out1
+out1[9] <= OR_gate:or_loop:9:OR160.out1
+out1[10] <= OR_gate:or_loop:10:OR160.out1
+out1[11] <= OR_gate:or_loop:11:OR160.out1
+out1[12] <= OR_gate:or_loop:12:OR160.out1
+out1[13] <= OR_gate:or_loop:13:OR160.out1
+out1[14] <= OR_gate:or_loop:14:OR160.out1
+out1[15] <= OR_gate:or_loop:15:OR160.out1
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:15:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:14:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:13:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:12:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:11:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:10:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:9:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:8:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:7:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:6:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:5:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:4:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:3:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:2:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:1:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MULT_3bit|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:0:OR160
+in1 => out1~0.IN0
+in2 => out1~0.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 

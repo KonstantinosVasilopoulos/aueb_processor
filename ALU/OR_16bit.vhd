@@ -7,7 +7,7 @@ port(in1, in2: in std_logic_vector(15 downto 0);
 end OR_16bit;
 
 architecture Or16BitLogic of OR_16bit is
-component OR_gate is
+	component OR_gate is
 	port(in1, in2: in std_logic;
 		out1: out std_logic);
 	end component OR_gate;
