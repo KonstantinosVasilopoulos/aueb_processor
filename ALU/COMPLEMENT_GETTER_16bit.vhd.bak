@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Produce the 1's complement of a 16 bit number
 entity COMPLEMENT_GETTER_16bit is
 port(in1: in std_logic_vector(15 downto 0);
 	out1: out std_logic_vector(15 downto 0));

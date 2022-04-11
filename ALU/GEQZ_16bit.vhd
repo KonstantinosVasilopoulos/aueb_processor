@@ -12,5 +12,5 @@ architecture GeqZ16BitLogic of GEQZ_16bit is
 		out1: out std_logic);
 	end component NOT_gate;
 begin
-	GEQZ0: NOT_gate port map(in1(0), out1(0));
+	GEQZ0: NOT_gate port map(in1(15), out1(0));
 end GeqZ16BitLogic;

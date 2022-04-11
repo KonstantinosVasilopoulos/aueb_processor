@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+-- 8 to 1 multiplexer
 entity MULT_3bit is
 port(in1, in2, in3, in4, in5, in6: in std_logic_vector(15 downto 0);
 	select_bits: in std_logic_vector(2 downto 0);
