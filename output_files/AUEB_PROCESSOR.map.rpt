@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AUEB_PROCESSOR
-Mon Apr 11 13:53:06 2022
+Mon Apr 11 14:52:03 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,12 +13,27 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "MULT_3bit:A7|MULT_1bit:M33"
- 10. Port Connectivity Checks: "FULL_ADDER_16bit:A2"
- 11. Port Connectivity Checks: "COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:0:FF160"
+ 11. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:1:FF160"
+ 12. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:2:FF160"
+ 13. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:3:FF160"
+ 14. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:4:FF160"
+ 15. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:5:FF160"
+ 16. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:6:FF160"
+ 17. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:7:FF160"
+ 18. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:8:FF160"
+ 19. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:9:FF160"
+ 20. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:10:FF160"
+ 21. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:11:FF160"
+ 22. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:12:FF160"
+ 23. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:13:FF160"
+ 24. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:14:FF160"
+ 25. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF11"
+ 26. Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160"
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +59,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 11 13:53:06 2022           ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 11 14:52:03 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; AUEB_PROCESSOR                                  ;
-; Top-level Entity Name              ; ALU_16bit                                       ;
+; Top-level Entity Name              ; FLIP_FLOP_16bit                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 105                                             ;
-;     Total combinational functions  ; 105                                             ;
+; Total logic elements               ; 49                                              ;
+;     Total combinational functions  ; 49                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 51                                              ;
+; Total pins                         ; 34                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -67,7 +82,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; ALU_16bit          ; AUEB_PROCESSOR     ;
+; Top-level entity name                                                      ; FLIP_FLOP_16bit    ; AUEB_PROCESSOR     ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,172 +172,228 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; ALU/OR_gate.vhd                  ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/OR_gate.vhd                 ;         ;
-; ALU/NOT_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/NOT_gate.vhd                ;         ;
-; ALU/FULL_ADDER_16bit.vhd         ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/FULL_ADDER_16bit.vhd        ;         ;
-; ALU/FULL_ADDER_1bit.vhd          ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/FULL_ADDER_1bit.vhd         ;         ;
-; ALU/AND_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/AND_gate.vhd                ;         ;
-; ALU/ALU_16bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/ALU_16bit.vhd               ;         ;
-; ALU/XOR_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/XOR_gate.vhd                ;         ;
-; ALU/GEQZ_16bit.vhd               ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/GEQZ_16bit.vhd              ;         ;
-; ALU/OR_16bit.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/OR_16bit.vhd                ;         ;
-; ALU/AND_16bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/AND_16bit.vhd               ;         ;
-; ALU/COMPLEMENT_GETTER_16bit.vhd  ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/COMPLEMENT_GETTER_16bit.vhd ;         ;
-; ALU/MULT_1bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/MULT_1bit.vhd               ;         ;
-; ALU/MULT_3bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/MULT_3bit.vhd               ;         ;
-; ALU/NOT_16bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/NOT_16bit.vhd               ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; ALU/NOT_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/NOT_gate.vhd                 ;         ;
+; ALU/AND_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/AND_gate.vhd                 ;         ;
+; ALU/REGISTER/SR_LATCH.vhd        ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/REGISTER/SR_LATCH.vhd        ;         ;
+; ALU/REGISTER/FLIP_FLOP_1bit.vhd  ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/REGISTER/FLIP_FLOP_1bit.vhd  ;         ;
+; ALU/REGISTER/FLIP_FLOP_16bit.vhd ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/REGISTER/FLIP_FLOP_16bit.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 105          ;
-;                                             ;              ;
-; Total combinational functions               ; 105          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 79           ;
-;     -- 3 input functions                    ; 9            ;
-;     -- <=2 input functions                  ; 17           ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 105          ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 51           ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-; Maximum fan-out node                        ; operation[0] ;
-; Maximum fan-out                             ; 46           ;
-; Total fan-out                               ; 393          ;
-; Average fan-out                             ; 2.52         ;
-+---------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                              ;
++---------------------------------------------+------------------------------------------------------------+
+; Resource                                    ; Usage                                                      ;
++---------------------------------------------+------------------------------------------------------------+
+; Estimated Total logic elements              ; 49                                                         ;
+;                                             ;                                                            ;
+; Total combinational functions               ; 49                                                         ;
+; Logic element usage by number of LUT inputs ;                                                            ;
+;     -- 4 input functions                    ; 48                                                         ;
+;     -- 3 input functions                    ; 0                                                          ;
+;     -- <=2 input functions                  ; 1                                                          ;
+;                                             ;                                                            ;
+; Logic elements by mode                      ;                                                            ;
+;     -- normal mode                          ; 49                                                         ;
+;     -- arithmetic mode                      ; 0                                                          ;
+;                                             ;                                                            ;
+; Total registers                             ; 0                                                          ;
+;     -- Dedicated logic registers            ; 0                                                          ;
+;     -- I/O registers                        ; 0                                                          ;
+;                                             ;                                                            ;
+; I/O pins                                    ; 34                                                         ;
+; Embedded Multiplier 9-bit elements          ; 0                                                          ;
+; Maximum fan-out node                        ; FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|AND_gate:FF10|out1 ;
+; Maximum fan-out                             ; 32                                                         ;
+; Total fan-out                               ; 210                                                        ;
+; Average fan-out                             ; 2.53                                                       ;
++---------------------------------------------+------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Library Name ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
-; |ALU_16bit                                 ; 105 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |ALU_16bit                                                                                        ; work         ;
-;    |COMPLEMENT_GETTER_16bit:A0|            ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0                                                             ; work         ;
-;       |FULL_ADDER_16bit:CG161|             ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161                                      ; work         ;
-;          |FULL_ADDER_1bit:FA1612|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1612               ; work         ;
-;             |AND_gate:FAO2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1612|AND_gate:FAO2 ; work         ;
-;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1612|XOR_gate:FAO1 ; work         ;
-;          |FULL_ADDER_1bit:FA163|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA163                ; work         ;
-;             |AND_gate:FAO2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA163|AND_gate:FAO2  ; work         ;
-;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA163|XOR_gate:FAO1  ; work         ;
-;          |FULL_ADDER_1bit:FA166|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA166                ; work         ;
-;             |AND_gate:FAO2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA166|AND_gate:FAO2  ; work         ;
-;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA166|XOR_gate:FAO1  ; work         ;
-;          |FULL_ADDER_1bit:FA169|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA169                ; work         ;
-;             |AND_gate:FAO2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA169|AND_gate:FAO2  ; work         ;
-;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA169|XOR_gate:FAO1  ; work         ;
-;    |FULL_ADDER_16bit:A2|                   ; 27 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2                                                                    ; work         ;
-;       |FULL_ADDER_1bit:FA1610|             ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1610                                             ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1610|OR_gate:FAO4                                ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1610|XOR_gate:FAO1                               ; work         ;
-;       |FULL_ADDER_1bit:FA1611|             ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611                                             ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|OR_gate:FAO4                                ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|XOR_gate:FAO1                               ; work         ;
-;       |FULL_ADDER_1bit:FA1612|             ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612                                             ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612|OR_gate:FAO4                                ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612|XOR_gate:FAO1                               ; work         ;
-;       |FULL_ADDER_1bit:FA1613|             ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1613                                             ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1613|OR_gate:FAO4                                ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1613|XOR_gate:FAO1                               ; work         ;
-;       |FULL_ADDER_1bit:FA1614|             ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614                                             ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614|XOR_gate:FAO1                               ; work         ;
-;       |FULL_ADDER_1bit:FA161|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161|OR_gate:FAO4                                 ; work         ;
-;       |FULL_ADDER_1bit:FA162|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA162                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA162|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA162|XOR_gate:FAO1                                ; work         ;
-;       |FULL_ADDER_1bit:FA163|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|XOR_gate:FAO1                                ; work         ;
-;       |FULL_ADDER_1bit:FA164|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164|XOR_gate:FAO1                                ; work         ;
-;       |FULL_ADDER_1bit:FA165|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA165                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA165|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA165|XOR_gate:FAO1                                ; work         ;
-;       |FULL_ADDER_1bit:FA166|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166|XOR_gate:FAO1                                ; work         ;
-;       |FULL_ADDER_1bit:FA167|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA167                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA167|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA167|XOR_gate:FAO1                                ; work         ;
-;       |FULL_ADDER_1bit:FA168|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|XOR_gate:FAO1                                ; work         ;
-;       |FULL_ADDER_1bit:FA169|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169                                              ; work         ;
-;          |OR_gate:FAO4|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169|OR_gate:FAO4                                 ; work         ;
-;          |XOR_gate:FAO1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169|XOR_gate:FAO1                                ; work         ;
-;    |MULT_1bit:A1|                          ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1                                                                           ; work         ;
-;       |AND_16bit:M11|                      ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11                                                             ; work         ;
-;          |AND_gate:\and_loop:10:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:10:AND160                                ; work         ;
-;          |AND_gate:\and_loop:11:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:11:AND160                                ; work         ;
-;          |AND_gate:\and_loop:12:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:12:AND160                                ; work         ;
-;          |AND_gate:\and_loop:13:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:13:AND160                                ; work         ;
-;          |AND_gate:\and_loop:14:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:14:AND160                                ; work         ;
-;          |AND_gate:\and_loop:2:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:2:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:3:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:3:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:4:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:4:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:5:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:5:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:6:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:6:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:7:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:7:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:8:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:8:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:9:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:9:AND160                                 ; work         ;
-;       |AND_16bit:M12|                      ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12                                                             ; work         ;
-;          |AND_gate:\and_loop:10:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:10:AND160                                ; work         ;
-;          |AND_gate:\and_loop:11:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:11:AND160                                ; work         ;
-;          |AND_gate:\and_loop:12:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:12:AND160                                ; work         ;
-;          |AND_gate:\and_loop:13:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:13:AND160                                ; work         ;
-;          |AND_gate:\and_loop:14:AND160|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:14:AND160                                ; work         ;
-;          |AND_gate:\and_loop:2:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:2:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:3:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:3:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:4:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:4:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:5:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:5:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:6:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:6:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:7:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:7:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:8:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:8:AND160                                 ; work         ;
-;          |AND_gate:\and_loop:9:AND160|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:9:AND160                                 ; work         ;
-;    |MULT_3bit:A7|                          ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7                                                                           ; work         ;
-;       |MULT_1bit:M36|                      ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36                                                             ; work         ;
-;          |AND_16bit:M11|                   ; 36 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11                                               ; work         ;
-;             |AND_gate:\and_loop:10:AND160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:10:AND160                  ; work         ;
-;             |AND_gate:\and_loop:11:AND160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:11:AND160                  ; work         ;
-;             |AND_gate:\and_loop:12:AND160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:12:AND160                  ; work         ;
-;             |AND_gate:\and_loop:13:AND160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:13:AND160                  ; work         ;
-;             |AND_gate:\and_loop:14:AND160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:14:AND160                  ; work         ;
-;             |AND_gate:\and_loop:15:AND160| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:15:AND160                  ; work         ;
-;             |AND_gate:\and_loop:1:AND160|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:1:AND160                   ; work         ;
-;             |AND_gate:\and_loop:2:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:2:AND160                   ; work         ;
-;             |AND_gate:\and_loop:3:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:3:AND160                   ; work         ;
-;             |AND_gate:\and_loop:4:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:4:AND160                   ; work         ;
-;             |AND_gate:\and_loop:5:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:5:AND160                   ; work         ;
-;             |AND_gate:\and_loop:6:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:6:AND160                   ; work         ;
-;             |AND_gate:\and_loop:7:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:7:AND160                   ; work         ;
-;             |AND_gate:\and_loop:8:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:8:AND160                   ; work         ;
-;             |AND_gate:\and_loop:9:AND160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:9:AND160                   ; work         ;
-;          |OR_16bit:M13|                    ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|OR_16bit:M13                                                ; work         ;
-;             |OR_gate:\or_loop:0:OR160|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|MULT_3bit:A7|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:0:OR160                       ; work         ;
-;    |NOT_16bit:A6|                          ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|NOT_16bit:A6                                                                           ; work         ;
-;       |OR_gate:\nor_loop:3:NOT162|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_16bit|NOT_16bit:A6|OR_gate:\nor_loop:3:NOT162                                                ; work         ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; |FLIP_FLOP_16bit                              ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |FLIP_FLOP_16bit                                                                     ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|  ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160                             ; work         ;
+;       |AND_gate:FF10|                         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|AND_gate:FF10               ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:10:FF160| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:10:FF160                            ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF11              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF11|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF13              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF13|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF14              ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF14|AND_gate:SR0 ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:11:FF160| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:11:FF160                            ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF11              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF11|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF13              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF13|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF14              ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF14|AND_gate:SR0 ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:12:FF160| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:12:FF160                            ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF11              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF11|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF13              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF13|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF14              ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF14|AND_gate:SR0 ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:13:FF160| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:13:FF160                            ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF11              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF11|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF13              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF13|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF14              ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF14|AND_gate:SR0 ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:14:FF160| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:14:FF160                            ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF11              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF11|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF13              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF13|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF14              ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF14|AND_gate:SR0 ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:15:FF160| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:15:FF160                            ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF11              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF11|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF13              ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF13|AND_gate:SR2 ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF14              ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF14|AND_gate:SR0 ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:1:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:2:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:3:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:4:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:5:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:6:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:7:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:8:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
+;    |FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:9:FF160                             ; work         ;
+;       |SR_LATCH:FF11|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF11               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF11|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF13|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF13               ; work         ;
+;          |AND_gate:SR2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF13|AND_gate:SR2  ; work         ;
+;       |SR_LATCH:FF14|                         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF14               ; work         ;
+;          |AND_gate:SR0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FLIP_FLOP_16bit|FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF14|AND_gate:SR0  ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                    ;
++----------------------------------------------------------------------------+----+
+; Logic Cell Name                                                            ;    ;
++----------------------------------------------------------------------------+----+
+; FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:0:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:1:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:2:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:3:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:4:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:5:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:6:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:7:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:8:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:9:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:10:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:11:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:12:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:13:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:14:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;    ;
+; FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;    ;
+; Number of logic cells representing combinational loops                     ; 48 ;
++----------------------------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -340,36 +411,157 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "MULT_3bit:A7|MULT_1bit:M33" ;
-+------+-------+----------+------------------------------+
-; Port ; Type  ; Severity ; Details                      ;
-+------+-------+----------+------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                 ;
-; in2  ; Input ; Info     ; Stuck at GND                 ;
-+------+-------+----------+------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:0:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FULL_ADDER_16bit:A2"                                                                     ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:1:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"                                        ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; in2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; in2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; carry_in   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carry_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:2:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:3:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:4:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:5:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:6:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:7:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:8:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:9:FF160"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:10:FF160"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:11:FF160"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:12:FF160"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:13:FF160"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:14:FF160"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF11"                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -377,7 +569,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -387,7 +579,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Apr 11 13:53:02 2022
+    Info: Processing started: Mon Apr 11 14:52:01 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUEB_PROCESSOR -c AUEB_PROCESSOR
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ALU/SUB_16bit.vhd
@@ -447,32 +639,32 @@ Info (12021): Found 2 design units, including 1 entities, in source file ALU/MUL
 Info (12021): Found 2 design units, including 1 entities, in source file ALU/NOT_16bit.vhd
     Info (12022): Found design unit 1: NOT_16bit-Not16BitLogic
     Info (12023): Found entity 1: NOT_16bit
-Info (12127): Elaborating entity "ALU_16bit" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ALU_16bit.vhd(58): object "carry_out" assigned a value but never read
-Info (12128): Elaborating entity "COMPLEMENT_GETTER_16bit" for hierarchy "COMPLEMENT_GETTER_16bit:A0"
-Warning (10036): Verilog HDL or VHDL warning at COMPLEMENT_GETTER_16bit.vhd(25): object "carry_out" assigned a value but never read
-Info (12128): Elaborating entity "NOT_gate" for hierarchy "COMPLEMENT_GETTER_16bit:A0|NOT_gate:\main_loop:15:CG160"
-Info (12128): Elaborating entity "FULL_ADDER_16bit" for hierarchy "COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"
-Info (12128): Elaborating entity "FULL_ADDER_1bit" for hierarchy "COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160"
-Info (12128): Elaborating entity "XOR_gate" for hierarchy "COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|XOR_gate:FAO0"
-Info (12128): Elaborating entity "AND_gate" for hierarchy "COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|AND_gate:FAO2"
-Info (12128): Elaborating entity "OR_gate" for hierarchy "COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|OR_gate:FAO4"
-Info (12128): Elaborating entity "MULT_1bit" for hierarchy "MULT_1bit:A1"
-Info (12128): Elaborating entity "AND_16bit" for hierarchy "MULT_1bit:A1|AND_16bit:M11"
-Info (12128): Elaborating entity "OR_16bit" for hierarchy "MULT_1bit:A1|OR_16bit:M13"
-Info (12128): Elaborating entity "GEQZ_16bit" for hierarchy "GEQZ_16bit:A5"
-Info (12128): Elaborating entity "NOT_16bit" for hierarchy "NOT_16bit:A6"
-Info (12128): Elaborating entity "MULT_3bit" for hierarchy "MULT_3bit:A7"
+Info (12021): Found 2 design units, including 1 entities, in source file ALU/REGISTER/SR_LATCH.vhd
+    Info (12022): Found design unit 1: SR_LATCH-SRLatchLogic
+    Info (12023): Found entity 1: SR_LATCH
+Info (12021): Found 2 design units, including 1 entities, in source file ALU/REGISTER/FLIP_FLOP_1bit.vhd
+    Info (12022): Found design unit 1: FLIP_FLOP_1bit-FlipFlop1BitLogic
+    Info (12023): Found entity 1: FLIP_FLOP_1bit
+Info (12021): Found 2 design units, including 1 entities, in source file ALU/REGISTER/FLIP_FLOP_16bit.vhd
+    Info (12022): Found design unit 1: FLIP_FLOP_16bit-FlipFlop16BitLogic
+    Info (12023): Found entity 1: FLIP_FLOP_16bit
+Info (12127): Elaborating entity "FLIP_FLOP_16bit" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at FLIP_FLOP_16bit.vhd(17): object "flip_flop_not" assigned a value but never read
+Info (12128): Elaborating entity "FLIP_FLOP_1bit" for hierarchy "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160"
+Warning (10036): Verilog HDL or VHDL warning at FLIP_FLOP_1bit.vhd(20): object "first_latch" assigned a value but never read
+Info (12128): Elaborating entity "AND_gate" for hierarchy "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|AND_gate:FF10"
+Info (12128): Elaborating entity "SR_LATCH" for hierarchy "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF11"
+Info (12128): Elaborating entity "NOT_gate" for hierarchy "FLIP_FLOP_1bit:\flip_flops_loop:15:FF160|SR_LATCH:FF11|NOT_gate:SR1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 156 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
+Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 105 logic cells
+    Info (21061): Implemented 49 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 639 megabytes
-    Info: Processing ended: Mon Apr 11 13:53:06 2022
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 637 megabytes
+    Info: Processing ended: Mon Apr 11 14:52:03 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

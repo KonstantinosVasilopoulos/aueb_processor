@@ -18,36 +18,28 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/07/2022 15:37:02"
+// Generated on "04/11/2022 14:57:39"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    MULT_3bit
+// Verilog Self-Checking Test Bench (with test vectors) for design :    FLIP_FLOP_16bit
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module MULT_3bit_vlg_sample_tst(
-	in1,
-	in2,
-	in3,
-	in4,
-	in5,
-	in6,
-	select_bits,
+module FLIP_FLOP_16bit_vlg_sample_tst(
+	clock,
+	d,
+	enable,
 	sampler_tx
 );
-input [15:0] in1;
-input [15:0] in2;
-input [15:0] in3;
-input [15:0] in4;
-input [15:0] in5;
-input [15:0] in6;
-input [2:0] select_bits;
+input  clock;
+input [15:0] d;
+input  enable;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(in1 or in2 or in3 or in4 or in5 or in6 or select_bits)
+always @(clock or d or enable)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -66,7 +58,7 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module MULT_3bit_vlg_check_tst (
+module FLIP_FLOP_16bit_vlg_check_tst (
 	out1,
 	sampler_rx
 );
@@ -430,541 +422,145 @@ $finish;
 end 
 endmodule
 
-module MULT_3bit_vlg_vec_tst();
+module FLIP_FLOP_16bit_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [15:0] in1;
-reg [15:0] in2;
-reg [15:0] in3;
-reg [15:0] in4;
-reg [15:0] in5;
-reg [15:0] in6;
-reg [2:0] select_bits;
+reg clock;
+reg [15:0] d;
+reg enable;
 // wires                                               
 wire [15:0] out1;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-MULT_3bit i1 (
+FLIP_FLOP_16bit i1 (
 // port map - connection between master ports and signals/registers   
-	.in1(in1),
-	.in2(in2),
-	.in3(in3),
-	.in4(in4),
-	.in5(in5),
-	.in6(in6),
-	.out1(out1),
-	.select_bits(select_bits)
+	.clock(clock),
+	.d(d),
+	.enable(enable),
+	.out1(out1)
 );
-// in1[ 15 ]
+
+// clock
 initial
 begin
-	in1[15] = 1'b1;
+	clock = 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
 end 
-// in1[ 14 ]
+// d[ 15 ]
 initial
 begin
-	in1[14] = 1'b1;
+	d[15] = 1'b0;
 end 
-// in1[ 13 ]
+// d[ 14 ]
 initial
 begin
-	in1[13] = 1'b1;
+	d[14] = 1'b0;
 end 
-// in1[ 12 ]
+// d[ 13 ]
 initial
 begin
-	in1[12] = 1'b1;
+	d[13] = 1'b0;
 end 
-// in1[ 11 ]
+// d[ 12 ]
 initial
 begin
-	in1[11] = 1'b1;
+	d[12] = 1'b0;
 end 
-// in1[ 10 ]
+// d[ 11 ]
 initial
 begin
-	in1[10] = 1'b1;
+	d[11] = 1'b0;
 end 
-// in1[ 9 ]
+// d[ 10 ]
 initial
 begin
-	in1[9] = 1'b1;
+	d[10] = 1'b0;
 end 
-// in1[ 8 ]
+// d[ 9 ]
 initial
 begin
-	in1[8] = 1'b1;
+	d[9] = 1'b0;
 end 
-// in1[ 7 ]
+// d[ 8 ]
 initial
 begin
-	in1[7] = 1'b1;
+	d[8] = 1'b0;
 end 
-// in1[ 6 ]
+// d[ 7 ]
 initial
 begin
-	in1[6] = 1'b1;
+	d[7] = 1'b0;
 end 
-// in1[ 5 ]
+// d[ 6 ]
 initial
 begin
-	in1[5] = 1'b1;
+	d[6] = 1'b0;
 end 
-// in1[ 4 ]
+// d[ 5 ]
 initial
 begin
-	in1[4] = 1'b1;
+	d[5] = 1'b0;
 end 
-// in1[ 3 ]
+// d[ 4 ]
 initial
 begin
-	in1[3] = 1'b1;
+	d[4] = 1'b0;
 end 
-// in1[ 2 ]
+// d[ 3 ]
 initial
 begin
-	in1[2] = 1'b1;
+	d[3] = 1'b1;
+	d[3] = #60000 1'b0;
+	d[3] = #10000 1'b1;
 end 
-// in1[ 1 ]
+// d[ 2 ]
 initial
 begin
-	in1[1] = 1'b1;
+	d[2] = 1'b1;
+	d[2] = #60000 1'b0;
+	d[2] = #10000 1'b1;
 end 
-// in1[ 0 ]
+// d[ 1 ]
 initial
 begin
-	in1[0] = 1'b1;
+	d[1] = 1'b0;
 end 
-// in2[ 15 ]
+// d[ 0 ]
 initial
 begin
-	in2[15] = 1'b0;
-end 
-// in2[ 14 ]
-initial
-begin
-	in2[14] = 1'b0;
-end 
-// in2[ 13 ]
-initial
-begin
-	in2[13] = 1'b0;
-end 
-// in2[ 12 ]
-initial
-begin
-	in2[12] = 1'b0;
-end 
-// in2[ 11 ]
-initial
-begin
-	in2[11] = 1'b0;
-end 
-// in2[ 10 ]
-initial
-begin
-	in2[10] = 1'b0;
-end 
-// in2[ 9 ]
-initial
-begin
-	in2[9] = 1'b0;
-end 
-// in2[ 8 ]
-initial
-begin
-	in2[8] = 1'b0;
-end 
-// in2[ 7 ]
-initial
-begin
-	in2[7] = 1'b0;
-end 
-// in2[ 6 ]
-initial
-begin
-	in2[6] = 1'b0;
-end 
-// in2[ 5 ]
-initial
-begin
-	in2[5] = 1'b0;
-end 
-// in2[ 4 ]
-initial
-begin
-	in2[4] = 1'b0;
-end 
-// in2[ 3 ]
-initial
-begin
-	in2[3] = 1'b0;
-end 
-// in2[ 2 ]
-initial
-begin
-	in2[2] = 1'b0;
-end 
-// in2[ 1 ]
-initial
-begin
-	in2[1] = 1'b0;
-end 
-// in2[ 0 ]
-initial
-begin
-	in2[0] = 1'b0;
-end 
-// in3[ 15 ]
-initial
-begin
-	in3[15] = 1'b0;
-end 
-// in3[ 14 ]
-initial
-begin
-	in3[14] = 1'b0;
-end 
-// in3[ 13 ]
-initial
-begin
-	in3[13] = 1'b0;
-end 
-// in3[ 12 ]
-initial
-begin
-	in3[12] = 1'b0;
-end 
-// in3[ 11 ]
-initial
-begin
-	in3[11] = 1'b0;
-end 
-// in3[ 10 ]
-initial
-begin
-	in3[10] = 1'b0;
-end 
-// in3[ 9 ]
-initial
-begin
-	in3[9] = 1'b0;
-end 
-// in3[ 8 ]
-initial
-begin
-	in3[8] = 1'b0;
-end 
-// in3[ 7 ]
-initial
-begin
-	in3[7] = 1'b0;
-end 
-// in3[ 6 ]
-initial
-begin
-	in3[6] = 1'b0;
-end 
-// in3[ 5 ]
-initial
-begin
-	in3[5] = 1'b0;
-end 
-// in3[ 4 ]
-initial
-begin
-	in3[4] = 1'b0;
-end 
-// in3[ 3 ]
-initial
-begin
-	in3[3] = 1'b0;
-end 
-// in3[ 2 ]
-initial
-begin
-	in3[2] = 1'b0;
-end 
-// in3[ 1 ]
-initial
-begin
-	in3[1] = 1'b0;
-end 
-// in3[ 0 ]
-initial
-begin
-	in3[0] = 1'b1;
-end 
-// in4[ 15 ]
-initial
-begin
-	in4[15] = 1'b0;
-end 
-// in4[ 14 ]
-initial
-begin
-	in4[14] = 1'b0;
-end 
-// in4[ 13 ]
-initial
-begin
-	in4[13] = 1'b0;
-end 
-// in4[ 12 ]
-initial
-begin
-	in4[12] = 1'b0;
-end 
-// in4[ 11 ]
-initial
-begin
-	in4[11] = 1'b0;
-end 
-// in4[ 10 ]
-initial
-begin
-	in4[10] = 1'b0;
-end 
-// in4[ 9 ]
-initial
-begin
-	in4[9] = 1'b0;
-end 
-// in4[ 8 ]
-initial
-begin
-	in4[8] = 1'b0;
-end 
-// in4[ 7 ]
-initial
-begin
-	in4[7] = 1'b0;
-end 
-// in4[ 6 ]
-initial
-begin
-	in4[6] = 1'b0;
-end 
-// in4[ 5 ]
-initial
-begin
-	in4[5] = 1'b0;
-end 
-// in4[ 4 ]
-initial
-begin
-	in4[4] = 1'b0;
-end 
-// in4[ 3 ]
-initial
-begin
-	in4[3] = 1'b0;
-end 
-// in4[ 2 ]
-initial
-begin
-	in4[2] = 1'b0;
-end 
-// in4[ 1 ]
-initial
-begin
-	in4[1] = 1'b1;
-end 
-// in4[ 0 ]
-initial
-begin
-	in4[0] = 1'b0;
-end 
-// in5[ 15 ]
-initial
-begin
-	in5[15] = 1'b0;
-end 
-// in5[ 14 ]
-initial
-begin
-	in5[14] = 1'b0;
-end 
-// in5[ 13 ]
-initial
-begin
-	in5[13] = 1'b0;
-end 
-// in5[ 12 ]
-initial
-begin
-	in5[12] = 1'b0;
-end 
-// in5[ 11 ]
-initial
-begin
-	in5[11] = 1'b0;
-end 
-// in5[ 10 ]
-initial
-begin
-	in5[10] = 1'b0;
-end 
-// in5[ 9 ]
-initial
-begin
-	in5[9] = 1'b0;
-end 
-// in5[ 8 ]
-initial
-begin
-	in5[8] = 1'b0;
-end 
-// in5[ 7 ]
-initial
-begin
-	in5[7] = 1'b0;
-end 
-// in5[ 6 ]
-initial
-begin
-	in5[6] = 1'b0;
-end 
-// in5[ 5 ]
-initial
-begin
-	in5[5] = 1'b0;
-end 
-// in5[ 4 ]
-initial
-begin
-	in5[4] = 1'b0;
-end 
-// in5[ 3 ]
-initial
-begin
-	in5[3] = 1'b0;
-end 
-// in5[ 2 ]
-initial
-begin
-	in5[2] = 1'b1;
-end 
-// in5[ 1 ]
-initial
-begin
-	in5[1] = 1'b0;
-end 
-// in5[ 0 ]
-initial
-begin
-	in5[0] = 1'b0;
-end 
-// in6[ 15 ]
-initial
-begin
-	in6[15] = 1'b1;
-end 
-// in6[ 14 ]
-initial
-begin
-	in6[14] = 1'b0;
-end 
-// in6[ 13 ]
-initial
-begin
-	in6[13] = 1'b0;
-end 
-// in6[ 12 ]
-initial
-begin
-	in6[12] = 1'b0;
-end 
-// in6[ 11 ]
-initial
-begin
-	in6[11] = 1'b0;
-end 
-// in6[ 10 ]
-initial
-begin
-	in6[10] = 1'b0;
-end 
-// in6[ 9 ]
-initial
-begin
-	in6[9] = 1'b0;
-end 
-// in6[ 8 ]
-initial
-begin
-	in6[8] = 1'b0;
-end 
-// in6[ 7 ]
-initial
-begin
-	in6[7] = 1'b0;
-end 
-// in6[ 6 ]
-initial
-begin
-	in6[6] = 1'b0;
-end 
-// in6[ 5 ]
-initial
-begin
-	in6[5] = 1'b0;
-end 
-// in6[ 4 ]
-initial
-begin
-	in6[4] = 1'b0;
-end 
-// in6[ 3 ]
-initial
-begin
-	in6[3] = 1'b0;
-end 
-// in6[ 2 ]
-initial
-begin
-	in6[2] = 1'b0;
-end 
-// in6[ 1 ]
-initial
-begin
-	in6[1] = 1'b0;
-end 
-// in6[ 0 ]
-initial
-begin
-	in6[0] = 1'b0;
-end 
-// select_bits[ 2 ]
-initial
-begin
-	select_bits[2] = 1'b0;
-end 
-// select_bits[ 1 ]
-initial
-begin
-	select_bits[1] = 1'b0;
-end 
-// select_bits[ 0 ]
-initial
-begin
-	select_bits[0] = 1'b0;
+	d[0] = 1'b1;
+	d[0] = #60000 1'b0;
+	d[0] = #10000 1'b1;
 end 
 
-MULT_3bit_vlg_sample_tst tb_sample (
-	.in1(in1),
-	.in2(in2),
-	.in3(in3),
-	.in4(in4),
-	.in5(in5),
-	.in6(in6),
-	.select_bits(select_bits),
+// enable
+initial
+begin
+	enable = 1'b0;
+	enable = #10000 1'b1;
+	enable = #20000 1'b0;
+	enable = #30000 1'b1;
+	enable = #10000 1'b0;
+end 
+
+FLIP_FLOP_16bit_vlg_sample_tst tb_sample (
+	.clock(clock),
+	.d(d),
+	.enable(enable),
 	.sampler_tx(sampler)
 );
 
-MULT_3bit_vlg_check_tst tb_out(
+FLIP_FLOP_16bit_vlg_check_tst tb_out(
 	.out1(out1),
 	.sampler_rx(sampler)
 );
