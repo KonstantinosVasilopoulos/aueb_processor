@@ -1,5 +1,5 @@
 Flow report for AUEB_PROCESSOR
-Tue Apr 12 19:10:47 2022
+Tue Apr 12 20:31:44 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 12 19:10:47 2022           ;
+; Flow Status                        ; Successful - Tue Apr 12 20:31:44 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; AUEB_PROCESSOR                                  ;
 ; Top-level Entity Name              ; AUEB_PROCESSOR                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/12/2022 19:10:00 ;
+; Start date & time ; 04/12/2022 20:31:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AUEB_PROCESSOR      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.164977979938855                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.164978467543265                     ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
@@ -95,12 +95,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 619 MB              ; 00:00:08                           ;
-; Fitter                    ; 00:00:12     ; 1.0                     ; 724 MB              ; 00:00:12                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 554 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 516 MB              ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 615 MB              ; 00:00:05                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 728 MB              ; 00:00:09                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 554 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 516 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 782 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:27     ; --                      ; --                  ; 00:00:26                           ;
+; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:18                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
