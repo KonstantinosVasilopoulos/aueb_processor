@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AUEB_PROCESSOR
-Tue Apr 12 20:31:21 2022
+Fri May 06 17:07:08 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,32 +15,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "reg:P3"
- 12. Port Connectivity Checks: "ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M33"
- 13. Port Connectivity Checks: "ALU_16bit:P2|FULL_ADDER_16bit:A2"
- 14. Port Connectivity Checks: "ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"
- 15. Port Connectivity Checks: "reg:P1"
- 16. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0"
- 17. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0"
- 18. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0"
- 19. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0"
- 20. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0"
- 21. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0"
- 22. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0"
- 23. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0"
- 24. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0"
- 25. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0"
- 26. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0"
- 27. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0"
- 28. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0"
- 29. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0"
- 30. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0"
- 31. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11"
- 32. Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0"
- 33. Port Connectivity Checks: "reg:P0"
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |gen_reg
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -66,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 12 20:31:21 2022           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 06 17:07:08 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; AUEB_PROCESSOR                                  ;
-; Top-level Entity Name              ; AUEB_PROCESSOR                                  ;
+; Top-level Entity Name              ; gen_reg                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 238                                             ;
-;     Total combinational functions  ; 238                                             ;
+; Total logic elements               ; 49                                              ;
+;     Total combinational functions  ; 49                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 100                                             ;
+; Total pins                         ; 34                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -89,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; AUEB_PROCESSOR     ; AUEB_PROCESSOR     ;
+; Top-level entity name                                                      ; gen_reg            ; AUEB_PROCESSOR     ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -179,612 +156,128 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; ALU/OR_gate.vhd                  ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/OR_gate.vhd                 ;         ;
-; ALU/NOT_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/NOT_gate.vhd                ;         ;
-; ALU/FULL_ADDER_16bit.vhd         ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/FULL_ADDER_16bit.vhd        ;         ;
-; ALU/FULL_ADDER_1bit.vhd          ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/FULL_ADDER_1bit.vhd         ;         ;
-; ALU/AND_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/AND_gate.vhd                ;         ;
-; ALU/ALU_16bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/ALU_16bit.vhd               ;         ;
-; ALU/XOR_gate.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/XOR_gate.vhd                ;         ;
-; AUEB_PROCESSOR.vhd               ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/AUEB_PROCESSOR.vhd              ;         ;
-; ALU/GEQZ_16bit.vhd               ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/GEQZ_16bit.vhd              ;         ;
-; ALU/OR_16bit.vhd                 ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/OR_16bit.vhd                ;         ;
-; ALU/AND_16bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/AND_16bit.vhd               ;         ;
-; ALU/COMPLEMENT_GETTER_16bit.vhd  ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/COMPLEMENT_GETTER_16bit.vhd ;         ;
-; ALU/MULT_1bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/MULT_1bit.vhd               ;         ;
-; ALU/MULT_3bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/MULT_3bit.vhd               ;         ;
-; ALU/NOT_16bit.vhd                ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/NOT_16bit.vhd               ;         ;
-; ALU/REGISTER/SR_LATCH.vhd        ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/REGISTER/SR_LATCH.vhd       ;         ;
-; ALU/REGISTER/FLIP_FLOP_1bit.vhd  ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/REGISTER/FLIP_FLOP_1bit.vhd ;         ;
-; ALU/REGISTER/REG.vhd             ; yes             ; User VHDL File  ; /home/niemand/altera/aueb_processor/ALU/REGISTER/REG.vhd            ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; CPU_COMPONENTS/REG_1bit.vhd      ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/REG_1bit.vhd ;         ;
+; CPU_COMPONENTS/gen_reg.vhd       ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/gen_reg.vhd  ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 238   ;
-;                                             ;       ;
-; Total combinational functions               ; 238   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 168   ;
-;     -- 3 input functions                    ; 67    ;
-;     -- <=2 input functions                  ; 3     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 238   ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 100   ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 144   ;
-; Total fan-out                               ; 943   ;
-; Average fan-out                             ; 2.79  ;
-+---------------------------------------------+-------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                        ;
++---------------------------------------------+--------------------------------------+
+; Resource                                    ; Usage                                ;
++---------------------------------------------+--------------------------------------+
+; Estimated Total logic elements              ; 49                                   ;
+;                                             ;                                      ;
+; Total combinational functions               ; 49                                   ;
+; Logic element usage by number of LUT inputs ;                                      ;
+;     -- 4 input functions                    ; 48                                   ;
+;     -- 3 input functions                    ; 0                                    ;
+;     -- <=2 input functions                  ; 1                                    ;
+;                                             ;                                      ;
+; Logic elements by mode                      ;                                      ;
+;     -- normal mode                          ; 49                                   ;
+;     -- arithmetic mode                      ; 0                                    ;
+;                                             ;                                      ;
+; Total registers                             ; 0                                    ;
+;     -- Dedicated logic registers            ; 0                                    ;
+;     -- I/O registers                        ; 0                                    ;
+;                                             ;                                      ;
+; I/O pins                                    ; 34                                   ;
+; Embedded Multiplier 9-bit elements          ; 0                                    ;
+; Maximum fan-out node                        ; REG_1bit:\reg_loop:0:REG0|afterClock ;
+; Maximum fan-out                             ; 32                                   ;
+; Total fan-out                               ; 210                                  ;
+; Average fan-out                             ; 2.53                                 ;
++---------------------------------------------+--------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; |AUEB_PROCESSOR                                 ; 238 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 100  ; 0            ; |AUEB_PROCESSOR                                                                                                     ; work         ;
-;    |ALU_16bit:P2|                               ; 92 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2                                                                                        ; work         ;
-;       |COMPLEMENT_GETTER_16bit:A0|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0                                                             ; work         ;
-;          |FULL_ADDER_16bit:CG161|               ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161                                      ; work         ;
-;             |FULL_ADDER_1bit:FA1610|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1610               ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1610|AND_gate:FAO2 ; work         ;
-;             |FULL_ADDER_1bit:FA1611|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1611               ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1611|AND_gate:FAO2 ; work         ;
-;             |FULL_ADDER_1bit:FA1613|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1613               ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1613|AND_gate:FAO2 ; work         ;
-;             |FULL_ADDER_1bit:FA162|             ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA162                ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA162|AND_gate:FAO2  ; work         ;
-;             |FULL_ADDER_1bit:FA163|             ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA163                ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA163|AND_gate:FAO2  ; work         ;
-;             |FULL_ADDER_1bit:FA165|             ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA165                ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA165|AND_gate:FAO2  ; work         ;
-;             |FULL_ADDER_1bit:FA167|             ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA167                ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA167|AND_gate:FAO2  ; work         ;
-;             |FULL_ADDER_1bit:FA168|             ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA168                ; work         ;
-;                |AND_gate:FAO2|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA168|AND_gate:FAO2  ; work         ;
-;       |FULL_ADDER_16bit:A2|                     ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2                                                                    ; work         ;
-;          |FULL_ADDER_1bit:FA1611|               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611                                             ; work         ;
-;             |AND_gate:FAO2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|AND_gate:FAO2                               ; work         ;
-;             |AND_gate:FAO3|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|AND_gate:FAO3                               ; work         ;
-;             |XOR_gate:FAO0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|XOR_gate:FAO0                               ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|XOR_gate:FAO1                               ; work         ;
-;          |FULL_ADDER_1bit:FA1612|               ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612                                             ; work         ;
-;             |OR_gate:FAO4|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612|OR_gate:FAO4                                ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612|XOR_gate:FAO1                               ; work         ;
-;          |FULL_ADDER_1bit:FA1613|               ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1613                                             ; work         ;
-;             |XOR_gate:FAO0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1613|XOR_gate:FAO0                               ; work         ;
-;          |FULL_ADDER_1bit:FA1614|               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614                                             ; work         ;
-;             |AND_gate:FAO2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614|AND_gate:FAO2                               ; work         ;
-;             |AND_gate:FAO3|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614|AND_gate:FAO3                               ; work         ;
-;             |XOR_gate:FAO0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614|XOR_gate:FAO0                               ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614|XOR_gate:FAO1                               ; work         ;
-;          |FULL_ADDER_1bit:FA1615|               ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1615                                             ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1615|XOR_gate:FAO1                               ; work         ;
-;          |FULL_ADDER_1bit:FA161|                ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161                                              ; work         ;
-;             |OR_gate:FAO4|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161|OR_gate:FAO4                                 ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161|XOR_gate:FAO1                                ; work         ;
-;          |FULL_ADDER_1bit:FA163|                ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163                                              ; work         ;
-;             |AND_gate:FAO2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|AND_gate:FAO2                                ; work         ;
-;             |AND_gate:FAO3|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|AND_gate:FAO3                                ; work         ;
-;             |XOR_gate:FAO0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|XOR_gate:FAO0                                ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|XOR_gate:FAO1                                ; work         ;
-;          |FULL_ADDER_1bit:FA164|                ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164                                              ; work         ;
-;             |OR_gate:FAO4|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164|OR_gate:FAO4                                 ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164|XOR_gate:FAO1                                ; work         ;
-;          |FULL_ADDER_1bit:FA166|                ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166                                              ; work         ;
-;             |OR_gate:FAO4|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166|OR_gate:FAO4                                 ; work         ;
-;          |FULL_ADDER_1bit:FA168|                ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168                                              ; work         ;
-;             |AND_gate:FAO2|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|AND_gate:FAO2                                ; work         ;
-;             |AND_gate:FAO3|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|AND_gate:FAO3                                ; work         ;
-;             |XOR_gate:FAO0|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|XOR_gate:FAO0                                ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|XOR_gate:FAO1                                ; work         ;
-;          |FULL_ADDER_1bit:FA169|                ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169                                              ; work         ;
-;             |OR_gate:FAO4|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169|OR_gate:FAO4                                 ; work         ;
-;             |XOR_gate:FAO1|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169|XOR_gate:FAO1                                ; work         ;
-;       |MULT_1bit:A1|                            ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1                                                                           ; work         ;
-;          |OR_16bit:M13|                         ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13                                                              ; work         ;
-;             |OR_gate:\or_loop:10:OR160|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:10:OR160                                    ; work         ;
-;             |OR_gate:\or_loop:12:OR160|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:12:OR160                                    ; work         ;
-;             |OR_gate:\or_loop:13:OR160|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:13:OR160                                    ; work         ;
-;             |OR_gate:\or_loop:15:OR160|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:15:OR160                                    ; work         ;
-;             |OR_gate:\or_loop:1:OR160|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:1:OR160                                     ; work         ;
-;             |OR_gate:\or_loop:2:OR160|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:2:OR160                                     ; work         ;
-;             |OR_gate:\or_loop:4:OR160|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:4:OR160                                     ; work         ;
-;             |OR_gate:\or_loop:5:OR160|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:5:OR160                                     ; work         ;
-;             |OR_gate:\or_loop:6:OR160|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:6:OR160                                     ; work         ;
-;             |OR_gate:\or_loop:7:OR160|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:7:OR160                                     ; work         ;
-;             |OR_gate:\or_loop:9:OR160|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13|OR_gate:\or_loop:9:OR160                                     ; work         ;
-;       |MULT_3bit:A7|                            ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7                                                                           ; work         ;
-;          |MULT_1bit:M36|                        ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36                                                             ; work         ;
-;             |AND_16bit:M11|                     ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11                                               ; work         ;
-;                |AND_gate:\and_loop:10:AND160|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:10:AND160                  ; work         ;
-;                |AND_gate:\and_loop:11:AND160|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:11:AND160                  ; work         ;
-;                |AND_gate:\and_loop:12:AND160|   ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:12:AND160                  ; work         ;
-;                |AND_gate:\and_loop:13:AND160|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:13:AND160                  ; work         ;
-;                |AND_gate:\and_loop:14:AND160|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:14:AND160                  ; work         ;
-;                |AND_gate:\and_loop:15:AND160|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:15:AND160                  ; work         ;
-;                |AND_gate:\and_loop:1:AND160|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:1:AND160                   ; work         ;
-;                |AND_gate:\and_loop:2:AND160|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:2:AND160                   ; work         ;
-;                |AND_gate:\and_loop:3:AND160|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:3:AND160                   ; work         ;
-;                |AND_gate:\and_loop:4:AND160|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:4:AND160                   ; work         ;
-;                |AND_gate:\and_loop:5:AND160|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:5:AND160                   ; work         ;
-;                |AND_gate:\and_loop:6:AND160|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:6:AND160                   ; work         ;
-;                |AND_gate:\and_loop:7:AND160|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:7:AND160                   ; work         ;
-;                |AND_gate:\and_loop:8:AND160|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:8:AND160                   ; work         ;
-;                |AND_gate:\and_loop:9:AND160|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|AND_16bit:M11|AND_gate:\and_loop:9:AND160                   ; work         ;
-;             |OR_16bit:M13|                      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|OR_16bit:M13                                                ; work         ;
-;                |OR_gate:\or_loop:0:OR160|       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:0:OR160                       ; work         ;
-;       |NOT_16bit:A6|                            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|NOT_16bit:A6                                                                           ; work         ;
-;          |OR_gate:\nor_loop:3:NOT162|           ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:P2|NOT_16bit:A6|OR_gate:\nor_loop:3:NOT162                                                ; work         ;
-;    |reg:P0|                                     ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0                                                                                              ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:10:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:11:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:12:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:13:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:14:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:15:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;    |reg:P1|                                     ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1                                                                                              ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:10:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:11:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:12:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:13:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:14:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:15:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;    |reg:P3|                                     ; 50 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3                                                                                              ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:10:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:11:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:12:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:13:REG0| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:14:REG0| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:15:REG0| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0                                                      ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11                                        ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF13|                        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF13                                        ; work         ;
-;             |AND_gate:SR2|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF13|AND_gate:SR2                           ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14                                        ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14|AND_gate:SR0                           ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-;       |FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0                                                       ; work         ;
-;          |SR_LATCH:FF11|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF13|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13                                         ; work         ;
-;             |AND_gate:SR2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13|AND_gate:SR2                            ; work         ;
-;          |SR_LATCH:FF14|                        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14                                         ; work         ;
-;             |AND_gate:SR0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14|AND_gate:SR0                            ; work         ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; |gen_reg                        ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |gen_reg                            ; work         ;
+;    |REG_1bit:\reg_loop:0:REG0|  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:0:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:10:REG0| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:10:REG0 ; work         ;
+;    |REG_1bit:\reg_loop:11:REG0| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:11:REG0 ; work         ;
+;    |REG_1bit:\reg_loop:12:REG0| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:12:REG0 ; work         ;
+;    |REG_1bit:\reg_loop:13:REG0| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:13:REG0 ; work         ;
+;    |REG_1bit:\reg_loop:14:REG0| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:14:REG0 ; work         ;
+;    |REG_1bit:\reg_loop:15:REG0| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:15:REG0 ; work         ;
+;    |REG_1bit:\reg_loop:1:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:1:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:2:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:2:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:3:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:3:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:4:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:4:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:5:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:5:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:6:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:6:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:7:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:7:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:8:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:8:REG0  ; work         ;
+;    |REG_1bit:\reg_loop:9:REG0|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gen_reg|REG_1bit:\reg_loop:9:REG0  ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                                           ;
-+----------------------------------------------------------------------------------+-----+
-; Logic Cell Name                                                                  ;     ;
-+----------------------------------------------------------------------------------+-----+
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0  ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P3|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF14|AND_gate:SR0|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0 ;     ;
-; reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0 ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF11|AND_gate:SR2|out1~0  ;     ;
-; reg:P1|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0|SR_LATCH:FF13|AND_gate:SR2|out1~0  ;     ;
-; Number of logic cells representing combinational loops                           ; 144 ;
-+----------------------------------------------------------------------------------+-----+
-Table restricted to first 100 entries. Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; REG_1bit:\reg_loop:0:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:1:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:2:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:3:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:4:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:5:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:6:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:7:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:8:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:9:REG0|out1~0                       ;    ;
+; REG_1bit:\reg_loop:10:REG0|out1~0                      ;    ;
+; REG_1bit:\reg_loop:11:REG0|out1~0                      ;    ;
+; REG_1bit:\reg_loop:12:REG0|out1~0                      ;    ;
+; REG_1bit:\reg_loop:13:REG0|out1~0                      ;    ;
+; REG_1bit:\reg_loop:14:REG0|out1~0                      ;    ;
+; REG_1bit:\reg_loop:15:REG0|out1~0                      ;    ;
+; REG_1bit:\reg_loop:0:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:0:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:1:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:1:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:2:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:2:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:3:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:3:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:4:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:4:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:5:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:5:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:6:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:6:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:7:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:7:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:8:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:8:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:9:REG0|p3~0                         ;    ;
+; REG_1bit:\reg_loop:9:REG0|p3~1                         ;    ;
+; REG_1bit:\reg_loop:10:REG0|p3~0                        ;    ;
+; REG_1bit:\reg_loop:10:REG0|p3~1                        ;    ;
+; REG_1bit:\reg_loop:11:REG0|p3~0                        ;    ;
+; REG_1bit:\reg_loop:11:REG0|p3~1                        ;    ;
+; REG_1bit:\reg_loop:12:REG0|p3~0                        ;    ;
+; REG_1bit:\reg_loop:12:REG0|p3~1                        ;    ;
+; REG_1bit:\reg_loop:13:REG0|p3~0                        ;    ;
+; REG_1bit:\reg_loop:13:REG0|p3~1                        ;    ;
+; REG_1bit:\reg_loop:14:REG0|p3~0                        ;    ;
+; REG_1bit:\reg_loop:14:REG0|p3~1                        ;    ;
+; REG_1bit:\reg_loop:15:REG0|p3~0                        ;    ;
+; REG_1bit:\reg_loop:15:REG0|p3~1                        ;    ;
+; Number of logic cells representing combinational loops ; 48 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -802,225 +295,14 @@ Table restricted to first 100 entries. Note: All cells listed above may not be p
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |AUEB_PROCESSOR|ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:1:OR160|out1 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------+
-; Port Connectivity Checks: "reg:P3"       ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; enable ; Input ; Info     ; Stuck at VCC ;
-+--------+-------+----------+--------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_16bit:P2|MULT_3bit:A7|MULT_1bit:M33" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; in1  ; Input ; Info     ; Stuck at GND                              ;
-; in2  ; Input ; Info     ; Stuck at GND                              ;
-+------+-------+----------+-------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_16bit:P2|FULL_ADDER_16bit:A2"                                                        ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; carry_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"                           ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; in2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; in2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; carry_in   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carry_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------+
-; Port Connectivity Checks: "reg:P1"       ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; enable ; Input ; Info     ; Stuck at VCC ;
-+--------+-------+----------+--------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:0:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:1:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:2:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:3:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:4:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:5:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:6:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:7:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:8:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:9:REG0"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:10:REG0"                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:11:REG0"                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:12:REG0"                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:13:REG0"                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:14:REG0"                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11"                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0"                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------+
-; Port Connectivity Checks: "reg:P0"       ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; enable ; Input ; Info     ; Stuck at VCC ;
-+--------+-------+----------+--------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |gen_reg ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -1028,7 +310,7 @@ Table restricted to first 100 entries. Note: All cells listed above may not be p
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1038,107 +320,96 @@ Table restricted to first 100 entries. Note: All cells listed above may not be p
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 12 20:31:15 2022
+    Info: Processing started: Fri May 06 17:07:06 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUEB_PROCESSOR -c AUEB_PROCESSOR
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/SUB_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/sub_16bit.vhd
     Info (12022): Found design unit 1: SUB_16bit-Sub16BitLogic
     Info (12023): Found entity 1: SUB_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/SUB_1bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/sub_1bit.vhd
     Info (12022): Found design unit 1: SUB_1bit-Sub1BitLogic
     Info (12023): Found entity 1: SUB_1bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/OR_gate.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/or_gate.vhd
     Info (12022): Found design unit 1: OR_gate-OrGateLogic
     Info (12023): Found entity 1: OR_gate
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/NOT_gate.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/not_gate.vhd
     Info (12022): Found design unit 1: NOT_gate-NotGateLogic
     Info (12023): Found entity 1: NOT_gate
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/FULL_ADDER_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/full_adder_16bit.vhd
     Info (12022): Found design unit 1: FULL_ADDER_16bit-FullAdder16BitLogic
     Info (12023): Found entity 1: FULL_ADDER_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/FULL_ADDER_1bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/full_adder_1bit.vhd
     Info (12022): Found design unit 1: FULL_ADDER_1bit-FullAdder1BitLogic
     Info (12023): Found entity 1: FULL_ADDER_1bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/AND_gate.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/and_gate.vhd
     Info (12022): Found design unit 1: AND_gate-AndGateLogic
     Info (12023): Found entity 1: AND_gate
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/ALU_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/alu_16bit.vhd
     Info (12022): Found design unit 1: ALU_16bit-ALULogic
     Info (12023): Found entity 1: ALU_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/XOR_gate.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/xor_gate.vhd
     Info (12022): Found design unit 1: XOR_gate-XorGateLogic
     Info (12023): Found entity 1: XOR_gate
-Info (12021): Found 2 design units, including 1 entities, in source file AUEB_PROCESSOR.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file aueb_processor.vhd
     Info (12022): Found design unit 1: AUEB_PROCESSOR-ProcessorLogic
     Info (12023): Found entity 1: AUEB_PROCESSOR
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/GEQ_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/geq_16bit.vhd
     Info (12022): Found design unit 1: GEQ_16bit-Geq16BitLogic
     Info (12023): Found entity 1: GEQ_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/GEQZ_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/geqz_16bit.vhd
     Info (12022): Found design unit 1: GEQZ_16bit-GeqZ16BitLogic
     Info (12023): Found entity 1: GEQZ_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/OR_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/or_16bit.vhd
     Info (12022): Found design unit 1: OR_16bit-Or16BitLogic
     Info (12023): Found entity 1: OR_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/AND_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/and_16bit.vhd
     Info (12022): Found design unit 1: AND_16bit-And16BitLogic
     Info (12023): Found entity 1: AND_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/COMPLEMENT_GETTER_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/complement_getter_16bit.vhd
     Info (12022): Found design unit 1: COMPLEMENT_GETTER_16bit-ComplementGetter16BitLogic
     Info (12023): Found entity 1: COMPLEMENT_GETTER_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/MULT_1bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/mult_1bit.vhd
     Info (12022): Found design unit 1: MULT_1bit-Mult1BitLogic
     Info (12023): Found entity 1: MULT_1bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/NOT_FULL_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/not_full_16bit.vhd
     Info (12022): Found design unit 1: NOT_FULL_16bit-NotFull16BitLogic
     Info (12023): Found entity 1: NOT_FULL_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/MULT_3bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/mult_3bit.vhd
     Info (12022): Found design unit 1: MULT_3bit-Mult3BitLogic
     Info (12023): Found entity 1: MULT_3bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/NOT_16bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/not_16bit.vhd
     Info (12022): Found design unit 1: NOT_16bit-Not16BitLogic
     Info (12023): Found entity 1: NOT_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/REGISTER/SR_LATCH.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/register/sr_latch.vhd
     Info (12022): Found design unit 1: SR_LATCH-SRLatchLogic
     Info (12023): Found entity 1: SR_LATCH
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/REGISTER/FLIP_FLOP_1bit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/register/flip_flop_1bit.vhd
     Info (12022): Found design unit 1: FLIP_FLOP_1bit-FlipFlop1BitLogic
     Info (12023): Found entity 1: FLIP_FLOP_1bit
-Info (12021): Found 2 design units, including 1 entities, in source file ALU/REGISTER/REG.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file alu/register/reg.vhd
     Info (12022): Found design unit 1: reg-RegLogic
     Info (12023): Found entity 1: reg
-Info (12127): Elaborating entity "AUEB_PROCESSOR" for the top level hierarchy
-Info (12128): Elaborating entity "reg" for hierarchy "reg:P0"
-Warning (10036): Verilog HDL or VHDL warning at REG.vhd(17): object "flip_flop_not" assigned a value but never read
-Info (12128): Elaborating entity "FLIP_FLOP_1bit" for hierarchy "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0"
-Warning (10036): Verilog HDL or VHDL warning at FLIP_FLOP_1bit.vhd(20): object "first_latch" assigned a value but never read
-Info (12128): Elaborating entity "AND_gate" for hierarchy "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|AND_gate:FF10"
-Info (12128): Elaborating entity "SR_LATCH" for hierarchy "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11"
-Info (12128): Elaborating entity "NOT_gate" for hierarchy "reg:P0|FLIP_FLOP_1bit:\flip_flops_loop:15:REG0|SR_LATCH:FF11|NOT_gate:SR1"
-Info (12128): Elaborating entity "ALU_16bit" for hierarchy "ALU_16bit:P2"
-Warning (10036): Verilog HDL or VHDL warning at ALU_16bit.vhd(58): object "carry_out" assigned a value but never read
-Info (12128): Elaborating entity "COMPLEMENT_GETTER_16bit" for hierarchy "ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0"
-Warning (10036): Verilog HDL or VHDL warning at COMPLEMENT_GETTER_16bit.vhd(25): object "carry_out" assigned a value but never read
-Info (12128): Elaborating entity "FULL_ADDER_16bit" for hierarchy "ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"
-Info (12128): Elaborating entity "FULL_ADDER_1bit" for hierarchy "ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160"
-Info (12128): Elaborating entity "XOR_gate" for hierarchy "ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|XOR_gate:FAO0"
-Info (12128): Elaborating entity "OR_gate" for hierarchy "ALU_16bit:P2|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|OR_gate:FAO4"
-Info (12128): Elaborating entity "MULT_1bit" for hierarchy "ALU_16bit:P2|MULT_1bit:A1"
-Info (12128): Elaborating entity "AND_16bit" for hierarchy "ALU_16bit:P2|MULT_1bit:A1|AND_16bit:M11"
-Info (12128): Elaborating entity "OR_16bit" for hierarchy "ALU_16bit:P2|MULT_1bit:A1|OR_16bit:M13"
-Info (12128): Elaborating entity "GEQZ_16bit" for hierarchy "ALU_16bit:P2|GEQZ_16bit:A5"
-Info (12128): Elaborating entity "NOT_16bit" for hierarchy "ALU_16bit:P2|NOT_16bit:A6"
-Info (12128): Elaborating entity "MULT_3bit" for hierarchy "ALU_16bit:P2|MULT_3bit:A7"
+Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/reg0.vhd
+    Info (12022): Found design unit 1: reg0-Reg0Logic
+    Info (12023): Found entity 1: reg0
+Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/reg_1bit.vhd
+    Info (12022): Found design unit 1: REG_1bit-Reg1BitLogic
+    Info (12023): Found entity 1: REG_1bit
+Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/gen_reg.vhd
+    Info (12022): Found design unit 1: gen_reg-RegLogic
+    Info (12023): Found entity 1: gen_reg
+Info (12127): Elaborating entity "gen_reg" for the top level hierarchy
+Info (12128): Elaborating entity "REG_1bit" for hierarchy "REG_1bit:\reg_loop:15:REG0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 338 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 36 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 238 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 634 megabytes
-    Info: Processing ended: Tue Apr 12 20:31:21 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 49 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4627 megabytes
+    Info: Processing ended: Fri May 06 17:07:08 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
