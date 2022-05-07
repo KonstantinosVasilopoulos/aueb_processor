@@ -1,179 +1,86 @@
-|gen_reg
-in1[0] => REG_1bit:reg_loop:0:REG0.in1
-in1[1] => REG_1bit:reg_loop:1:REG0.in1
-in1[2] => REG_1bit:reg_loop:2:REG0.in1
-in1[3] => REG_1bit:reg_loop:3:REG0.in1
-in1[4] => REG_1bit:reg_loop:4:REG0.in1
-in1[5] => REG_1bit:reg_loop:5:REG0.in1
-in1[6] => REG_1bit:reg_loop:6:REG0.in1
-in1[7] => REG_1bit:reg_loop:7:REG0.in1
-in1[8] => REG_1bit:reg_loop:8:REG0.in1
-in1[9] => REG_1bit:reg_loop:9:REG0.in1
-in1[10] => REG_1bit:reg_loop:10:REG0.in1
-in1[11] => REG_1bit:reg_loop:11:REG0.in1
-in1[12] => REG_1bit:reg_loop:12:REG0.in1
-in1[13] => REG_1bit:reg_loop:13:REG0.in1
-in1[14] => REG_1bit:reg_loop:14:REG0.in1
-in1[15] => REG_1bit:reg_loop:15:REG0.in1
-clock => REG_1bit:reg_loop:15:REG0.clock
-clock => REG_1bit:reg_loop:14:REG0.clock
-clock => REG_1bit:reg_loop:13:REG0.clock
-clock => REG_1bit:reg_loop:12:REG0.clock
-clock => REG_1bit:reg_loop:11:REG0.clock
-clock => REG_1bit:reg_loop:10:REG0.clock
-clock => REG_1bit:reg_loop:9:REG0.clock
-clock => REG_1bit:reg_loop:8:REG0.clock
-clock => REG_1bit:reg_loop:7:REG0.clock
-clock => REG_1bit:reg_loop:6:REG0.clock
-clock => REG_1bit:reg_loop:5:REG0.clock
-clock => REG_1bit:reg_loop:4:REG0.clock
-clock => REG_1bit:reg_loop:3:REG0.clock
-clock => REG_1bit:reg_loop:2:REG0.clock
-clock => REG_1bit:reg_loop:1:REG0.clock
-clock => REG_1bit:reg_loop:0:REG0.clock
-enable => REG_1bit:reg_loop:15:REG0.enable
-enable => REG_1bit:reg_loop:14:REG0.enable
-enable => REG_1bit:reg_loop:13:REG0.enable
-enable => REG_1bit:reg_loop:12:REG0.enable
-enable => REG_1bit:reg_loop:11:REG0.enable
-enable => REG_1bit:reg_loop:10:REG0.enable
-enable => REG_1bit:reg_loop:9:REG0.enable
-enable => REG_1bit:reg_loop:8:REG0.enable
-enable => REG_1bit:reg_loop:7:REG0.enable
-enable => REG_1bit:reg_loop:6:REG0.enable
-enable => REG_1bit:reg_loop:5:REG0.enable
-enable => REG_1bit:reg_loop:4:REG0.enable
-enable => REG_1bit:reg_loop:3:REG0.enable
-enable => REG_1bit:reg_loop:2:REG0.enable
-enable => REG_1bit:reg_loop:1:REG0.enable
-enable => REG_1bit:reg_loop:0:REG0.enable
-out1[0] <= REG_1bit:reg_loop:0:REG0.out1
-out1[1] <= REG_1bit:reg_loop:1:REG0.out1
-out1[2] <= REG_1bit:reg_loop:2:REG0.out1
-out1[3] <= REG_1bit:reg_loop:3:REG0.out1
-out1[4] <= REG_1bit:reg_loop:4:REG0.out1
-out1[5] <= REG_1bit:reg_loop:5:REG0.out1
-out1[6] <= REG_1bit:reg_loop:6:REG0.out1
-out1[7] <= REG_1bit:reg_loop:7:REG0.out1
-out1[8] <= REG_1bit:reg_loop:8:REG0.out1
-out1[9] <= REG_1bit:reg_loop:9:REG0.out1
-out1[10] <= REG_1bit:reg_loop:10:REG0.out1
-out1[11] <= REG_1bit:reg_loop:11:REG0.out1
-out1[12] <= REG_1bit:reg_loop:12:REG0.out1
-out1[13] <= REG_1bit:reg_loop:13:REG0.out1
-out1[14] <= REG_1bit:reg_loop:14:REG0.out1
-out1[15] <= REG_1bit:reg_loop:15:REG0.out1
-
-
-|gen_reg|REG_1bit:\reg_loop:15:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:14:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:13:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:12:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:11:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:10:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:9:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:8:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:7:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:6:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:5:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:4:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:3:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:2:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:1:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|gen_reg|REG_1bit:\reg_loop:0:REG0
-in1 => p4.IN1
-clock => afterClock.IN0
-enable => afterClock.IN1
-out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+|ALUcontrol
+opCode[0] => Mux0.IN19
+opCode[0] => Mux1.IN18
+opCode[0] => Mux2.IN18
+opCode[0] => Mux3.IN3
+opCode[0] => Mux3.IN4
+opCode[0] => Mux3.IN5
+opCode[0] => Mux3.IN6
+opCode[0] => Mux3.IN7
+opCode[0] => Mux3.IN8
+opCode[0] => Mux3.IN9
+opCode[0] => Mux3.IN10
+opCode[0] => Mux3.IN11
+opCode[0] => Mux3.IN12
+opCode[0] => Mux3.IN13
+opCode[0] => Mux3.IN14
+opCode[0] => Mux3.IN15
+opCode[0] => Mux3.IN16
+opCode[0] => Mux3.IN17
+opCode[0] => Mux3.IN18
+opCode[1] => Mux0.IN18
+opCode[1] => Mux1.IN17
+opCode[1] => Mux2.IN2
+opCode[1] => Mux2.IN3
+opCode[1] => Mux2.IN4
+opCode[1] => Mux2.IN5
+opCode[1] => Mux2.IN6
+opCode[1] => Mux2.IN7
+opCode[1] => Mux2.IN8
+opCode[1] => Mux2.IN9
+opCode[1] => Mux2.IN10
+opCode[1] => Mux2.IN11
+opCode[1] => Mux2.IN12
+opCode[1] => Mux2.IN13
+opCode[1] => Mux2.IN14
+opCode[1] => Mux2.IN15
+opCode[1] => Mux2.IN16
+opCode[1] => Mux2.IN17
+opCode[1] => Mux3.IN2
+opCode[2] => Mux0.IN17
+opCode[2] => Mux1.IN1
+opCode[2] => Mux1.IN2
+opCode[2] => Mux1.IN3
+opCode[2] => Mux1.IN4
+opCode[2] => Mux1.IN5
+opCode[2] => Mux1.IN6
+opCode[2] => Mux1.IN7
+opCode[2] => Mux1.IN8
+opCode[2] => Mux1.IN9
+opCode[2] => Mux1.IN10
+opCode[2] => Mux1.IN11
+opCode[2] => Mux1.IN12
+opCode[2] => Mux1.IN13
+opCode[2] => Mux1.IN14
+opCode[2] => Mux1.IN15
+opCode[2] => Mux1.IN16
+opCode[2] => Mux2.IN1
+opCode[2] => Mux3.IN1
+opCode[3] => Mux0.IN1
+opCode[3] => Mux0.IN2
+opCode[3] => Mux0.IN3
+opCode[3] => Mux0.IN4
+opCode[3] => Mux0.IN5
+opCode[3] => Mux0.IN6
+opCode[3] => Mux0.IN7
+opCode[3] => Mux0.IN8
+opCode[3] => Mux0.IN9
+opCode[3] => Mux0.IN10
+opCode[3] => Mux0.IN11
+opCode[3] => Mux0.IN12
+opCode[3] => Mux0.IN13
+opCode[3] => Mux0.IN14
+opCode[3] => Mux0.IN15
+opCode[3] => Mux0.IN16
+opCode[3] => Mux1.IN0
+opCode[3] => Mux2.IN0
+opCode[3] => Mux3.IN0
+func[0] => Mux3.IN19
+func[1] => Mux2.IN19
+func[2] => Mux1.IN19
+output[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
