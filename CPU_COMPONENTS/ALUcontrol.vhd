@@ -1,3 +1,6 @@
+-- Konstantinos Vasilopoulos 3180018
+-- Efthymios Papageorgiou 3180144
+
 library ieee;
 use ieee.std_logic_1164.all;
 

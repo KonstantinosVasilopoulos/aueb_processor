@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="AUEB_PROCESSOR">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALUcontrol|lpm_mux:Mux0" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALUcontrol|lpm_mux:Mux1" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALUcontrol|lpm_mux:Mux2" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ALUcontrol|lpm_mux:Mux3" CBX_FILE_NAME="mux_joc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -55,7 +55,6 @@ set_global_assignment -name VHDL_FILE ALU/NOT_gate.vhd
 set_global_assignment -name VHDL_FILE ALU/FULL_ADDER_16bit.vhd
 set_global_assignment -name VHDL_FILE ALU/FULL_ADDER_1bit.vhd
 set_global_assignment -name VHDL_FILE ALU/AND_gate.vhd
-set_global_assignment -name VHDL_FILE ALU/ALU_16bit.vhd
 set_global_assignment -name VHDL_FILE ALU/XOR_gate.vhd
 set_global_assignment -name VHDL_FILE AUEB_PROCESSOR.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -85,17 +84,26 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE ALU/waveforms/GEQ_16bit.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ALU/waveforms/NOT_16bit.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ALU/waveforms/ALU_16bit.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ALU/REGISTER/waveforms/REG.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE /home/niemand/altera/aueb_processor/Final_Test.vwf
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/reg0.vhd
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/REG_1bit.vhd
-set_global_assignment -name VHDL_FILE CPU_COMPONENTS/gen_reg.vhd
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/mux8to1.vhd
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/decode3to8.vhd
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/regFile.vhd
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/sign_extender.vhd
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/jumpAD.vhd
 set_global_assignment -name VHDL_FILE CPU_COMPONENTS/ALUcontrol.vhd
+set_global_assignment -name VHDL_FILE CPU_COMPONENTS/reg.vhd
+set_global_assignment -name VHDL_FILE ALU/ALU.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_COMPONENTS/waveforms/reg.vwf
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_COMPONENTS/waveforms/reg0.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_COMPONENTS/waveforms/mux8to1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_COMPONENTS/waveforms/regFile.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_COMPONENTS/waveforms/sing_extender.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_COMPONENTS/waveforms/jumpAD.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_COMPONENTS/waveforms/ALUcontrol.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/waveforms/ALUcontrol.vwf"

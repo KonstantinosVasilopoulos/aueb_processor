@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AUEB_PROCESSOR
-Sat May 07 18:21:59 2022
+Thu May 12 16:54:50 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 07 18:21:59 2022           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 12 16:54:50 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; AUEB_PROCESSOR                                  ;
 ; Top-level Entity Name              ; ALUcontrol                                      ;
@@ -233,7 +233,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 07 18:21:57 2022
+    Info: Processing started: Thu May 12 16:54:48 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUEB_PROCESSOR -c AUEB_PROCESSOR
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file alu/sub_16bit.vhd
@@ -257,9 +257,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu/ful
 Info (12021): Found 2 design units, including 1 entities, in source file alu/and_gate.vhd
     Info (12022): Found design unit 1: AND_gate-AndGateLogic
     Info (12023): Found entity 1: AND_gate
-Info (12021): Found 2 design units, including 1 entities, in source file alu/alu_16bit.vhd
-    Info (12022): Found design unit 1: ALU_16bit-ALULogic
-    Info (12023): Found entity 1: ALU_16bit
 Info (12021): Found 2 design units, including 1 entities, in source file alu/xor_gate.vhd
     Info (12022): Found design unit 1: XOR_gate-XorGateLogic
     Info (12023): Found entity 1: XOR_gate
@@ -293,24 +290,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu/mul
 Info (12021): Found 2 design units, including 1 entities, in source file alu/not_16bit.vhd
     Info (12022): Found design unit 1: NOT_16bit-Not16BitLogic
     Info (12023): Found entity 1: NOT_16bit
-Info (12021): Found 2 design units, including 1 entities, in source file alu/register/sr_latch.vhd
-    Info (12022): Found design unit 1: SR_LATCH-SRLatchLogic
-    Info (12023): Found entity 1: SR_LATCH
-Info (12021): Found 2 design units, including 1 entities, in source file alu/register/flip_flop_1bit.vhd
-    Info (12022): Found design unit 1: FLIP_FLOP_1bit-FlipFlop1BitLogic
-    Info (12023): Found entity 1: FLIP_FLOP_1bit
-Info (12021): Found 2 design units, including 1 entities, in source file alu/register/reg.vhd
-    Info (12022): Found design unit 1: reg-RegLogic
-    Info (12023): Found entity 1: reg
+Warning (12019): Can't analyze file -- file ALU/REGISTER/SR_LATCH.vhd is missing
+Warning (12019): Can't analyze file -- file ALU/REGISTER/FLIP_FLOP_1bit.vhd is missing
+Warning (12019): Can't analyze file -- file ALU/REGISTER/REG.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/reg0.vhd
     Info (12022): Found design unit 1: reg0-Reg0Logic
     Info (12023): Found entity 1: reg0
 Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/reg_1bit.vhd
     Info (12022): Found design unit 1: REG_1bit-Reg1BitLogic
     Info (12023): Found entity 1: REG_1bit
-Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/gen_reg.vhd
-    Info (12022): Found design unit 1: gen_reg-RegLogic
-    Info (12023): Found entity 1: gen_reg
 Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/mux8to1.vhd
     Info (12022): Found design unit 1: mux8to1-mux8to1Logic
     Info (12023): Found entity 1: mux8to1
@@ -329,6 +317,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file cpu_com
 Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/alucontrol.vhd
     Info (12022): Found design unit 1: ALUcontrol-ALUcontrolLogic
     Info (12023): Found entity 1: ALUcontrol
+Info (12021): Found 2 design units, including 1 entities, in source file cpu_components/reg.vhd
+    Info (12022): Found design unit 1: reg-RegLogic
+    Info (12023): Found entity 1: reg
+Info (12021): Found 2 design units, including 1 entities, in source file alu/alu.vhd
+    Info (12022): Found design unit 1: ALU-ALULogic
+    Info (12023): Found entity 1: ALU
 Info (12127): Elaborating entity "ALUcontrol" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -336,9 +330,9 @@ Info (21057): Implemented 16 device resources after synthesis - the final resour
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Sat May 07 18:21:59 2022
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Thu May 12 16:54:50 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
