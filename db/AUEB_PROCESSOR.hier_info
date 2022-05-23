@@ -1,86 +1,2023 @@
-|ALUcontrol
-opCode[0] => Mux0.IN19
-opCode[0] => Mux1.IN18
-opCode[0] => Mux2.IN18
-opCode[0] => Mux3.IN3
-opCode[0] => Mux3.IN4
-opCode[0] => Mux3.IN5
-opCode[0] => Mux3.IN6
-opCode[0] => Mux3.IN7
-opCode[0] => Mux3.IN8
-opCode[0] => Mux3.IN9
-opCode[0] => Mux3.IN10
-opCode[0] => Mux3.IN11
-opCode[0] => Mux3.IN12
-opCode[0] => Mux3.IN13
-opCode[0] => Mux3.IN14
-opCode[0] => Mux3.IN15
-opCode[0] => Mux3.IN16
-opCode[0] => Mux3.IN17
-opCode[0] => Mux3.IN18
-opCode[1] => Mux0.IN18
-opCode[1] => Mux1.IN17
-opCode[1] => Mux2.IN2
-opCode[1] => Mux2.IN3
-opCode[1] => Mux2.IN4
-opCode[1] => Mux2.IN5
-opCode[1] => Mux2.IN6
-opCode[1] => Mux2.IN7
-opCode[1] => Mux2.IN8
-opCode[1] => Mux2.IN9
-opCode[1] => Mux2.IN10
-opCode[1] => Mux2.IN11
-opCode[1] => Mux2.IN12
-opCode[1] => Mux2.IN13
-opCode[1] => Mux2.IN14
-opCode[1] => Mux2.IN15
-opCode[1] => Mux2.IN16
-opCode[1] => Mux2.IN17
-opCode[1] => Mux3.IN2
-opCode[2] => Mux0.IN17
-opCode[2] => Mux1.IN1
-opCode[2] => Mux1.IN2
-opCode[2] => Mux1.IN3
-opCode[2] => Mux1.IN4
-opCode[2] => Mux1.IN5
-opCode[2] => Mux1.IN6
-opCode[2] => Mux1.IN7
-opCode[2] => Mux1.IN8
-opCode[2] => Mux1.IN9
-opCode[2] => Mux1.IN10
-opCode[2] => Mux1.IN11
-opCode[2] => Mux1.IN12
-opCode[2] => Mux1.IN13
-opCode[2] => Mux1.IN14
-opCode[2] => Mux1.IN15
-opCode[2] => Mux1.IN16
-opCode[2] => Mux2.IN1
-opCode[2] => Mux3.IN1
-opCode[3] => Mux0.IN1
-opCode[3] => Mux0.IN2
-opCode[3] => Mux0.IN3
-opCode[3] => Mux0.IN4
-opCode[3] => Mux0.IN5
-opCode[3] => Mux0.IN6
-opCode[3] => Mux0.IN7
-opCode[3] => Mux0.IN8
-opCode[3] => Mux0.IN9
-opCode[3] => Mux0.IN10
-opCode[3] => Mux0.IN11
-opCode[3] => Mux0.IN12
-opCode[3] => Mux0.IN13
-opCode[3] => Mux0.IN14
-opCode[3] => Mux0.IN15
-opCode[3] => Mux0.IN16
-opCode[3] => Mux1.IN0
-opCode[3] => Mux2.IN0
-opCode[3] => Mux3.IN0
-func[0] => Mux3.IN19
-func[1] => Mux2.IN19
-func[2] => Mux1.IN19
-output[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+|regFile
+clock => reg0:G1.clock
+clock => reg:G2.clock
+clock => reg:G3.clock
+clock => reg:G4.clock
+clock => reg:G5.clock
+clock => reg:G6.clock
+clock => reg:G7.clock
+clock => reg:G8.clock
+Write1[0] => reg0:G1.in1[0]
+Write1[0] => reg:G2.in1[0]
+Write1[0] => reg:G3.in1[0]
+Write1[0] => reg:G4.in1[0]
+Write1[0] => reg:G5.in1[0]
+Write1[0] => reg:G6.in1[0]
+Write1[0] => reg:G7.in1[0]
+Write1[0] => reg:G8.in1[0]
+Write1[1] => reg0:G1.in1[1]
+Write1[1] => reg:G2.in1[1]
+Write1[1] => reg:G3.in1[1]
+Write1[1] => reg:G4.in1[1]
+Write1[1] => reg:G5.in1[1]
+Write1[1] => reg:G6.in1[1]
+Write1[1] => reg:G7.in1[1]
+Write1[1] => reg:G8.in1[1]
+Write1[2] => reg0:G1.in1[2]
+Write1[2] => reg:G2.in1[2]
+Write1[2] => reg:G3.in1[2]
+Write1[2] => reg:G4.in1[2]
+Write1[2] => reg:G5.in1[2]
+Write1[2] => reg:G6.in1[2]
+Write1[2] => reg:G7.in1[2]
+Write1[2] => reg:G8.in1[2]
+Write1[3] => reg0:G1.in1[3]
+Write1[3] => reg:G2.in1[3]
+Write1[3] => reg:G3.in1[3]
+Write1[3] => reg:G4.in1[3]
+Write1[3] => reg:G5.in1[3]
+Write1[3] => reg:G6.in1[3]
+Write1[3] => reg:G7.in1[3]
+Write1[3] => reg:G8.in1[3]
+Write1[4] => reg0:G1.in1[4]
+Write1[4] => reg:G2.in1[4]
+Write1[4] => reg:G3.in1[4]
+Write1[4] => reg:G4.in1[4]
+Write1[4] => reg:G5.in1[4]
+Write1[4] => reg:G6.in1[4]
+Write1[4] => reg:G7.in1[4]
+Write1[4] => reg:G8.in1[4]
+Write1[5] => reg0:G1.in1[5]
+Write1[5] => reg:G2.in1[5]
+Write1[5] => reg:G3.in1[5]
+Write1[5] => reg:G4.in1[5]
+Write1[5] => reg:G5.in1[5]
+Write1[5] => reg:G6.in1[5]
+Write1[5] => reg:G7.in1[5]
+Write1[5] => reg:G8.in1[5]
+Write1[6] => reg0:G1.in1[6]
+Write1[6] => reg:G2.in1[6]
+Write1[6] => reg:G3.in1[6]
+Write1[6] => reg:G4.in1[6]
+Write1[6] => reg:G5.in1[6]
+Write1[6] => reg:G6.in1[6]
+Write1[6] => reg:G7.in1[6]
+Write1[6] => reg:G8.in1[6]
+Write1[7] => reg0:G1.in1[7]
+Write1[7] => reg:G2.in1[7]
+Write1[7] => reg:G3.in1[7]
+Write1[7] => reg:G4.in1[7]
+Write1[7] => reg:G5.in1[7]
+Write1[7] => reg:G6.in1[7]
+Write1[7] => reg:G7.in1[7]
+Write1[7] => reg:G8.in1[7]
+Write1[8] => reg0:G1.in1[8]
+Write1[8] => reg:G2.in1[8]
+Write1[8] => reg:G3.in1[8]
+Write1[8] => reg:G4.in1[8]
+Write1[8] => reg:G5.in1[8]
+Write1[8] => reg:G6.in1[8]
+Write1[8] => reg:G7.in1[8]
+Write1[8] => reg:G8.in1[8]
+Write1[9] => reg0:G1.in1[9]
+Write1[9] => reg:G2.in1[9]
+Write1[9] => reg:G3.in1[9]
+Write1[9] => reg:G4.in1[9]
+Write1[9] => reg:G5.in1[9]
+Write1[9] => reg:G6.in1[9]
+Write1[9] => reg:G7.in1[9]
+Write1[9] => reg:G8.in1[9]
+Write1[10] => reg0:G1.in1[10]
+Write1[10] => reg:G2.in1[10]
+Write1[10] => reg:G3.in1[10]
+Write1[10] => reg:G4.in1[10]
+Write1[10] => reg:G5.in1[10]
+Write1[10] => reg:G6.in1[10]
+Write1[10] => reg:G7.in1[10]
+Write1[10] => reg:G8.in1[10]
+Write1[11] => reg0:G1.in1[11]
+Write1[11] => reg:G2.in1[11]
+Write1[11] => reg:G3.in1[11]
+Write1[11] => reg:G4.in1[11]
+Write1[11] => reg:G5.in1[11]
+Write1[11] => reg:G6.in1[11]
+Write1[11] => reg:G7.in1[11]
+Write1[11] => reg:G8.in1[11]
+Write1[12] => reg0:G1.in1[12]
+Write1[12] => reg:G2.in1[12]
+Write1[12] => reg:G3.in1[12]
+Write1[12] => reg:G4.in1[12]
+Write1[12] => reg:G5.in1[12]
+Write1[12] => reg:G6.in1[12]
+Write1[12] => reg:G7.in1[12]
+Write1[12] => reg:G8.in1[12]
+Write1[13] => reg0:G1.in1[13]
+Write1[13] => reg:G2.in1[13]
+Write1[13] => reg:G3.in1[13]
+Write1[13] => reg:G4.in1[13]
+Write1[13] => reg:G5.in1[13]
+Write1[13] => reg:G6.in1[13]
+Write1[13] => reg:G7.in1[13]
+Write1[13] => reg:G8.in1[13]
+Write1[14] => reg0:G1.in1[14]
+Write1[14] => reg:G2.in1[14]
+Write1[14] => reg:G3.in1[14]
+Write1[14] => reg:G4.in1[14]
+Write1[14] => reg:G5.in1[14]
+Write1[14] => reg:G6.in1[14]
+Write1[14] => reg:G7.in1[14]
+Write1[14] => reg:G8.in1[14]
+Write1[15] => reg0:G1.in1[15]
+Write1[15] => reg:G2.in1[15]
+Write1[15] => reg:G3.in1[15]
+Write1[15] => reg:G4.in1[15]
+Write1[15] => reg:G5.in1[15]
+Write1[15] => reg:G6.in1[15]
+Write1[15] => reg:G7.in1[15]
+Write1[15] => reg:G8.in1[15]
+Write1AD[0] => decode3to8:G0.in1[0]
+Write1AD[1] => decode3to8:G0.in1[1]
+Write1AD[2] => decode3to8:G0.in1[2]
+Read1AD[0] => mux8to1:G9.choice[0]
+Read1AD[1] => mux8to1:G9.choice[1]
+Read1AD[2] => mux8to1:G9.choice[2]
+Read2AD[0] => mux8to1:G10.choice[0]
+Read2AD[1] => mux8to1:G10.choice[1]
+Read2AD[2] => mux8to1:G10.choice[2]
+Read1[0] <= mux8to1:G9.out1[0]
+Read1[1] <= mux8to1:G9.out1[1]
+Read1[2] <= mux8to1:G9.out1[2]
+Read1[3] <= mux8to1:G9.out1[3]
+Read1[4] <= mux8to1:G9.out1[4]
+Read1[5] <= mux8to1:G9.out1[5]
+Read1[6] <= mux8to1:G9.out1[6]
+Read1[7] <= mux8to1:G9.out1[7]
+Read1[8] <= mux8to1:G9.out1[8]
+Read1[9] <= mux8to1:G9.out1[9]
+Read1[10] <= mux8to1:G9.out1[10]
+Read1[11] <= mux8to1:G9.out1[11]
+Read1[12] <= mux8to1:G9.out1[12]
+Read1[13] <= mux8to1:G9.out1[13]
+Read1[14] <= mux8to1:G9.out1[14]
+Read1[15] <= mux8to1:G9.out1[15]
+Read2[0] <= mux8to1:G10.out1[0]
+Read2[1] <= mux8to1:G10.out1[1]
+Read2[2] <= mux8to1:G10.out1[2]
+Read2[3] <= mux8to1:G10.out1[3]
+Read2[4] <= mux8to1:G10.out1[4]
+Read2[5] <= mux8to1:G10.out1[5]
+Read2[6] <= mux8to1:G10.out1[6]
+Read2[7] <= mux8to1:G10.out1[7]
+Read2[8] <= mux8to1:G10.out1[8]
+Read2[9] <= mux8to1:G10.out1[9]
+Read2[10] <= mux8to1:G10.out1[10]
+Read2[11] <= mux8to1:G10.out1[11]
+Read2[12] <= mux8to1:G10.out1[12]
+Read2[13] <= mux8to1:G10.out1[13]
+Read2[14] <= mux8to1:G10.out1[14]
+Read2[15] <= mux8to1:G10.out1[15]
+OUTall[0] <= reg0:G1.out1[0]
+OUTall[1] <= reg0:G1.out1[1]
+OUTall[2] <= reg0:G1.out1[2]
+OUTall[3] <= reg0:G1.out1[3]
+OUTall[4] <= reg0:G1.out1[4]
+OUTall[5] <= reg0:G1.out1[5]
+OUTall[6] <= reg0:G1.out1[6]
+OUTall[7] <= reg0:G1.out1[7]
+OUTall[8] <= reg0:G1.out1[8]
+OUTall[9] <= reg0:G1.out1[9]
+OUTall[10] <= reg0:G1.out1[10]
+OUTall[11] <= reg0:G1.out1[11]
+OUTall[12] <= reg0:G1.out1[12]
+OUTall[13] <= reg0:G1.out1[13]
+OUTall[14] <= reg0:G1.out1[14]
+OUTall[15] <= reg0:G1.out1[15]
+OUTall[16] <= reg:G2.out1[0]
+OUTall[17] <= reg:G2.out1[1]
+OUTall[18] <= reg:G2.out1[2]
+OUTall[19] <= reg:G2.out1[3]
+OUTall[20] <= reg:G2.out1[4]
+OUTall[21] <= reg:G2.out1[5]
+OUTall[22] <= reg:G2.out1[6]
+OUTall[23] <= reg:G2.out1[7]
+OUTall[24] <= reg:G2.out1[8]
+OUTall[25] <= reg:G2.out1[9]
+OUTall[26] <= reg:G2.out1[10]
+OUTall[27] <= reg:G2.out1[11]
+OUTall[28] <= reg:G2.out1[12]
+OUTall[29] <= reg:G2.out1[13]
+OUTall[30] <= reg:G2.out1[14]
+OUTall[31] <= reg:G2.out1[15]
+OUTall[32] <= reg:G3.out1[0]
+OUTall[33] <= reg:G3.out1[1]
+OUTall[34] <= reg:G3.out1[2]
+OUTall[35] <= reg:G3.out1[3]
+OUTall[36] <= reg:G3.out1[4]
+OUTall[37] <= reg:G3.out1[5]
+OUTall[38] <= reg:G3.out1[6]
+OUTall[39] <= reg:G3.out1[7]
+OUTall[40] <= reg:G3.out1[8]
+OUTall[41] <= reg:G3.out1[9]
+OUTall[42] <= reg:G3.out1[10]
+OUTall[43] <= reg:G3.out1[11]
+OUTall[44] <= reg:G3.out1[12]
+OUTall[45] <= reg:G3.out1[13]
+OUTall[46] <= reg:G3.out1[14]
+OUTall[47] <= reg:G3.out1[15]
+OUTall[48] <= reg:G4.out1[0]
+OUTall[49] <= reg:G4.out1[1]
+OUTall[50] <= reg:G4.out1[2]
+OUTall[51] <= reg:G4.out1[3]
+OUTall[52] <= reg:G4.out1[4]
+OUTall[53] <= reg:G4.out1[5]
+OUTall[54] <= reg:G4.out1[6]
+OUTall[55] <= reg:G4.out1[7]
+OUTall[56] <= reg:G4.out1[8]
+OUTall[57] <= reg:G4.out1[9]
+OUTall[58] <= reg:G4.out1[10]
+OUTall[59] <= reg:G4.out1[11]
+OUTall[60] <= reg:G4.out1[12]
+OUTall[61] <= reg:G4.out1[13]
+OUTall[62] <= reg:G4.out1[14]
+OUTall[63] <= reg:G4.out1[15]
+OUTall[64] <= reg:G5.out1[0]
+OUTall[65] <= reg:G5.out1[1]
+OUTall[66] <= reg:G5.out1[2]
+OUTall[67] <= reg:G5.out1[3]
+OUTall[68] <= reg:G5.out1[4]
+OUTall[69] <= reg:G5.out1[5]
+OUTall[70] <= reg:G5.out1[6]
+OUTall[71] <= reg:G5.out1[7]
+OUTall[72] <= reg:G5.out1[8]
+OUTall[73] <= reg:G5.out1[9]
+OUTall[74] <= reg:G5.out1[10]
+OUTall[75] <= reg:G5.out1[11]
+OUTall[76] <= reg:G5.out1[12]
+OUTall[77] <= reg:G5.out1[13]
+OUTall[78] <= reg:G5.out1[14]
+OUTall[79] <= reg:G5.out1[15]
+OUTall[80] <= reg:G6.out1[0]
+OUTall[81] <= reg:G6.out1[1]
+OUTall[82] <= reg:G6.out1[2]
+OUTall[83] <= reg:G6.out1[3]
+OUTall[84] <= reg:G6.out1[4]
+OUTall[85] <= reg:G6.out1[5]
+OUTall[86] <= reg:G6.out1[6]
+OUTall[87] <= reg:G6.out1[7]
+OUTall[88] <= reg:G6.out1[8]
+OUTall[89] <= reg:G6.out1[9]
+OUTall[90] <= reg:G6.out1[10]
+OUTall[91] <= reg:G6.out1[11]
+OUTall[92] <= reg:G6.out1[12]
+OUTall[93] <= reg:G6.out1[13]
+OUTall[94] <= reg:G6.out1[14]
+OUTall[95] <= reg:G6.out1[15]
+OUTall[96] <= reg:G7.out1[0]
+OUTall[97] <= reg:G7.out1[1]
+OUTall[98] <= reg:G7.out1[2]
+OUTall[99] <= reg:G7.out1[3]
+OUTall[100] <= reg:G7.out1[4]
+OUTall[101] <= reg:G7.out1[5]
+OUTall[102] <= reg:G7.out1[6]
+OUTall[103] <= reg:G7.out1[7]
+OUTall[104] <= reg:G7.out1[8]
+OUTall[105] <= reg:G7.out1[9]
+OUTall[106] <= reg:G7.out1[10]
+OUTall[107] <= reg:G7.out1[11]
+OUTall[108] <= reg:G7.out1[12]
+OUTall[109] <= reg:G7.out1[13]
+OUTall[110] <= reg:G7.out1[14]
+OUTall[111] <= reg:G7.out1[15]
+OUTall[112] <= reg:G8.out1[0]
+OUTall[113] <= reg:G8.out1[1]
+OUTall[114] <= reg:G8.out1[2]
+OUTall[115] <= reg:G8.out1[3]
+OUTall[116] <= reg:G8.out1[4]
+OUTall[117] <= reg:G8.out1[5]
+OUTall[118] <= reg:G8.out1[6]
+OUTall[119] <= reg:G8.out1[7]
+OUTall[120] <= reg:G8.out1[8]
+OUTall[121] <= reg:G8.out1[9]
+OUTall[122] <= reg:G8.out1[10]
+OUTall[123] <= reg:G8.out1[11]
+OUTall[124] <= reg:G8.out1[12]
+OUTall[125] <= reg:G8.out1[13]
+OUTall[126] <= reg:G8.out1[14]
+OUTall[127] <= reg:G8.out1[15]
+
+
+|regFile|decode3to8:G0
+in1[0] => Mux0.IN10
+in1[0] => Mux1.IN10
+in1[0] => Mux2.IN10
+in1[0] => Mux3.IN10
+in1[0] => Mux4.IN10
+in1[0] => Mux5.IN10
+in1[0] => Mux6.IN10
+in1[0] => Mux7.IN10
+in1[1] => Mux0.IN9
+in1[1] => Mux1.IN9
+in1[1] => Mux2.IN9
+in1[1] => Mux3.IN9
+in1[1] => Mux4.IN9
+in1[1] => Mux5.IN9
+in1[1] => Mux6.IN9
+in1[1] => Mux7.IN9
+in1[2] => Mux0.IN8
+in1[2] => Mux1.IN8
+in1[2] => Mux2.IN8
+in1[2] => Mux3.IN8
+in1[2] => Mux4.IN8
+in1[2] => Mux5.IN8
+in1[2] => Mux6.IN8
+in1[2] => Mux7.IN8
+out1[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out1[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out1[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out1[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out1[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out1[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out1[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out1[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg0:G1
+in1[0] => ~NO_FANOUT~
+in1[1] => ~NO_FANOUT~
+in1[2] => ~NO_FANOUT~
+in1[3] => ~NO_FANOUT~
+in1[4] => ~NO_FANOUT~
+in1[5] => ~NO_FANOUT~
+in1[6] => ~NO_FANOUT~
+in1[7] => ~NO_FANOUT~
+in1[8] => ~NO_FANOUT~
+in1[9] => ~NO_FANOUT~
+in1[10] => ~NO_FANOUT~
+in1[11] => ~NO_FANOUT~
+in1[12] => ~NO_FANOUT~
+in1[13] => ~NO_FANOUT~
+in1[14] => ~NO_FANOUT~
+in1[15] => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+enable => ~NO_FANOUT~
+out1[0] <= <GND>
+out1[1] <= <GND>
+out1[2] <= <GND>
+out1[3] <= <GND>
+out1[4] <= <GND>
+out1[5] <= <GND>
+out1[6] <= <GND>
+out1[7] <= <GND>
+out1[8] <= <GND>
+out1[9] <= <GND>
+out1[10] <= <GND>
+out1[11] <= <GND>
+out1[12] <= <GND>
+out1[13] <= <GND>
+out1[14] <= <GND>
+out1[15] <= <GND>
+
+
+|regFile|reg:G2
+in1[0] => REG_1bit:G0.in1
+in1[1] => REG_1bit:G1.in1
+in1[2] => REG_1bit:G2.in1
+in1[3] => REG_1bit:G3.in1
+in1[4] => REG_1bit:G4.in1
+in1[5] => REG_1bit:G5.in1
+in1[6] => REG_1bit:G6.in1
+in1[7] => REG_1bit:G7.in1
+in1[8] => REG_1bit:G8.in1
+in1[9] => REG_1bit:G9.in1
+in1[10] => REG_1bit:G10.in1
+in1[11] => REG_1bit:G11.in1
+in1[12] => REG_1bit:G12.in1
+in1[13] => REG_1bit:G13.in1
+in1[14] => REG_1bit:G14.in1
+in1[15] => REG_1bit:G15.in1
+clock => REG_1bit:G0.clock
+clock => REG_1bit:G1.clock
+clock => REG_1bit:G2.clock
+clock => REG_1bit:G3.clock
+clock => REG_1bit:G4.clock
+clock => REG_1bit:G5.clock
+clock => REG_1bit:G6.clock
+clock => REG_1bit:G7.clock
+clock => REG_1bit:G8.clock
+clock => REG_1bit:G9.clock
+clock => REG_1bit:G10.clock
+clock => REG_1bit:G11.clock
+clock => REG_1bit:G12.clock
+clock => REG_1bit:G13.clock
+clock => REG_1bit:G14.clock
+clock => REG_1bit:G15.clock
+enable => REG_1bit:G0.enable
+enable => REG_1bit:G1.enable
+enable => REG_1bit:G2.enable
+enable => REG_1bit:G3.enable
+enable => REG_1bit:G4.enable
+enable => REG_1bit:G5.enable
+enable => REG_1bit:G6.enable
+enable => REG_1bit:G7.enable
+enable => REG_1bit:G8.enable
+enable => REG_1bit:G9.enable
+enable => REG_1bit:G10.enable
+enable => REG_1bit:G11.enable
+enable => REG_1bit:G12.enable
+enable => REG_1bit:G13.enable
+enable => REG_1bit:G14.enable
+enable => REG_1bit:G15.enable
+out1[0] <= REG_1bit:G0.out1
+out1[1] <= REG_1bit:G1.out1
+out1[2] <= REG_1bit:G2.out1
+out1[3] <= REG_1bit:G3.out1
+out1[4] <= REG_1bit:G4.out1
+out1[5] <= REG_1bit:G5.out1
+out1[6] <= REG_1bit:G6.out1
+out1[7] <= REG_1bit:G7.out1
+out1[8] <= REG_1bit:G8.out1
+out1[9] <= REG_1bit:G9.out1
+out1[10] <= REG_1bit:G10.out1
+out1[11] <= REG_1bit:G11.out1
+out1[12] <= REG_1bit:G12.out1
+out1[13] <= REG_1bit:G13.out1
+out1[14] <= REG_1bit:G14.out1
+out1[15] <= REG_1bit:G15.out1
+
+
+|regFile|reg:G2|REG_1bit:G0
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G1
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G2
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G3
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G4
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G5
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G6
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G7
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G8
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G9
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G10
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G11
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G12
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G13
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G14
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G2|REG_1bit:G15
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3
+in1[0] => REG_1bit:G0.in1
+in1[1] => REG_1bit:G1.in1
+in1[2] => REG_1bit:G2.in1
+in1[3] => REG_1bit:G3.in1
+in1[4] => REG_1bit:G4.in1
+in1[5] => REG_1bit:G5.in1
+in1[6] => REG_1bit:G6.in1
+in1[7] => REG_1bit:G7.in1
+in1[8] => REG_1bit:G8.in1
+in1[9] => REG_1bit:G9.in1
+in1[10] => REG_1bit:G10.in1
+in1[11] => REG_1bit:G11.in1
+in1[12] => REG_1bit:G12.in1
+in1[13] => REG_1bit:G13.in1
+in1[14] => REG_1bit:G14.in1
+in1[15] => REG_1bit:G15.in1
+clock => REG_1bit:G0.clock
+clock => REG_1bit:G1.clock
+clock => REG_1bit:G2.clock
+clock => REG_1bit:G3.clock
+clock => REG_1bit:G4.clock
+clock => REG_1bit:G5.clock
+clock => REG_1bit:G6.clock
+clock => REG_1bit:G7.clock
+clock => REG_1bit:G8.clock
+clock => REG_1bit:G9.clock
+clock => REG_1bit:G10.clock
+clock => REG_1bit:G11.clock
+clock => REG_1bit:G12.clock
+clock => REG_1bit:G13.clock
+clock => REG_1bit:G14.clock
+clock => REG_1bit:G15.clock
+enable => REG_1bit:G0.enable
+enable => REG_1bit:G1.enable
+enable => REG_1bit:G2.enable
+enable => REG_1bit:G3.enable
+enable => REG_1bit:G4.enable
+enable => REG_1bit:G5.enable
+enable => REG_1bit:G6.enable
+enable => REG_1bit:G7.enable
+enable => REG_1bit:G8.enable
+enable => REG_1bit:G9.enable
+enable => REG_1bit:G10.enable
+enable => REG_1bit:G11.enable
+enable => REG_1bit:G12.enable
+enable => REG_1bit:G13.enable
+enable => REG_1bit:G14.enable
+enable => REG_1bit:G15.enable
+out1[0] <= REG_1bit:G0.out1
+out1[1] <= REG_1bit:G1.out1
+out1[2] <= REG_1bit:G2.out1
+out1[3] <= REG_1bit:G3.out1
+out1[4] <= REG_1bit:G4.out1
+out1[5] <= REG_1bit:G5.out1
+out1[6] <= REG_1bit:G6.out1
+out1[7] <= REG_1bit:G7.out1
+out1[8] <= REG_1bit:G8.out1
+out1[9] <= REG_1bit:G9.out1
+out1[10] <= REG_1bit:G10.out1
+out1[11] <= REG_1bit:G11.out1
+out1[12] <= REG_1bit:G12.out1
+out1[13] <= REG_1bit:G13.out1
+out1[14] <= REG_1bit:G14.out1
+out1[15] <= REG_1bit:G15.out1
+
+
+|regFile|reg:G3|REG_1bit:G0
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G1
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G2
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G3
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G4
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G5
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G6
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G7
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G8
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G9
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G10
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G11
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G12
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G13
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G14
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G3|REG_1bit:G15
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4
+in1[0] => REG_1bit:G0.in1
+in1[1] => REG_1bit:G1.in1
+in1[2] => REG_1bit:G2.in1
+in1[3] => REG_1bit:G3.in1
+in1[4] => REG_1bit:G4.in1
+in1[5] => REG_1bit:G5.in1
+in1[6] => REG_1bit:G6.in1
+in1[7] => REG_1bit:G7.in1
+in1[8] => REG_1bit:G8.in1
+in1[9] => REG_1bit:G9.in1
+in1[10] => REG_1bit:G10.in1
+in1[11] => REG_1bit:G11.in1
+in1[12] => REG_1bit:G12.in1
+in1[13] => REG_1bit:G13.in1
+in1[14] => REG_1bit:G14.in1
+in1[15] => REG_1bit:G15.in1
+clock => REG_1bit:G0.clock
+clock => REG_1bit:G1.clock
+clock => REG_1bit:G2.clock
+clock => REG_1bit:G3.clock
+clock => REG_1bit:G4.clock
+clock => REG_1bit:G5.clock
+clock => REG_1bit:G6.clock
+clock => REG_1bit:G7.clock
+clock => REG_1bit:G8.clock
+clock => REG_1bit:G9.clock
+clock => REG_1bit:G10.clock
+clock => REG_1bit:G11.clock
+clock => REG_1bit:G12.clock
+clock => REG_1bit:G13.clock
+clock => REG_1bit:G14.clock
+clock => REG_1bit:G15.clock
+enable => REG_1bit:G0.enable
+enable => REG_1bit:G1.enable
+enable => REG_1bit:G2.enable
+enable => REG_1bit:G3.enable
+enable => REG_1bit:G4.enable
+enable => REG_1bit:G5.enable
+enable => REG_1bit:G6.enable
+enable => REG_1bit:G7.enable
+enable => REG_1bit:G8.enable
+enable => REG_1bit:G9.enable
+enable => REG_1bit:G10.enable
+enable => REG_1bit:G11.enable
+enable => REG_1bit:G12.enable
+enable => REG_1bit:G13.enable
+enable => REG_1bit:G14.enable
+enable => REG_1bit:G15.enable
+out1[0] <= REG_1bit:G0.out1
+out1[1] <= REG_1bit:G1.out1
+out1[2] <= REG_1bit:G2.out1
+out1[3] <= REG_1bit:G3.out1
+out1[4] <= REG_1bit:G4.out1
+out1[5] <= REG_1bit:G5.out1
+out1[6] <= REG_1bit:G6.out1
+out1[7] <= REG_1bit:G7.out1
+out1[8] <= REG_1bit:G8.out1
+out1[9] <= REG_1bit:G9.out1
+out1[10] <= REG_1bit:G10.out1
+out1[11] <= REG_1bit:G11.out1
+out1[12] <= REG_1bit:G12.out1
+out1[13] <= REG_1bit:G13.out1
+out1[14] <= REG_1bit:G14.out1
+out1[15] <= REG_1bit:G15.out1
+
+
+|regFile|reg:G4|REG_1bit:G0
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G1
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G2
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G3
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G4
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G5
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G6
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G7
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G8
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G9
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G10
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G11
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G12
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G13
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G14
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G4|REG_1bit:G15
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5
+in1[0] => REG_1bit:G0.in1
+in1[1] => REG_1bit:G1.in1
+in1[2] => REG_1bit:G2.in1
+in1[3] => REG_1bit:G3.in1
+in1[4] => REG_1bit:G4.in1
+in1[5] => REG_1bit:G5.in1
+in1[6] => REG_1bit:G6.in1
+in1[7] => REG_1bit:G7.in1
+in1[8] => REG_1bit:G8.in1
+in1[9] => REG_1bit:G9.in1
+in1[10] => REG_1bit:G10.in1
+in1[11] => REG_1bit:G11.in1
+in1[12] => REG_1bit:G12.in1
+in1[13] => REG_1bit:G13.in1
+in1[14] => REG_1bit:G14.in1
+in1[15] => REG_1bit:G15.in1
+clock => REG_1bit:G0.clock
+clock => REG_1bit:G1.clock
+clock => REG_1bit:G2.clock
+clock => REG_1bit:G3.clock
+clock => REG_1bit:G4.clock
+clock => REG_1bit:G5.clock
+clock => REG_1bit:G6.clock
+clock => REG_1bit:G7.clock
+clock => REG_1bit:G8.clock
+clock => REG_1bit:G9.clock
+clock => REG_1bit:G10.clock
+clock => REG_1bit:G11.clock
+clock => REG_1bit:G12.clock
+clock => REG_1bit:G13.clock
+clock => REG_1bit:G14.clock
+clock => REG_1bit:G15.clock
+enable => REG_1bit:G0.enable
+enable => REG_1bit:G1.enable
+enable => REG_1bit:G2.enable
+enable => REG_1bit:G3.enable
+enable => REG_1bit:G4.enable
+enable => REG_1bit:G5.enable
+enable => REG_1bit:G6.enable
+enable => REG_1bit:G7.enable
+enable => REG_1bit:G8.enable
+enable => REG_1bit:G9.enable
+enable => REG_1bit:G10.enable
+enable => REG_1bit:G11.enable
+enable => REG_1bit:G12.enable
+enable => REG_1bit:G13.enable
+enable => REG_1bit:G14.enable
+enable => REG_1bit:G15.enable
+out1[0] <= REG_1bit:G0.out1
+out1[1] <= REG_1bit:G1.out1
+out1[2] <= REG_1bit:G2.out1
+out1[3] <= REG_1bit:G3.out1
+out1[4] <= REG_1bit:G4.out1
+out1[5] <= REG_1bit:G5.out1
+out1[6] <= REG_1bit:G6.out1
+out1[7] <= REG_1bit:G7.out1
+out1[8] <= REG_1bit:G8.out1
+out1[9] <= REG_1bit:G9.out1
+out1[10] <= REG_1bit:G10.out1
+out1[11] <= REG_1bit:G11.out1
+out1[12] <= REG_1bit:G12.out1
+out1[13] <= REG_1bit:G13.out1
+out1[14] <= REG_1bit:G14.out1
+out1[15] <= REG_1bit:G15.out1
+
+
+|regFile|reg:G5|REG_1bit:G0
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G1
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G2
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G3
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G4
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G5
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G6
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G7
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G8
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G9
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G10
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G11
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G12
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G13
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G14
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G5|REG_1bit:G15
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6
+in1[0] => REG_1bit:G0.in1
+in1[1] => REG_1bit:G1.in1
+in1[2] => REG_1bit:G2.in1
+in1[3] => REG_1bit:G3.in1
+in1[4] => REG_1bit:G4.in1
+in1[5] => REG_1bit:G5.in1
+in1[6] => REG_1bit:G6.in1
+in1[7] => REG_1bit:G7.in1
+in1[8] => REG_1bit:G8.in1
+in1[9] => REG_1bit:G9.in1
+in1[10] => REG_1bit:G10.in1
+in1[11] => REG_1bit:G11.in1
+in1[12] => REG_1bit:G12.in1
+in1[13] => REG_1bit:G13.in1
+in1[14] => REG_1bit:G14.in1
+in1[15] => REG_1bit:G15.in1
+clock => REG_1bit:G0.clock
+clock => REG_1bit:G1.clock
+clock => REG_1bit:G2.clock
+clock => REG_1bit:G3.clock
+clock => REG_1bit:G4.clock
+clock => REG_1bit:G5.clock
+clock => REG_1bit:G6.clock
+clock => REG_1bit:G7.clock
+clock => REG_1bit:G8.clock
+clock => REG_1bit:G9.clock
+clock => REG_1bit:G10.clock
+clock => REG_1bit:G11.clock
+clock => REG_1bit:G12.clock
+clock => REG_1bit:G13.clock
+clock => REG_1bit:G14.clock
+clock => REG_1bit:G15.clock
+enable => REG_1bit:G0.enable
+enable => REG_1bit:G1.enable
+enable => REG_1bit:G2.enable
+enable => REG_1bit:G3.enable
+enable => REG_1bit:G4.enable
+enable => REG_1bit:G5.enable
+enable => REG_1bit:G6.enable
+enable => REG_1bit:G7.enable
+enable => REG_1bit:G8.enable
+enable => REG_1bit:G9.enable
+enable => REG_1bit:G10.enable
+enable => REG_1bit:G11.enable
+enable => REG_1bit:G12.enable
+enable => REG_1bit:G13.enable
+enable => REG_1bit:G14.enable
+enable => REG_1bit:G15.enable
+out1[0] <= REG_1bit:G0.out1
+out1[1] <= REG_1bit:G1.out1
+out1[2] <= REG_1bit:G2.out1
+out1[3] <= REG_1bit:G3.out1
+out1[4] <= REG_1bit:G4.out1
+out1[5] <= REG_1bit:G5.out1
+out1[6] <= REG_1bit:G6.out1
+out1[7] <= REG_1bit:G7.out1
+out1[8] <= REG_1bit:G8.out1
+out1[9] <= REG_1bit:G9.out1
+out1[10] <= REG_1bit:G10.out1
+out1[11] <= REG_1bit:G11.out1
+out1[12] <= REG_1bit:G12.out1
+out1[13] <= REG_1bit:G13.out1
+out1[14] <= REG_1bit:G14.out1
+out1[15] <= REG_1bit:G15.out1
+
+
+|regFile|reg:G6|REG_1bit:G0
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G1
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G2
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G3
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G4
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G5
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G6
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G7
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G8
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G9
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G10
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G11
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G12
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G13
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G14
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G6|REG_1bit:G15
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7
+in1[0] => REG_1bit:G0.in1
+in1[1] => REG_1bit:G1.in1
+in1[2] => REG_1bit:G2.in1
+in1[3] => REG_1bit:G3.in1
+in1[4] => REG_1bit:G4.in1
+in1[5] => REG_1bit:G5.in1
+in1[6] => REG_1bit:G6.in1
+in1[7] => REG_1bit:G7.in1
+in1[8] => REG_1bit:G8.in1
+in1[9] => REG_1bit:G9.in1
+in1[10] => REG_1bit:G10.in1
+in1[11] => REG_1bit:G11.in1
+in1[12] => REG_1bit:G12.in1
+in1[13] => REG_1bit:G13.in1
+in1[14] => REG_1bit:G14.in1
+in1[15] => REG_1bit:G15.in1
+clock => REG_1bit:G0.clock
+clock => REG_1bit:G1.clock
+clock => REG_1bit:G2.clock
+clock => REG_1bit:G3.clock
+clock => REG_1bit:G4.clock
+clock => REG_1bit:G5.clock
+clock => REG_1bit:G6.clock
+clock => REG_1bit:G7.clock
+clock => REG_1bit:G8.clock
+clock => REG_1bit:G9.clock
+clock => REG_1bit:G10.clock
+clock => REG_1bit:G11.clock
+clock => REG_1bit:G12.clock
+clock => REG_1bit:G13.clock
+clock => REG_1bit:G14.clock
+clock => REG_1bit:G15.clock
+enable => REG_1bit:G0.enable
+enable => REG_1bit:G1.enable
+enable => REG_1bit:G2.enable
+enable => REG_1bit:G3.enable
+enable => REG_1bit:G4.enable
+enable => REG_1bit:G5.enable
+enable => REG_1bit:G6.enable
+enable => REG_1bit:G7.enable
+enable => REG_1bit:G8.enable
+enable => REG_1bit:G9.enable
+enable => REG_1bit:G10.enable
+enable => REG_1bit:G11.enable
+enable => REG_1bit:G12.enable
+enable => REG_1bit:G13.enable
+enable => REG_1bit:G14.enable
+enable => REG_1bit:G15.enable
+out1[0] <= REG_1bit:G0.out1
+out1[1] <= REG_1bit:G1.out1
+out1[2] <= REG_1bit:G2.out1
+out1[3] <= REG_1bit:G3.out1
+out1[4] <= REG_1bit:G4.out1
+out1[5] <= REG_1bit:G5.out1
+out1[6] <= REG_1bit:G6.out1
+out1[7] <= REG_1bit:G7.out1
+out1[8] <= REG_1bit:G8.out1
+out1[9] <= REG_1bit:G9.out1
+out1[10] <= REG_1bit:G10.out1
+out1[11] <= REG_1bit:G11.out1
+out1[12] <= REG_1bit:G12.out1
+out1[13] <= REG_1bit:G13.out1
+out1[14] <= REG_1bit:G14.out1
+out1[15] <= REG_1bit:G15.out1
+
+
+|regFile|reg:G7|REG_1bit:G0
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G1
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G2
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G3
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G4
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G5
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G6
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G7
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G8
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G9
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G10
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G11
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G12
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G13
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G14
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G7|REG_1bit:G15
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8
+in1[0] => REG_1bit:G0.in1
+in1[1] => REG_1bit:G1.in1
+in1[2] => REG_1bit:G2.in1
+in1[3] => REG_1bit:G3.in1
+in1[4] => REG_1bit:G4.in1
+in1[5] => REG_1bit:G5.in1
+in1[6] => REG_1bit:G6.in1
+in1[7] => REG_1bit:G7.in1
+in1[8] => REG_1bit:G8.in1
+in1[9] => REG_1bit:G9.in1
+in1[10] => REG_1bit:G10.in1
+in1[11] => REG_1bit:G11.in1
+in1[12] => REG_1bit:G12.in1
+in1[13] => REG_1bit:G13.in1
+in1[14] => REG_1bit:G14.in1
+in1[15] => REG_1bit:G15.in1
+clock => REG_1bit:G0.clock
+clock => REG_1bit:G1.clock
+clock => REG_1bit:G2.clock
+clock => REG_1bit:G3.clock
+clock => REG_1bit:G4.clock
+clock => REG_1bit:G5.clock
+clock => REG_1bit:G6.clock
+clock => REG_1bit:G7.clock
+clock => REG_1bit:G8.clock
+clock => REG_1bit:G9.clock
+clock => REG_1bit:G10.clock
+clock => REG_1bit:G11.clock
+clock => REG_1bit:G12.clock
+clock => REG_1bit:G13.clock
+clock => REG_1bit:G14.clock
+clock => REG_1bit:G15.clock
+enable => REG_1bit:G0.enable
+enable => REG_1bit:G1.enable
+enable => REG_1bit:G2.enable
+enable => REG_1bit:G3.enable
+enable => REG_1bit:G4.enable
+enable => REG_1bit:G5.enable
+enable => REG_1bit:G6.enable
+enable => REG_1bit:G7.enable
+enable => REG_1bit:G8.enable
+enable => REG_1bit:G9.enable
+enable => REG_1bit:G10.enable
+enable => REG_1bit:G11.enable
+enable => REG_1bit:G12.enable
+enable => REG_1bit:G13.enable
+enable => REG_1bit:G14.enable
+enable => REG_1bit:G15.enable
+out1[0] <= REG_1bit:G0.out1
+out1[1] <= REG_1bit:G1.out1
+out1[2] <= REG_1bit:G2.out1
+out1[3] <= REG_1bit:G3.out1
+out1[4] <= REG_1bit:G4.out1
+out1[5] <= REG_1bit:G5.out1
+out1[6] <= REG_1bit:G6.out1
+out1[7] <= REG_1bit:G7.out1
+out1[8] <= REG_1bit:G8.out1
+out1[9] <= REG_1bit:G9.out1
+out1[10] <= REG_1bit:G10.out1
+out1[11] <= REG_1bit:G11.out1
+out1[12] <= REG_1bit:G12.out1
+out1[13] <= REG_1bit:G13.out1
+out1[14] <= REG_1bit:G14.out1
+out1[15] <= REG_1bit:G15.out1
+
+
+|regFile|reg:G8|REG_1bit:G0
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G1
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G2
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G3
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G4
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G5
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G6
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G7
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G8
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G9
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G10
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G11
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G12
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G13
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G14
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|reg:G8|REG_1bit:G15
+in1 => p4.IN1
+clock => afterClock.IN0
+enable => afterClock.IN1
+out1 <= out1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|mux8to1:G9
+in0[0] => Mux15.IN0
+in0[1] => Mux14.IN0
+in0[2] => Mux13.IN0
+in0[3] => Mux12.IN0
+in0[4] => Mux11.IN0
+in0[5] => Mux10.IN0
+in0[6] => Mux9.IN0
+in0[7] => Mux8.IN0
+in0[8] => Mux7.IN0
+in0[9] => Mux6.IN0
+in0[10] => Mux5.IN0
+in0[11] => Mux4.IN0
+in0[12] => Mux3.IN0
+in0[13] => Mux2.IN0
+in0[14] => Mux1.IN0
+in0[15] => Mux0.IN0
+in1[0] => Mux15.IN1
+in1[1] => Mux14.IN1
+in1[2] => Mux13.IN1
+in1[3] => Mux12.IN1
+in1[4] => Mux11.IN1
+in1[5] => Mux10.IN1
+in1[6] => Mux9.IN1
+in1[7] => Mux8.IN1
+in1[8] => Mux7.IN1
+in1[9] => Mux6.IN1
+in1[10] => Mux5.IN1
+in1[11] => Mux4.IN1
+in1[12] => Mux3.IN1
+in1[13] => Mux2.IN1
+in1[14] => Mux1.IN1
+in1[15] => Mux0.IN1
+in2[0] => Mux15.IN2
+in2[1] => Mux14.IN2
+in2[2] => Mux13.IN2
+in2[3] => Mux12.IN2
+in2[4] => Mux11.IN2
+in2[5] => Mux10.IN2
+in2[6] => Mux9.IN2
+in2[7] => Mux8.IN2
+in2[8] => Mux7.IN2
+in2[9] => Mux6.IN2
+in2[10] => Mux5.IN2
+in2[11] => Mux4.IN2
+in2[12] => Mux3.IN2
+in2[13] => Mux2.IN2
+in2[14] => Mux1.IN2
+in2[15] => Mux0.IN2
+in3[0] => Mux15.IN3
+in3[1] => Mux14.IN3
+in3[2] => Mux13.IN3
+in3[3] => Mux12.IN3
+in3[4] => Mux11.IN3
+in3[5] => Mux10.IN3
+in3[6] => Mux9.IN3
+in3[7] => Mux8.IN3
+in3[8] => Mux7.IN3
+in3[9] => Mux6.IN3
+in3[10] => Mux5.IN3
+in3[11] => Mux4.IN3
+in3[12] => Mux3.IN3
+in3[13] => Mux2.IN3
+in3[14] => Mux1.IN3
+in3[15] => Mux0.IN3
+in4[0] => Mux15.IN4
+in4[1] => Mux14.IN4
+in4[2] => Mux13.IN4
+in4[3] => Mux12.IN4
+in4[4] => Mux11.IN4
+in4[5] => Mux10.IN4
+in4[6] => Mux9.IN4
+in4[7] => Mux8.IN4
+in4[8] => Mux7.IN4
+in4[9] => Mux6.IN4
+in4[10] => Mux5.IN4
+in4[11] => Mux4.IN4
+in4[12] => Mux3.IN4
+in4[13] => Mux2.IN4
+in4[14] => Mux1.IN4
+in4[15] => Mux0.IN4
+in5[0] => Mux15.IN5
+in5[1] => Mux14.IN5
+in5[2] => Mux13.IN5
+in5[3] => Mux12.IN5
+in5[4] => Mux11.IN5
+in5[5] => Mux10.IN5
+in5[6] => Mux9.IN5
+in5[7] => Mux8.IN5
+in5[8] => Mux7.IN5
+in5[9] => Mux6.IN5
+in5[10] => Mux5.IN5
+in5[11] => Mux4.IN5
+in5[12] => Mux3.IN5
+in5[13] => Mux2.IN5
+in5[14] => Mux1.IN5
+in5[15] => Mux0.IN5
+in6[0] => Mux15.IN6
+in6[1] => Mux14.IN6
+in6[2] => Mux13.IN6
+in6[3] => Mux12.IN6
+in6[4] => Mux11.IN6
+in6[5] => Mux10.IN6
+in6[6] => Mux9.IN6
+in6[7] => Mux8.IN6
+in6[8] => Mux7.IN6
+in6[9] => Mux6.IN6
+in6[10] => Mux5.IN6
+in6[11] => Mux4.IN6
+in6[12] => Mux3.IN6
+in6[13] => Mux2.IN6
+in6[14] => Mux1.IN6
+in6[15] => Mux0.IN6
+in7[0] => Mux15.IN7
+in7[1] => Mux14.IN7
+in7[2] => Mux13.IN7
+in7[3] => Mux12.IN7
+in7[4] => Mux11.IN7
+in7[5] => Mux10.IN7
+in7[6] => Mux9.IN7
+in7[7] => Mux8.IN7
+in7[8] => Mux7.IN7
+in7[9] => Mux6.IN7
+in7[10] => Mux5.IN7
+in7[11] => Mux4.IN7
+in7[12] => Mux3.IN7
+in7[13] => Mux2.IN7
+in7[14] => Mux1.IN7
+in7[15] => Mux0.IN7
+choice[0] => Mux0.IN10
+choice[0] => Mux1.IN10
+choice[0] => Mux2.IN10
+choice[0] => Mux3.IN10
+choice[0] => Mux4.IN10
+choice[0] => Mux5.IN10
+choice[0] => Mux6.IN10
+choice[0] => Mux7.IN10
+choice[0] => Mux8.IN10
+choice[0] => Mux9.IN10
+choice[0] => Mux10.IN10
+choice[0] => Mux11.IN10
+choice[0] => Mux12.IN10
+choice[0] => Mux13.IN10
+choice[0] => Mux14.IN10
+choice[0] => Mux15.IN10
+choice[1] => Mux0.IN9
+choice[1] => Mux1.IN9
+choice[1] => Mux2.IN9
+choice[1] => Mux3.IN9
+choice[1] => Mux4.IN9
+choice[1] => Mux5.IN9
+choice[1] => Mux6.IN9
+choice[1] => Mux7.IN9
+choice[1] => Mux8.IN9
+choice[1] => Mux9.IN9
+choice[1] => Mux10.IN9
+choice[1] => Mux11.IN9
+choice[1] => Mux12.IN9
+choice[1] => Mux13.IN9
+choice[1] => Mux14.IN9
+choice[1] => Mux15.IN9
+choice[2] => Mux0.IN8
+choice[2] => Mux1.IN8
+choice[2] => Mux2.IN8
+choice[2] => Mux3.IN8
+choice[2] => Mux4.IN8
+choice[2] => Mux5.IN8
+choice[2] => Mux6.IN8
+choice[2] => Mux7.IN8
+choice[2] => Mux8.IN8
+choice[2] => Mux9.IN8
+choice[2] => Mux10.IN8
+choice[2] => Mux11.IN8
+choice[2] => Mux12.IN8
+choice[2] => Mux13.IN8
+choice[2] => Mux14.IN8
+choice[2] => Mux15.IN8
+out1[0] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+out1[1] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+out1[2] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+out1[3] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+out1[4] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+out1[5] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+out1[6] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+out1[7] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+out1[8] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out1[9] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out1[10] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out1[11] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out1[12] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out1[13] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out1[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out1[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFile|mux8to1:G10
+in0[0] => Mux15.IN0
+in0[1] => Mux14.IN0
+in0[2] => Mux13.IN0
+in0[3] => Mux12.IN0
+in0[4] => Mux11.IN0
+in0[5] => Mux10.IN0
+in0[6] => Mux9.IN0
+in0[7] => Mux8.IN0
+in0[8] => Mux7.IN0
+in0[9] => Mux6.IN0
+in0[10] => Mux5.IN0
+in0[11] => Mux4.IN0
+in0[12] => Mux3.IN0
+in0[13] => Mux2.IN0
+in0[14] => Mux1.IN0
+in0[15] => Mux0.IN0
+in1[0] => Mux15.IN1
+in1[1] => Mux14.IN1
+in1[2] => Mux13.IN1
+in1[3] => Mux12.IN1
+in1[4] => Mux11.IN1
+in1[5] => Mux10.IN1
+in1[6] => Mux9.IN1
+in1[7] => Mux8.IN1
+in1[8] => Mux7.IN1
+in1[9] => Mux6.IN1
+in1[10] => Mux5.IN1
+in1[11] => Mux4.IN1
+in1[12] => Mux3.IN1
+in1[13] => Mux2.IN1
+in1[14] => Mux1.IN1
+in1[15] => Mux0.IN1
+in2[0] => Mux15.IN2
+in2[1] => Mux14.IN2
+in2[2] => Mux13.IN2
+in2[3] => Mux12.IN2
+in2[4] => Mux11.IN2
+in2[5] => Mux10.IN2
+in2[6] => Mux9.IN2
+in2[7] => Mux8.IN2
+in2[8] => Mux7.IN2
+in2[9] => Mux6.IN2
+in2[10] => Mux5.IN2
+in2[11] => Mux4.IN2
+in2[12] => Mux3.IN2
+in2[13] => Mux2.IN2
+in2[14] => Mux1.IN2
+in2[15] => Mux0.IN2
+in3[0] => Mux15.IN3
+in3[1] => Mux14.IN3
+in3[2] => Mux13.IN3
+in3[3] => Mux12.IN3
+in3[4] => Mux11.IN3
+in3[5] => Mux10.IN3
+in3[6] => Mux9.IN3
+in3[7] => Mux8.IN3
+in3[8] => Mux7.IN3
+in3[9] => Mux6.IN3
+in3[10] => Mux5.IN3
+in3[11] => Mux4.IN3
+in3[12] => Mux3.IN3
+in3[13] => Mux2.IN3
+in3[14] => Mux1.IN3
+in3[15] => Mux0.IN3
+in4[0] => Mux15.IN4
+in4[1] => Mux14.IN4
+in4[2] => Mux13.IN4
+in4[3] => Mux12.IN4
+in4[4] => Mux11.IN4
+in4[5] => Mux10.IN4
+in4[6] => Mux9.IN4
+in4[7] => Mux8.IN4
+in4[8] => Mux7.IN4
+in4[9] => Mux6.IN4
+in4[10] => Mux5.IN4
+in4[11] => Mux4.IN4
+in4[12] => Mux3.IN4
+in4[13] => Mux2.IN4
+in4[14] => Mux1.IN4
+in4[15] => Mux0.IN4
+in5[0] => Mux15.IN5
+in5[1] => Mux14.IN5
+in5[2] => Mux13.IN5
+in5[3] => Mux12.IN5
+in5[4] => Mux11.IN5
+in5[5] => Mux10.IN5
+in5[6] => Mux9.IN5
+in5[7] => Mux8.IN5
+in5[8] => Mux7.IN5
+in5[9] => Mux6.IN5
+in5[10] => Mux5.IN5
+in5[11] => Mux4.IN5
+in5[12] => Mux3.IN5
+in5[13] => Mux2.IN5
+in5[14] => Mux1.IN5
+in5[15] => Mux0.IN5
+in6[0] => Mux15.IN6
+in6[1] => Mux14.IN6
+in6[2] => Mux13.IN6
+in6[3] => Mux12.IN6
+in6[4] => Mux11.IN6
+in6[5] => Mux10.IN6
+in6[6] => Mux9.IN6
+in6[7] => Mux8.IN6
+in6[8] => Mux7.IN6
+in6[9] => Mux6.IN6
+in6[10] => Mux5.IN6
+in6[11] => Mux4.IN6
+in6[12] => Mux3.IN6
+in6[13] => Mux2.IN6
+in6[14] => Mux1.IN6
+in6[15] => Mux0.IN6
+in7[0] => Mux15.IN7
+in7[1] => Mux14.IN7
+in7[2] => Mux13.IN7
+in7[3] => Mux12.IN7
+in7[4] => Mux11.IN7
+in7[5] => Mux10.IN7
+in7[6] => Mux9.IN7
+in7[7] => Mux8.IN7
+in7[8] => Mux7.IN7
+in7[9] => Mux6.IN7
+in7[10] => Mux5.IN7
+in7[11] => Mux4.IN7
+in7[12] => Mux3.IN7
+in7[13] => Mux2.IN7
+in7[14] => Mux1.IN7
+in7[15] => Mux0.IN7
+choice[0] => Mux0.IN10
+choice[0] => Mux1.IN10
+choice[0] => Mux2.IN10
+choice[0] => Mux3.IN10
+choice[0] => Mux4.IN10
+choice[0] => Mux5.IN10
+choice[0] => Mux6.IN10
+choice[0] => Mux7.IN10
+choice[0] => Mux8.IN10
+choice[0] => Mux9.IN10
+choice[0] => Mux10.IN10
+choice[0] => Mux11.IN10
+choice[0] => Mux12.IN10
+choice[0] => Mux13.IN10
+choice[0] => Mux14.IN10
+choice[0] => Mux15.IN10
+choice[1] => Mux0.IN9
+choice[1] => Mux1.IN9
+choice[1] => Mux2.IN9
+choice[1] => Mux3.IN9
+choice[1] => Mux4.IN9
+choice[1] => Mux5.IN9
+choice[1] => Mux6.IN9
+choice[1] => Mux7.IN9
+choice[1] => Mux8.IN9
+choice[1] => Mux9.IN9
+choice[1] => Mux10.IN9
+choice[1] => Mux11.IN9
+choice[1] => Mux12.IN9
+choice[1] => Mux13.IN9
+choice[1] => Mux14.IN9
+choice[1] => Mux15.IN9
+choice[2] => Mux0.IN8
+choice[2] => Mux1.IN8
+choice[2] => Mux2.IN8
+choice[2] => Mux3.IN8
+choice[2] => Mux4.IN8
+choice[2] => Mux5.IN8
+choice[2] => Mux6.IN8
+choice[2] => Mux7.IN8
+choice[2] => Mux8.IN8
+choice[2] => Mux9.IN8
+choice[2] => Mux10.IN8
+choice[2] => Mux11.IN8
+choice[2] => Mux12.IN8
+choice[2] => Mux13.IN8
+choice[2] => Mux14.IN8
+choice[2] => Mux15.IN8
+out1[0] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+out1[1] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+out1[2] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+out1[3] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+out1[4] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+out1[5] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+out1[6] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+out1[7] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+out1[8] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out1[9] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out1[10] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out1[11] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out1[12] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out1[13] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out1[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out1[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

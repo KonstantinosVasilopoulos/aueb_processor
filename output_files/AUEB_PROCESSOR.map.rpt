@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AUEB_PROCESSOR
-Thu May 12 16:54:50 2022
+Mon May 23 13:24:37 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,9 +13,23 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |regFile
+ 12. Parameter Settings for User Entity Instance: reg0:G1
+ 13. Parameter Settings for User Entity Instance: reg:G2
+ 14. Parameter Settings for User Entity Instance: reg:G3
+ 15. Parameter Settings for User Entity Instance: reg:G4
+ 16. Parameter Settings for User Entity Instance: reg:G5
+ 17. Parameter Settings for User Entity Instance: reg:G6
+ 18. Parameter Settings for User Entity Instance: reg:G7
+ 19. Parameter Settings for User Entity Instance: reg:G8
+ 20. Parameter Settings for User Entity Instance: mux8to1:G9
+ 21. Parameter Settings for User Entity Instance: mux8to1:G10
+ 22. Port Connectivity Checks: "decode3to8:G0"
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +55,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 12 16:54:50 2022           ;
+; Analysis & Synthesis Status        ; Successful - Mon May 23 13:24:37 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; AUEB_PROCESSOR                                  ;
-; Top-level Entity Name              ; ALUcontrol                                      ;
+; Top-level Entity Name              ; regFile                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 5                                               ;
-;     Total combinational functions  ; 5                                               ;
+; Total logic elements               ; 471                                             ;
+;     Total combinational functions  ; 471                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 11                                              ;
+; Total pins                         ; 186                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +78,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; ALUcontrol         ; AUEB_PROCESSOR     ;
+; Top-level entity name                                                      ; regFile            ; AUEB_PROCESSOR     ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -149,58 +163,294 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; CPU_COMPONENTS/ALUcontrol.vhd    ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/ALUcontrol.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; CPU_COMPONENTS/reg0.vhd          ; yes             ; User VHDL File  ; C:/Users/IT/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/reg0.vhd       ;         ;
+; CPU_COMPONENTS/REG_1bit.vhd      ; yes             ; User VHDL File  ; C:/Users/IT/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/REG_1bit.vhd   ;         ;
+; CPU_COMPONENTS/mux8to1.vhd       ; yes             ; User VHDL File  ; C:/Users/IT/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/mux8to1.vhd    ;         ;
+; CPU_COMPONENTS/decode3to8.vhd    ; yes             ; User VHDL File  ; C:/Users/IT/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/decode3to8.vhd ;         ;
+; CPU_COMPONENTS/regFile.vhd       ; yes             ; User VHDL File  ; C:/Users/IT/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/regFile.vhd    ;         ;
+; CPU_COMPONENTS/reg.vhd           ; yes             ; User VHDL File  ; C:/Users/IT/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/reg.vhd        ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 5         ;
-;                                             ;           ;
-; Total combinational functions               ; 5         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 3         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 2         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 5         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 11        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; opCode[1] ;
-; Maximum fan-out                             ; 3         ;
-; Total fan-out                               ; 20        ;
-; Average fan-out                             ; 1.25      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                   ;
++---------------------------------------------+---------------------------------+
+; Resource                                    ; Usage                           ;
++---------------------------------------------+---------------------------------+
+; Estimated Total logic elements              ; 471                             ;
+;                                             ;                                 ;
+; Total combinational functions               ; 471                             ;
+; Logic element usage by number of LUT inputs ;                                 ;
+;     -- 4 input functions                    ; 353                             ;
+;     -- 3 input functions                    ; 116                             ;
+;     -- <=2 input functions                  ; 2                               ;
+;                                             ;                                 ;
+; Logic elements by mode                      ;                                 ;
+;     -- normal mode                          ; 471                             ;
+;     -- arithmetic mode                      ; 0                               ;
+;                                             ;                                 ;
+; Total registers                             ; 0                               ;
+;     -- Dedicated logic registers            ; 0                               ;
+;     -- I/O registers                        ; 0                               ;
+;                                             ;                                 ;
+; I/O pins                                    ; 186                             ;
+; Embedded Multiplier 9-bit elements          ; 0                               ;
+; Maximum fan-out node                        ; reg:G2|REG_1bit:G0|afterClock~0 ;
+; Maximum fan-out                             ; 336                             ;
+; Total fan-out                               ; 1908                            ;
+; Average fan-out                             ; 2.90                            ;
++---------------------------------------------+---------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |ALUcontrol                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |ALUcontrol         ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                  ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; |regFile                   ; 471 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 186  ; 0            ; |regFile                     ; work         ;
+;    |mux8to1:G10|           ; 67 (67)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|mux8to1:G10         ; work         ;
+;    |mux8to1:G9|            ; 67 (67)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|mux8to1:G9          ; work         ;
+;    |reg:G2|                ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2              ; work         ;
+;       |REG_1bit:G0|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G0  ; work         ;
+;       |REG_1bit:G10|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G10 ; work         ;
+;       |REG_1bit:G11|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G11 ; work         ;
+;       |REG_1bit:G12|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G12 ; work         ;
+;       |REG_1bit:G13|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G13 ; work         ;
+;       |REG_1bit:G14|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G14 ; work         ;
+;       |REG_1bit:G15|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G15 ; work         ;
+;       |REG_1bit:G1|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G1  ; work         ;
+;       |REG_1bit:G2|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G2  ; work         ;
+;       |REG_1bit:G3|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G3  ; work         ;
+;       |REG_1bit:G4|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G4  ; work         ;
+;       |REG_1bit:G5|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G5  ; work         ;
+;       |REG_1bit:G6|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G6  ; work         ;
+;       |REG_1bit:G7|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G7  ; work         ;
+;       |REG_1bit:G8|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G8  ; work         ;
+;       |REG_1bit:G9|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G2|REG_1bit:G9  ; work         ;
+;    |reg:G3|                ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3              ; work         ;
+;       |REG_1bit:G0|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G0  ; work         ;
+;       |REG_1bit:G10|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G10 ; work         ;
+;       |REG_1bit:G11|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G11 ; work         ;
+;       |REG_1bit:G12|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G12 ; work         ;
+;       |REG_1bit:G13|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G13 ; work         ;
+;       |REG_1bit:G14|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G14 ; work         ;
+;       |REG_1bit:G15|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G15 ; work         ;
+;       |REG_1bit:G1|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G1  ; work         ;
+;       |REG_1bit:G2|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G2  ; work         ;
+;       |REG_1bit:G3|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G3  ; work         ;
+;       |REG_1bit:G4|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G4  ; work         ;
+;       |REG_1bit:G5|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G5  ; work         ;
+;       |REG_1bit:G6|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G6  ; work         ;
+;       |REG_1bit:G7|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G7  ; work         ;
+;       |REG_1bit:G8|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G8  ; work         ;
+;       |REG_1bit:G9|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G3|REG_1bit:G9  ; work         ;
+;    |reg:G4|                ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4              ; work         ;
+;       |REG_1bit:G0|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G0  ; work         ;
+;       |REG_1bit:G10|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G10 ; work         ;
+;       |REG_1bit:G11|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G11 ; work         ;
+;       |REG_1bit:G12|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G12 ; work         ;
+;       |REG_1bit:G13|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G13 ; work         ;
+;       |REG_1bit:G14|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G14 ; work         ;
+;       |REG_1bit:G15|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G15 ; work         ;
+;       |REG_1bit:G1|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G1  ; work         ;
+;       |REG_1bit:G2|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G2  ; work         ;
+;       |REG_1bit:G3|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G3  ; work         ;
+;       |REG_1bit:G4|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G4  ; work         ;
+;       |REG_1bit:G5|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G5  ; work         ;
+;       |REG_1bit:G6|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G6  ; work         ;
+;       |REG_1bit:G7|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G7  ; work         ;
+;       |REG_1bit:G8|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G8  ; work         ;
+;       |REG_1bit:G9|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G4|REG_1bit:G9  ; work         ;
+;    |reg:G5|                ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5              ; work         ;
+;       |REG_1bit:G0|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G0  ; work         ;
+;       |REG_1bit:G10|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G10 ; work         ;
+;       |REG_1bit:G11|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G11 ; work         ;
+;       |REG_1bit:G12|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G12 ; work         ;
+;       |REG_1bit:G13|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G13 ; work         ;
+;       |REG_1bit:G14|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G14 ; work         ;
+;       |REG_1bit:G15|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G15 ; work         ;
+;       |REG_1bit:G1|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G1  ; work         ;
+;       |REG_1bit:G2|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G2  ; work         ;
+;       |REG_1bit:G3|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G3  ; work         ;
+;       |REG_1bit:G4|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G4  ; work         ;
+;       |REG_1bit:G5|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G5  ; work         ;
+;       |REG_1bit:G6|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G6  ; work         ;
+;       |REG_1bit:G7|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G7  ; work         ;
+;       |REG_1bit:G8|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G8  ; work         ;
+;       |REG_1bit:G9|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G5|REG_1bit:G9  ; work         ;
+;    |reg:G6|                ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6              ; work         ;
+;       |REG_1bit:G0|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G0  ; work         ;
+;       |REG_1bit:G10|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G10 ; work         ;
+;       |REG_1bit:G11|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G11 ; work         ;
+;       |REG_1bit:G12|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G12 ; work         ;
+;       |REG_1bit:G13|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G13 ; work         ;
+;       |REG_1bit:G14|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G14 ; work         ;
+;       |REG_1bit:G15|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G15 ; work         ;
+;       |REG_1bit:G1|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G1  ; work         ;
+;       |REG_1bit:G2|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G2  ; work         ;
+;       |REG_1bit:G3|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G3  ; work         ;
+;       |REG_1bit:G4|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G4  ; work         ;
+;       |REG_1bit:G5|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G5  ; work         ;
+;       |REG_1bit:G6|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G6  ; work         ;
+;       |REG_1bit:G7|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G7  ; work         ;
+;       |REG_1bit:G8|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G8  ; work         ;
+;       |REG_1bit:G9|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G6|REG_1bit:G9  ; work         ;
+;    |reg:G7|                ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7              ; work         ;
+;       |REG_1bit:G0|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G0  ; work         ;
+;       |REG_1bit:G10|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G10 ; work         ;
+;       |REG_1bit:G11|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G11 ; work         ;
+;       |REG_1bit:G12|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G12 ; work         ;
+;       |REG_1bit:G13|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G13 ; work         ;
+;       |REG_1bit:G14|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G14 ; work         ;
+;       |REG_1bit:G15|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G15 ; work         ;
+;       |REG_1bit:G1|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G1  ; work         ;
+;       |REG_1bit:G2|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G2  ; work         ;
+;       |REG_1bit:G3|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G3  ; work         ;
+;       |REG_1bit:G4|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G4  ; work         ;
+;       |REG_1bit:G5|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G5  ; work         ;
+;       |REG_1bit:G6|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G6  ; work         ;
+;       |REG_1bit:G7|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G7  ; work         ;
+;       |REG_1bit:G8|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G8  ; work         ;
+;       |REG_1bit:G9|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G7|REG_1bit:G9  ; work         ;
+;    |reg:G8|                ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8              ; work         ;
+;       |REG_1bit:G0|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G0  ; work         ;
+;       |REG_1bit:G10|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G10 ; work         ;
+;       |REG_1bit:G11|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G11 ; work         ;
+;       |REG_1bit:G12|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G12 ; work         ;
+;       |REG_1bit:G13|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G13 ; work         ;
+;       |REG_1bit:G14|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G14 ; work         ;
+;       |REG_1bit:G15|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G15 ; work         ;
+;       |REG_1bit:G1|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G1  ; work         ;
+;       |REG_1bit:G2|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G2  ; work         ;
+;       |REG_1bit:G3|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G3  ; work         ;
+;       |REG_1bit:G4|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G4  ; work         ;
+;       |REG_1bit:G5|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G5  ; work         ;
+;       |REG_1bit:G6|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G6  ; work         ;
+;       |REG_1bit:G7|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G7  ; work         ;
+;       |REG_1bit:G8|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G8  ; work         ;
+;       |REG_1bit:G9|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regFile|reg:G8|REG_1bit:G9  ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                 ;
++--------------------------------------------------------+-----+
+; Logic Cell Name                                        ;     ;
++--------------------------------------------------------+-----+
+; reg:G3|REG_1bit:G0|out1~0                              ;     ;
+; reg:G4|REG_1bit:G0|out1~0                              ;     ;
+; reg:G2|REG_1bit:G0|out1~0                              ;     ;
+; reg:G7|REG_1bit:G0|out1~0                              ;     ;
+; reg:G6|REG_1bit:G0|out1~0                              ;     ;
+; reg:G5|REG_1bit:G0|out1~0                              ;     ;
+; reg:G8|REG_1bit:G0|out1~0                              ;     ;
+; reg:G3|REG_1bit:G1|out1~0                              ;     ;
+; reg:G4|REG_1bit:G1|out1~0                              ;     ;
+; reg:G2|REG_1bit:G1|out1~0                              ;     ;
+; reg:G7|REG_1bit:G1|out1~0                              ;     ;
+; reg:G6|REG_1bit:G1|out1~0                              ;     ;
+; reg:G5|REG_1bit:G1|out1~0                              ;     ;
+; reg:G8|REG_1bit:G1|out1~0                              ;     ;
+; reg:G3|REG_1bit:G2|out1~0                              ;     ;
+; reg:G4|REG_1bit:G2|out1~0                              ;     ;
+; reg:G2|REG_1bit:G2|out1~0                              ;     ;
+; reg:G6|REG_1bit:G2|out1~0                              ;     ;
+; reg:G7|REG_1bit:G2|out1~0                              ;     ;
+; reg:G5|REG_1bit:G2|out1~0                              ;     ;
+; reg:G8|REG_1bit:G2|out1~0                              ;     ;
+; reg:G3|REG_1bit:G3|out1~0                              ;     ;
+; reg:G4|REG_1bit:G3|out1~0                              ;     ;
+; reg:G2|REG_1bit:G3|out1~0                              ;     ;
+; reg:G7|REG_1bit:G3|out1~0                              ;     ;
+; reg:G6|REG_1bit:G3|out1~0                              ;     ;
+; reg:G5|REG_1bit:G3|out1~0                              ;     ;
+; reg:G8|REG_1bit:G3|out1~0                              ;     ;
+; reg:G3|REG_1bit:G4|out1~0                              ;     ;
+; reg:G4|REG_1bit:G4|out1~0                              ;     ;
+; reg:G2|REG_1bit:G4|out1~0                              ;     ;
+; reg:G6|REG_1bit:G4|out1~0                              ;     ;
+; reg:G7|REG_1bit:G4|out1~0                              ;     ;
+; reg:G5|REG_1bit:G4|out1~0                              ;     ;
+; reg:G8|REG_1bit:G4|out1~0                              ;     ;
+; reg:G3|REG_1bit:G5|out1~0                              ;     ;
+; reg:G4|REG_1bit:G5|out1~0                              ;     ;
+; reg:G2|REG_1bit:G5|out1~0                              ;     ;
+; reg:G7|REG_1bit:G5|out1~0                              ;     ;
+; reg:G6|REG_1bit:G5|out1~0                              ;     ;
+; reg:G5|REG_1bit:G5|out1~0                              ;     ;
+; reg:G8|REG_1bit:G5|out1~0                              ;     ;
+; reg:G3|REG_1bit:G6|out1~0                              ;     ;
+; reg:G4|REG_1bit:G6|out1~0                              ;     ;
+; reg:G2|REG_1bit:G6|out1~0                              ;     ;
+; reg:G6|REG_1bit:G6|out1~0                              ;     ;
+; reg:G7|REG_1bit:G6|out1~0                              ;     ;
+; reg:G5|REG_1bit:G6|out1~0                              ;     ;
+; reg:G8|REG_1bit:G6|out1~0                              ;     ;
+; reg:G3|REG_1bit:G7|out1~0                              ;     ;
+; reg:G4|REG_1bit:G7|out1~0                              ;     ;
+; reg:G2|REG_1bit:G7|out1~0                              ;     ;
+; reg:G7|REG_1bit:G7|out1~0                              ;     ;
+; reg:G6|REG_1bit:G7|out1~0                              ;     ;
+; reg:G5|REG_1bit:G7|out1~0                              ;     ;
+; reg:G8|REG_1bit:G7|out1~0                              ;     ;
+; reg:G3|REG_1bit:G8|out1~0                              ;     ;
+; reg:G4|REG_1bit:G8|out1~0                              ;     ;
+; reg:G2|REG_1bit:G8|out1~0                              ;     ;
+; reg:G6|REG_1bit:G8|out1~0                              ;     ;
+; reg:G7|REG_1bit:G8|out1~0                              ;     ;
+; reg:G5|REG_1bit:G8|out1~0                              ;     ;
+; reg:G8|REG_1bit:G8|out1~0                              ;     ;
+; reg:G3|REG_1bit:G9|out1~0                              ;     ;
+; reg:G4|REG_1bit:G9|out1~0                              ;     ;
+; reg:G2|REG_1bit:G9|out1~0                              ;     ;
+; reg:G7|REG_1bit:G9|out1~0                              ;     ;
+; reg:G6|REG_1bit:G9|out1~0                              ;     ;
+; reg:G5|REG_1bit:G9|out1~0                              ;     ;
+; reg:G8|REG_1bit:G9|out1~0                              ;     ;
+; reg:G3|REG_1bit:G10|out1~0                             ;     ;
+; reg:G4|REG_1bit:G10|out1~0                             ;     ;
+; reg:G2|REG_1bit:G10|out1~0                             ;     ;
+; reg:G6|REG_1bit:G10|out1~0                             ;     ;
+; reg:G7|REG_1bit:G10|out1~0                             ;     ;
+; reg:G5|REG_1bit:G10|out1~0                             ;     ;
+; reg:G8|REG_1bit:G10|out1~0                             ;     ;
+; reg:G3|REG_1bit:G11|out1~0                             ;     ;
+; reg:G4|REG_1bit:G11|out1~0                             ;     ;
+; reg:G2|REG_1bit:G11|out1~0                             ;     ;
+; reg:G7|REG_1bit:G11|out1~0                             ;     ;
+; reg:G6|REG_1bit:G11|out1~0                             ;     ;
+; reg:G5|REG_1bit:G11|out1~0                             ;     ;
+; reg:G8|REG_1bit:G11|out1~0                             ;     ;
+; reg:G3|REG_1bit:G12|out1~0                             ;     ;
+; reg:G4|REG_1bit:G12|out1~0                             ;     ;
+; reg:G2|REG_1bit:G12|out1~0                             ;     ;
+; reg:G6|REG_1bit:G12|out1~0                             ;     ;
+; reg:G7|REG_1bit:G12|out1~0                             ;     ;
+; reg:G5|REG_1bit:G12|out1~0                             ;     ;
+; reg:G8|REG_1bit:G12|out1~0                             ;     ;
+; reg:G3|REG_1bit:G13|out1~0                             ;     ;
+; reg:G4|REG_1bit:G13|out1~0                             ;     ;
+; reg:G2|REG_1bit:G13|out1~0                             ;     ;
+; reg:G7|REG_1bit:G13|out1~0                             ;     ;
+; reg:G6|REG_1bit:G13|out1~0                             ;     ;
+; reg:G5|REG_1bit:G13|out1~0                             ;     ;
+; reg:G8|REG_1bit:G13|out1~0                             ;     ;
+; reg:G3|REG_1bit:G14|out1~0                             ;     ;
+; reg:G4|REG_1bit:G14|out1~0                             ;     ;
+; Number of logic cells representing combinational loops ; 336 ;
++--------------------------------------------------------+-----+
+Table restricted to first 100 entries. Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -218,12 +468,143 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |regFile|mux8to1:G9|Mux15  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |regFile|mux8to1:G10|Mux15 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |regFile ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 16    ; Signed Integer                                 ;
+; k              ; 3     ; Signed Integer                                 ;
+; regNum         ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg0:G1 ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; n              ; 16    ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:G2 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; n              ; 16    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:G3 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; n              ; 16    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:G4 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; n              ; 16    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:G5 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; n              ; 16    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:G6 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; n              ; 16    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:G7 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; n              ; 16    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:G8 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; n              ; 16    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux8to1:G9 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux8to1:G10 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 16    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decode3to8:G0"                                                                            ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; out1[7..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -233,7 +614,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 12 16:54:48 2022
+    Info: Processing started: Mon May 23 13:24:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUEB_PROCESSOR -c AUEB_PROCESSOR
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file alu/sub_16bit.vhd
@@ -323,17 +704,39 @@ Info (12021): Found 2 design units, including 1 entities, in source file cpu_com
 Info (12021): Found 2 design units, including 1 entities, in source file alu/alu.vhd
     Info (12022): Found design unit 1: ALU-ALULogic
     Info (12023): Found entity 1: ALU
-Info (12127): Elaborating entity "ALUcontrol" for the top level hierarchy
+Info (12127): Elaborating entity "regFile" for the top level hierarchy
+Info (12128): Elaborating entity "decode3to8" for hierarchy "decode3to8:G0"
+Info (12128): Elaborating entity "reg0" for hierarchy "reg0:G1"
+Info (12128): Elaborating entity "reg" for hierarchy "reg:G2"
+Info (12128): Elaborating entity "REG_1bit" for hierarchy "reg:G2|REG_1bit:G0"
+Info (12128): Elaborating entity "mux8to1" for hierarchy "mux8to1:G9"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "OUTall[0]" is stuck at GND
+    Warning (13410): Pin "OUTall[1]" is stuck at GND
+    Warning (13410): Pin "OUTall[2]" is stuck at GND
+    Warning (13410): Pin "OUTall[3]" is stuck at GND
+    Warning (13410): Pin "OUTall[4]" is stuck at GND
+    Warning (13410): Pin "OUTall[5]" is stuck at GND
+    Warning (13410): Pin "OUTall[6]" is stuck at GND
+    Warning (13410): Pin "OUTall[7]" is stuck at GND
+    Warning (13410): Pin "OUTall[8]" is stuck at GND
+    Warning (13410): Pin "OUTall[9]" is stuck at GND
+    Warning (13410): Pin "OUTall[10]" is stuck at GND
+    Warning (13410): Pin "OUTall[11]" is stuck at GND
+    Warning (13410): Pin "OUTall[12]" is stuck at GND
+    Warning (13410): Pin "OUTall[13]" is stuck at GND
+    Warning (13410): Pin "OUTall[14]" is stuck at GND
+    Warning (13410): Pin "OUTall[15]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Thu May 12 16:54:50 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info (21057): Implemented 657 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 160 output pins
+    Info (21061): Implemented 471 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4637 megabytes
+    Info: Processing ended: Mon May 23 13:24:37 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

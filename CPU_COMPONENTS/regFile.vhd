@@ -49,14 +49,14 @@ begin
 
 	G0: decode3to8 port map(Write1AD, enableSigs);
 	
-	G1: reg0 port map(Write1, enableSigs(0), Clock, re0);
-	G2: reg port map(Write1, enableSigs(0), Clock, re1);
-	G3: reg port map(Write1, enableSigs(0), Clock, re2);
-	G4: reg port map(Write1, enableSigs(0), Clock, re3);
-	G5: reg port map(Write1, enableSigs(0), Clock, re4);
-	G6: reg port map(Write1, enableSigs(0), Clock, re5);
-	G7: reg port map(Write1, enableSigs(0), Clock, re6);
-	G8: reg port map(Write1, enableSigs(0), Clock, re7);
+	G1: reg0 port map(Write1, Clock, enableSigs(0),re0);
+	G2: reg port map(Write1, Clock, enableSigs(1), re1);
+	G3: reg port map(Write1, Clock, enableSigs(2), re2);
+	G4: reg port map(Write1, Clock, enableSigs(3), re3);
+	G5: reg port map(Write1, Clock, enableSigs(4), re4);
+	G6: reg port map(Write1, Clock, enableSigs(5), re5);
+	G7: reg port map(Write1, Clock, enableSigs(6), re6);
+	G8: reg port map(Write1, Clock, enableSigs(7), re7);
 	
 	G9: mux8to1 port map(re0, re1, re2, re3, re4, re5, re6, re7, Read1AD, Read1);
 	G10: mux8to1 port map(re0, re1, re2, re3, re4, re5, re6, re7, Read2AD, Read2);
