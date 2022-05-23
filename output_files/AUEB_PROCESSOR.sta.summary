@@ -2,4 +2,108 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Recovery 'gen_reg:G7|REG_1bit:\reg_loop:1:REG0|p1~0'
+Slack : -5.740
+TNS   : -5.740
+
+Type  : Slow Model Recovery 'gen_reg:G7|REG_1bit:\reg_loop:13:REG0|p1~0'
+Slack : -5.505
+TNS   : -5.505
+
+Type  : Slow Model Recovery 'gen_reg:G2|REG_1bit:\reg_loop:12:REG0|p1~0'
+Slack : -4.492
+TNS   : -4.492
+
+Type  : Slow Model Recovery 'gen_reg:G6|REG_1bit:\reg_loop:10:REG0|p1~0'
+Slack : -4.378
+TNS   : -4.378
+
+Type  : Slow Model Removal 'gen_reg:G6|REG_1bit:\reg_loop:10:REG0|p1~0'
+Slack : 4.037
+TNS   : 0.000
+
+Type  : Slow Model Removal 'gen_reg:G2|REG_1bit:\reg_loop:12:REG0|p1~0'
+Slack : 4.107
+TNS   : 0.000
+
+Type  : Slow Model Removal 'gen_reg:G7|REG_1bit:\reg_loop:13:REG0|p1~0'
+Slack : 5.133
+TNS   : 0.000
+
+Type  : Slow Model Removal 'gen_reg:G7|REG_1bit:\reg_loop:1:REG0|p1~0'
+Slack : 5.399
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'Write1AD[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'gen_reg:G2|REG_1bit:\reg_loop:12:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'gen_reg:G6|REG_1bit:\reg_loop:10:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'gen_reg:G7|REG_1bit:\reg_loop:13:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'gen_reg:G7|REG_1bit:\reg_loop:1:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'gen_reg:G7|REG_1bit:\reg_loop:1:REG0|p1~0'
+Slack : -2.848
+TNS   : -2.848
+
+Type  : Fast Model Recovery 'gen_reg:G7|REG_1bit:\reg_loop:13:REG0|p1~0'
+Slack : -2.729
+TNS   : -2.729
+
+Type  : Fast Model Recovery 'gen_reg:G2|REG_1bit:\reg_loop:12:REG0|p1~0'
+Slack : -2.161
+TNS   : -2.161
+
+Type  : Fast Model Recovery 'gen_reg:G6|REG_1bit:\reg_loop:10:REG0|p1~0'
+Slack : -2.104
+TNS   : -2.104
+
+Type  : Fast Model Removal 'gen_reg:G6|REG_1bit:\reg_loop:10:REG0|p1~0'
+Slack : 2.249
+TNS   : 0.000
+
+Type  : Fast Model Removal 'gen_reg:G2|REG_1bit:\reg_loop:12:REG0|p1~0'
+Slack : 2.291
+TNS   : 0.000
+
+Type  : Fast Model Removal 'gen_reg:G7|REG_1bit:\reg_loop:13:REG0|p1~0'
+Slack : 2.866
+TNS   : 0.000
+
+Type  : Fast Model Removal 'gen_reg:G7|REG_1bit:\reg_loop:1:REG0|p1~0'
+Slack : 2.993
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'Write1AD[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'gen_reg:G2|REG_1bit:\reg_loop:12:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'gen_reg:G6|REG_1bit:\reg_loop:10:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'gen_reg:G7|REG_1bit:\reg_loop:13:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'gen_reg:G7|REG_1bit:\reg_loop:1:REG0|p1~0'
+Slack : 0.500
+TNS   : 0.000
+
 ------------------------------------------------------------
