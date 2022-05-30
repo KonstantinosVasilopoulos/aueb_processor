@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AUEB_PROCESSOR
-Sun May 29 12:39:19 2022
+Mon May 30 14:03:44 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,9 +13,45 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Logic Cells Representing Combinational Loops
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: mux2to1:result_MEMWB1
+ 14. Parameter Settings for User Entity Instance: mux2to1:result_MEMWB2
+ 15. Parameter Settings for User Entity Instance: jrselector:JR
+ 16. Parameter Settings for User Entity Instance: register_mem_wb:MEMWBREG
+ 17. Parameter Settings for User Entity Instance: register_if_id:IFIDREG
+ 18. Parameter Settings for User Entity Instance: forwarder:ForwardUnit
+ 19. Parameter Settings for User Entity Instance: selector:Selector1
+ 20. Parameter Settings for User Entity Instance: selector:Selector2
+ 21. Parameter Settings for User Entity Instance: sign_extender:SignExtend
+ 22. Parameter Settings for User Entity Instance: mux2to1:ALUInput1
+ 23. Parameter Settings for User Entity Instance: mux2to1:ALUInput2
+ 24. Parameter Settings for User Entity Instance: mux2to1:R2AD
+ 25. Parameter Settings for User Entity Instance: regFile:RegisterFile
+ 26. Parameter Settings for User Entity Instance: regFile:RegisterFile|reg0:G1
+ 27. Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G2
+ 28. Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G3
+ 29. Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G4
+ 30. Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G5
+ 31. Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G6
+ 32. Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G7
+ 33. Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G8
+ 34. Parameter Settings for User Entity Instance: regFile:RegisterFile|mux8to1:G9
+ 35. Parameter Settings for User Entity Instance: regFile:RegisterFile|mux8to1:G10
+ 36. Parameter Settings for User Entity Instance: register_id_ex:IDEXREG
+ 37. Parameter Settings for User Entity Instance: register_ex_mem:EXMEMREG
+ 38. Port Connectivity Checks: "register_id_ex:IDEXREG"
+ 39. Port Connectivity Checks: "hazardunit:Hazard"
+ 40. Port Connectivity Checks: "ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M33"
+ 41. Port Connectivity Checks: "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"
+ 42. Port Connectivity Checks: "ALU_16bit:ALU16"
+ 43. Port Connectivity Checks: "register_if_id:IFIDREG"
+ 44. Port Connectivity Checks: "jrselector:JR"
+ 45. Elapsed Time Per Partition
+ 46. Analysis & Synthesis Messages
 
 
 
@@ -41,15 +77,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 29 12:39:19 2022           ;
+; Analysis & Synthesis Status        ; Successful - Mon May 30 14:03:44 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; AUEB_PROCESSOR                                  ;
 ; Top-level Entity Name              ; AUEB_PROCESSOR                                  ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
+; Total logic elements               ; 862                                             ;
+;     Total combinational functions  ; 836                                             ;
+;     Dedicated logic registers      ; 132                                             ;
+; Total registers                    ; 132                                             ;
 ; Total pins                         ; 277                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -154,13 +190,47 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
-; AUEB_PROCESSOR.vhd               ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/AUEB_PROCESSOR.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; ALU/OR_gate.vhd                  ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/OR_gate.vhd                  ;         ;
+; ALU/NOT_gate.vhd                 ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/NOT_gate.vhd                 ;         ;
+; ALU/FULL_ADDER_16bit.vhd         ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/FULL_ADDER_16bit.vhd         ;         ;
+; ALU/FULL_ADDER_1bit.vhd          ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/FULL_ADDER_1bit.vhd          ;         ;
+; ALU/AND_gate.vhd                 ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/AND_gate.vhd                 ;         ;
+; ALU/ALU_16bit.vhd                ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/ALU_16bit.vhd                ;         ;
+; ALU/XOR_gate.vhd                 ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/XOR_gate.vhd                 ;         ;
+; AUEB_PROCESSOR.vhd               ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/AUEB_PROCESSOR.vhd               ;         ;
+; ALU/GEQZ_16bit.vhd               ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/GEQZ_16bit.vhd               ;         ;
+; ALU/OR_16bit.vhd                 ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/OR_16bit.vhd                 ;         ;
+; ALU/AND_16bit.vhd                ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/AND_16bit.vhd                ;         ;
+; ALU/COMPLEMENT_GETTER_16bit.vhd  ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/COMPLEMENT_GETTER_16bit.vhd  ;         ;
+; ALU/MULT_1bit.vhd                ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/MULT_1bit.vhd                ;         ;
+; ALU/MULT_3bit.vhd                ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/MULT_3bit.vhd                ;         ;
+; ALU/NOT_16bit.vhd                ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/ALU/NOT_16bit.vhd                ;         ;
+; CPU_COMPONENTS/reg0.vhd          ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/reg0.vhd          ;         ;
+; CPU_COMPONENTS/REG_1bit.vhd      ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/REG_1bit.vhd      ;         ;
+; CPU_COMPONENTS/gen_reg.vhd       ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/gen_reg.vhd       ;         ;
+; CPU_COMPONENTS/mux8to1.vhd       ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/mux8to1.vhd       ;         ;
+; CPU_COMPONENTS/decode3to8.vhd    ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/decode3to8.vhd    ;         ;
+; CPU_COMPONENTS/regFile.vhd       ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/regFile.vhd       ;         ;
+; CPU_COMPONENTS/sign_extender.vhd ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/sign_extender.vhd ;         ;
+; CPU_COMPONENTS/ALUcontrol.vhd    ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/CPU_COMPONENTS/ALUcontrol.vhd    ;         ;
+; PROCESSOR/forwarder.vhd          ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/forwarder.vhd          ;         ;
+; PROCESSOR/selector.vhd           ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/selector.vhd           ;         ;
+; PROCESSOR/control.vhd            ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/control.vhd            ;         ;
+; PROCESSOR/hazardunit.vhd         ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/hazardunit.vhd         ;         ;
+; PROCESSOR/register_if_id.vhd     ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/register_if_id.vhd     ;         ;
+; PROCESSOR/register_ex_mem.vhd    ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/register_ex_mem.vhd    ;         ;
+; PROCESSOR/register_mem_wb.vhd    ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/register_mem_wb.vhd    ;         ;
+; PROCESSOR/register_id_ex.vhd     ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/register_id_ex.vhd     ;         ;
+; PROCESSOR/jrselector.vhd         ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/jrselector.vhd         ;         ;
+; PROCESSOR/reg16b.vhd             ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/reg16b.vhd             ;         ;
+; PROCESSOR/trapunit.vhd           ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/trapunit.vhd           ;         ;
+; PROCESSOR/mux2to1.vhd            ; yes             ; User VHDL File  ; C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/mux2to1.vhd            ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -168,34 +238,475 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 862   ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 836   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- 4 input functions                    ; 579   ;
+;     -- 3 input functions                    ; 218   ;
+;     -- <=2 input functions                  ; 39    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 822   ;
+;     -- arithmetic mode                      ; 14    ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 132   ;
+;     -- Dedicated logic registers            ; 132   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 277   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 164   ;
+; Total fan-out                               ; 3553  ;
+; Average fan-out                             ; 2.85  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |AUEB_PROCESSOR            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 277  ; 0            ; |AUEB_PROCESSOR     ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
+; |AUEB_PROCESSOR                            ; 836 (1)           ; 132 (0)      ; 0           ; 0            ; 0       ; 0         ; 277  ; 0            ; |AUEB_PROCESSOR                                                                                                        ; work         ;
+;    |ALU_16bit:ALU16|                       ; 107 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16                                                                                        ; work         ;
+;       |COMPLEMENT_GETTER_16bit:A0|         ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0                                                             ; work         ;
+;          |FULL_ADDER_16bit:CG161|          ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161                                      ; work         ;
+;             |FULL_ADDER_1bit:FA1611|       ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1611               ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1611|AND_gate:FAO2 ; work         ;
+;             |FULL_ADDER_1bit:FA1613|       ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1613               ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA1613|AND_gate:FAO2 ; work         ;
+;             |FULL_ADDER_1bit:FA162|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA162                ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA162|AND_gate:FAO2  ; work         ;
+;             |FULL_ADDER_1bit:FA163|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA163                ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA163|AND_gate:FAO2  ; work         ;
+;             |FULL_ADDER_1bit:FA165|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA165                ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA165|AND_gate:FAO2  ; work         ;
+;             |FULL_ADDER_1bit:FA166|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA166                ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA166|AND_gate:FAO2  ; work         ;
+;             |FULL_ADDER_1bit:FA168|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA168                ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA168|AND_gate:FAO2  ; work         ;
+;             |FULL_ADDER_1bit:FA169|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA169                ; work         ;
+;                |AND_gate:FAO2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA169|AND_gate:FAO2  ; work         ;
+;       |FULL_ADDER_16bit:A2|                ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2                                                                    ; work         ;
+;          |FULL_ADDER_1bit:FA160|           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA160                                              ; work         ;
+;             |AND_gate:FAO3|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA160|AND_gate:FAO3                                ; work         ;
+;          |FULL_ADDER_1bit:FA1610|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1610                                             ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1610|OR_gate:FAO4                                ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1610|XOR_gate:FAO1                               ; work         ;
+;          |FULL_ADDER_1bit:FA1611|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611                                             ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|OR_gate:FAO4                                ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1611|XOR_gate:FAO1                               ; work         ;
+;          |FULL_ADDER_1bit:FA1612|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612                                             ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612|OR_gate:FAO4                                ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1612|XOR_gate:FAO1                               ; work         ;
+;          |FULL_ADDER_1bit:FA1613|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1613                                             ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1613|OR_gate:FAO4                                ; work         ;
+;          |FULL_ADDER_1bit:FA1614|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614                                             ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1614|OR_gate:FAO4                                ; work         ;
+;          |FULL_ADDER_1bit:FA1615|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1615                                             ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA1615|OR_gate:FAO4                                ; work         ;
+;          |FULL_ADDER_1bit:FA161|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA161|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA162|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA162                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA162|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA162|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA163|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA163|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA164|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA164|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA165|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA165                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA165|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA165|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA166|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA166|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA167|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA167                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA167|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA167|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA168|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA168|XOR_gate:FAO1                                ; work         ;
+;          |FULL_ADDER_1bit:FA169|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169                                              ; work         ;
+;             |OR_gate:FAO4|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169|OR_gate:FAO4                                 ; work         ;
+;             |XOR_gate:FAO1|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|FULL_ADDER_16bit:A2|FULL_ADDER_1bit:FA169|XOR_gate:FAO1                                ; work         ;
+;       |MULT_1bit:A1|                       ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1                                                                           ; work         ;
+;          |AND_16bit:M11|                   ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11                                                             ; work         ;
+;             |AND_gate:\and_loop:10:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:10:AND160                                ; work         ;
+;             |AND_gate:\and_loop:11:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:11:AND160                                ; work         ;
+;             |AND_gate:\and_loop:12:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:12:AND160                                ; work         ;
+;             |AND_gate:\and_loop:13:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:13:AND160                                ; work         ;
+;             |AND_gate:\and_loop:14:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:14:AND160                                ; work         ;
+;             |AND_gate:\and_loop:15:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:15:AND160                                ; work         ;
+;             |AND_gate:\and_loop:1:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:1:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:2:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:2:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:3:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:3:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:4:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:4:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:5:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:5:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:6:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:6:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:7:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:7:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:8:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:8:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:9:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11|AND_gate:\and_loop:9:AND160                                 ; work         ;
+;          |AND_16bit:M12|                   ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12                                                             ; work         ;
+;             |AND_gate:\and_loop:10:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:10:AND160                                ; work         ;
+;             |AND_gate:\and_loop:11:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:11:AND160                                ; work         ;
+;             |AND_gate:\and_loop:12:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:12:AND160                                ; work         ;
+;             |AND_gate:\and_loop:13:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:13:AND160                                ; work         ;
+;             |AND_gate:\and_loop:14:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:14:AND160                                ; work         ;
+;             |AND_gate:\and_loop:15:AND160| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:15:AND160                                ; work         ;
+;             |AND_gate:\and_loop:1:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:1:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:2:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:2:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:3:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:3:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:4:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:4:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:5:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:5:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:6:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:6:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:7:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:7:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:8:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:8:AND160                                 ; work         ;
+;             |AND_gate:\and_loop:9:AND160|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M12|AND_gate:\and_loop:9:AND160                                 ; work         ;
+;       |MULT_3bit:A7|                       ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7                                                                           ; work         ;
+;          |MULT_1bit:M34|                   ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34                                                             ; work         ;
+;             |OR_16bit:M13|                 ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13                                                ; work         ;
+;                |OR_gate:\or_loop:10:OR160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:10:OR160                      ; work         ;
+;                |OR_gate:\or_loop:11:OR160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:11:OR160                      ; work         ;
+;                |OR_gate:\or_loop:12:OR160| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:12:OR160                      ; work         ;
+;                |OR_gate:\or_loop:13:OR160| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:13:OR160                      ; work         ;
+;                |OR_gate:\or_loop:14:OR160| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:14:OR160                      ; work         ;
+;                |OR_gate:\or_loop:15:OR160| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:15:OR160                      ; work         ;
+;                |OR_gate:\or_loop:1:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:1:OR160                       ; work         ;
+;                |OR_gate:\or_loop:2:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:2:OR160                       ; work         ;
+;                |OR_gate:\or_loop:3:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:3:OR160                       ; work         ;
+;                |OR_gate:\or_loop:4:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:4:OR160                       ; work         ;
+;                |OR_gate:\or_loop:5:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:5:OR160                       ; work         ;
+;                |OR_gate:\or_loop:6:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:6:OR160                       ; work         ;
+;                |OR_gate:\or_loop:7:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:7:OR160                       ; work         ;
+;                |OR_gate:\or_loop:8:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:8:OR160                       ; work         ;
+;                |OR_gate:\or_loop:9:OR160|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M34|OR_16bit:M13|OR_gate:\or_loop:9:OR160                       ; work         ;
+;          |MULT_1bit:M36|                   ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M36                                                             ; work         ;
+;             |OR_16bit:M13|                 ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M36|OR_16bit:M13                                                ; work         ;
+;                |OR_gate:\or_loop:0:OR160|  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M36|OR_16bit:M13|OR_gate:\or_loop:0:OR160                       ; work         ;
+;       |NOT_16bit:A6|                       ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|NOT_16bit:A6                                                                           ; work         ;
+;          |OR_gate:\nor_loop:3:NOT162|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALU_16bit:ALU16|NOT_16bit:A6|OR_gate:\nor_loop:3:NOT162                                                ; work         ;
+;    |ALUcontrol:ALUController|              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|ALUcontrol:ALUController                                                                               ; work         ;
+;    |control:Controller|                    ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|control:Controller                                                                                     ; work         ;
+;    |forwarder:ForwardUnit|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|forwarder:ForwardUnit                                                                                  ; work         ;
+;    |jrselector:JR|                         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|jrselector:JR                                                                                          ; work         ;
+;    |mux2to1:ALUInput1|                     ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|mux2to1:ALUInput1                                                                                      ; work         ;
+;    |mux2to1:ALUInput2|                     ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|mux2to1:ALUInput2                                                                                      ; work         ;
+;    |mux2to1:R2AD|                          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|mux2to1:R2AD                                                                                           ; work         ;
+;    |mux2to1:result_MEMWB2|                 ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|mux2to1:result_MEMWB2                                                                                  ; work         ;
+;    |reg16b:PC|                             ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|reg16b:PC                                                                                              ; work         ;
+;    |regFile:RegisterFile|                  ; 503 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile                                                                                   ; work         ;
+;       |decode3to8:G0|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|decode3to8:G0                                                                     ; work         ;
+;       |gen_reg:G2|                         ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2                                                                        ; work         ;
+;          |REG_1bit:\reg_loop:0:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:0:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:10:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:10:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:11:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:11:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:12:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:12:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:13:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:13:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:14:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:14:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:15:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:15:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:1:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:1:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:2:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:2:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:3:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:3:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:4:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:4:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:5:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:5:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:6:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:6:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:7:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:7:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:8:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:8:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:9:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:9:REG0                                              ; work         ;
+;       |gen_reg:G3|                         ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3                                                                        ; work         ;
+;          |REG_1bit:\reg_loop:0:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:0:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:10:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:10:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:11:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:11:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:12:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:12:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:13:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:13:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:14:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:14:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:15:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:15:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:1:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:1:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:2:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:2:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:3:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:3:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:4:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:4:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:5:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:5:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:6:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:6:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:7:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:7:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:8:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:8:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:9:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:9:REG0                                              ; work         ;
+;       |gen_reg:G4|                         ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4                                                                        ; work         ;
+;          |REG_1bit:\reg_loop:0:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:0:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:10:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:10:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:11:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:11:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:12:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:12:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:13:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:13:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:14:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:14:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:15:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:15:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:1:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:1:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:2:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:2:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:3:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:3:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:4:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:4:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:5:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:5:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:6:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:6:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:7:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:7:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:8:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:8:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:9:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:9:REG0                                              ; work         ;
+;       |gen_reg:G5|                         ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5                                                                        ; work         ;
+;          |REG_1bit:\reg_loop:0:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:0:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:10:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:10:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:11:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:11:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:12:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:12:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:13:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:13:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:14:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:14:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:15:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:15:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:1:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:1:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:2:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:2:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:3:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:3:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:4:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:4:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:5:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:5:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:6:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:6:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:7:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:7:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:8:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:8:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:9:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:9:REG0                                              ; work         ;
+;       |gen_reg:G6|                         ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6                                                                        ; work         ;
+;          |REG_1bit:\reg_loop:0:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:0:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:10:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:10:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:11:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:11:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:12:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:12:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:13:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:13:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:14:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:14:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:15:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:15:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:1:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:1:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:2:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:2:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:3:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:3:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:4:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:4:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:5:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:5:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:6:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:6:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:7:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:7:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:8:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:8:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:9:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:9:REG0                                              ; work         ;
+;       |gen_reg:G7|                         ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7                                                                        ; work         ;
+;          |REG_1bit:\reg_loop:0:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:0:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:10:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:10:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:11:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:11:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:12:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:12:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:13:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:13:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:14:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:14:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:15:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:15:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:1:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:1:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:2:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:2:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:3:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:3:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:4:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:4:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:5:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:5:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:6:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:6:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:7:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:7:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:8:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:8:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:9:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:9:REG0                                              ; work         ;
+;       |gen_reg:G8|                         ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8                                                                        ; work         ;
+;          |REG_1bit:\reg_loop:0:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:0:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:10:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:10:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:11:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:11:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:12:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:12:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:13:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:13:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:14:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:14:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:15:REG0|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:15:REG0                                             ; work         ;
+;          |REG_1bit:\reg_loop:1:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:1:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:2:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:2:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:3:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:3:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:4:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:4:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:5:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:5:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:6:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:6:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:7:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:7:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:8:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:8:REG0                                              ; work         ;
+;          |REG_1bit:\reg_loop:9:REG0|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:9:REG0                                              ; work         ;
+;       |mux8to1:G10|                        ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|mux8to1:G10                                                                       ; work         ;
+;       |mux8to1:G9|                         ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|regFile:RegisterFile|mux8to1:G9                                                                        ; work         ;
+;    |register_ex_mem:EXMEMREG|              ; 0 (0)             ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|register_ex_mem:EXMEMREG                                                                               ; work         ;
+;    |register_id_ex:IDEXREG|                ; 4 (4)             ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|register_id_ex:IDEXREG                                                                                 ; work         ;
+;    |register_if_id:IFIDREG|                ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|register_if_id:IFIDREG                                                                                 ; work         ;
+;    |register_mem_wb:MEMWBREG|              ; 0 (0)             ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|register_mem_wb:MEMWBREG                                                                               ; work         ;
+;    |trapunit:Trap|                         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUEB_PROCESSOR|trapunit:Trap                                                                                          ; work         ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal             ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; register_if_id:IFIDREG|outPC[15]                    ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[14]                    ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[13]                    ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[12]                    ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[11]                    ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[10]                    ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[9]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[8]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[7]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[6]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[5]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[4]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[3]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[2]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[1]                     ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outPC[0]                     ; clock                           ; yes                    ;
+; control:Controller|isJumpD                          ; control:Controller|isJumpD      ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[12]           ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[13]           ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[14]           ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[15]           ; clock                           ; yes                    ;
+; control:Controller|isPrintDigit                     ; control:Controller|isPrintDigit ; yes                    ;
+; control:Controller|isReadDigit                      ; control:Controller|isReadDigit  ; yes                    ;
+; control:Controller|isSW                             ; control:Controller|isSW         ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[3]            ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[6]            ; clock                           ; yes                    ;
+; control:Controller|isR                              ; control:Controller|isR          ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[5]            ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[8]            ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[4]            ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[7]            ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[1]            ; clock                           ; yes                    ;
+; control:Controller|isMPFC                           ; control:Controller|isMPFC       ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[0]            ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[2]            ; clock                           ; yes                    ;
+; control:Controller|isJR                             ; control:Controller|isJR         ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[9]            ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[10]           ; clock                           ; yes                    ;
+; register_if_id:IFIDREG|outInstruction[11]           ; clock                           ; yes                    ;
+; control:Controller|isLW                             ; control:Controller|isLW         ; yes                    ;
+; control:Controller|isBranch                         ; control:Controller|isBranch     ; yes                    ;
+; Number of user-specified and inferred latches = 41  ;                                 ;                        ;
++-----------------------------------------------------+---------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                            ;
++-------------------------------------------------------------------+-----+
+; Logic Cell Name                                                   ;     ;
++-------------------------------------------------------------------+-----+
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:0:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:1:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:2:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:3:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:4:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:5:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:6:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:7:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:8:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:9:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:10:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:11:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:12:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:13:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:14:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:15:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:0:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:1:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:2:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:3:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:4:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:5:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:6:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:7:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:8:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:9:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:10:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:11:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:12:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:13:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:14:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G3|REG_1bit:\reg_loop:15:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:0:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:1:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:2:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:3:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:4:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:5:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:6:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:7:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:8:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:9:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:10:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:11:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:12:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:13:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:14:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G4|REG_1bit:\reg_loop:15:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:0:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:1:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:2:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:3:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:4:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:5:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:6:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:7:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:8:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:9:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:10:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:11:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:12:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:13:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:14:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G5|REG_1bit:\reg_loop:15:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:0:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:1:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:2:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:3:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:4:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:5:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:6:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:7:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:8:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:9:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:10:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:11:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:12:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:13:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:14:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G6|REG_1bit:\reg_loop:15:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:0:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:1:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:2:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:3:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:4:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:5:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:6:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:7:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:8:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:9:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:10:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:11:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:12:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:13:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:14:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G7|REG_1bit:\reg_loop:15:REG0|out1~0 ;     ;
+; regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:0:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:1:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:2:REG0|out1~0  ;     ;
+; regFile:RegisterFile|gen_reg:G8|REG_1bit:\reg_loop:3:REG0|out1~0  ;     ;
+; Number of logic cells representing combinational loops            ; 336 ;
++-------------------------------------------------------------------+-----+
+Table restricted to first 100 entries. Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                           ;
++------------------------------------------------+-------------------------------------------------------------+
+; Register name                                  ; Reason for Removal                                          ;
++------------------------------------------------+-------------------------------------------------------------+
+; register_id_ex:IDEXREG|immediate16_IDEX[0]     ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[0] ;
+; register_id_ex:IDEXREG|immediate16_IDEX[1]     ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[1] ;
+; register_id_ex:IDEXREG|immediate16_IDEX[2]     ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[2] ;
+; register_id_ex:IDEXREG|immediate16_IDEX[3]     ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[3] ;
+; register_id_ex:IDEXREG|immediate16_IDEX[4]     ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[4] ;
+; register_id_ex:IDEXREG|immediate16_IDEX[5..15] ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[5] ;
+; register_id_ex:IDEXREG|R1AD_IDEX[0]            ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[6] ;
+; register_id_ex:IDEXREG|R1AD_IDEX[1]            ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[7] ;
+; register_id_ex:IDEXREG|R1AD_IDEX[2]            ; Merged with register_id_ex:IDEXREG|jumpShortAddress_IDEX[8] ;
+; Total Number of Removed Registers = 19         ;                                                             ;
++------------------------------------------------+-------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -203,14 +714,353 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 132   ;
+; Number of registers using Synchronous Clear  ; 15    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |AUEB_PROCESSOR|register_id_ex:IDEXREG|R1Reg_IDEX[0]  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |AUEB_PROCESSOR|register_id_ex:IDEXREG|R2Reg_IDEX[12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AUEB_PROCESSOR|mux2to1:result_MEMWB2|out0[10]        ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |AUEB_PROCESSOR|mux2to1:ALUInput1|out0[12]            ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |AUEB_PROCESSOR|mux2to1:ALUInput2|out0[3]             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:result_MEMWB1 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; n              ; 16    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:result_MEMWB2 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; n              ; 16    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: jrselector:JR ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; n              ; 16    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register_mem_wb:MEMWBREG ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 16    ; Signed Integer                               ;
+; addressSize    ; 3     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register_if_id:IFIDREG ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 16    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: forwarder:ForwardUnit ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; addr_size      ; 3     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:Selector1 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; n              ; 16    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: selector:Selector2 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; n              ; 16    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sign_extender:SignExtend ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 16    ; Signed Integer                               ;
+; k              ; 6     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:ALUInput1 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n              ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:ALUInput2 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n              ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:R2AD ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; n              ; 3     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 16    ; Signed Integer                           ;
+; k              ; 3     ; Signed Integer                           ;
+; regNum         ; 8     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|reg0:G1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; n              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G2 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G3 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G4 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G5 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G6 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G7 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|gen_reg:G8 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|mux8to1:G9 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regFile:RegisterFile|mux8to1:G10 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register_id_ex:IDEXREG ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 16    ; Signed Integer                             ;
+; addressSize    ; 3     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register_ex_mem:EXMEMREG ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 16    ; Signed Integer                               ;
+; addressSize    ; 3     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_id_ex:IDEXREG"                                                                        ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; wasjumpout_idex ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; isjump_idex     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; isjr_idex       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "hazardunit:Hazard" ;
++------------+-------+----------+---------------+
+; Port       ; Type  ; Severity ; Details       ;
++------------+-------+----------+---------------+
+; mustbranch ; Input ; Info     ; Stuck at GND  ;
++------------+-------+----------+---------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_16bit:ALU16|MULT_3bit:A7|MULT_1bit:M33" ;
++------+-------+----------+----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                      ;
++------+-------+----------+----------------------------------------------+
+; in1  ; Input ; Info     ; Stuck at GND                                 ;
+; in2  ; Input ; Info     ; Stuck at GND                                 ;
++------+-------+----------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; in2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; in2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; carry_in   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "ALU_16bit:ALU16" ;
++----------+-------+----------+---------------+
+; Port     ; Type  ; Severity ; Details       ;
++----------+-------+----------+---------------+
+; carry_in ; Input ; Info     ; Stuck at GND  ;
++----------+-------+----------+---------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "register_if_id:IFIDREG" ;
++--------------+-------+----------+------------------+
+; Port         ; Type  ; Severity ; Details          ;
++--------------+-------+----------+------------------+
+; if_flush     ; Input ; Info     ; Stuck at GND     ;
+; if_id_enable ; Input ; Info     ; Stuck at VCC     ;
++--------------+-------+----------+------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "jrselector:JR"        ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; jumpad[15..12] ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -218,7 +1068,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -228,7 +1078,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 29 12:39:17 2022
+    Info: Processing started: Mon May 30 14:03:37 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUEB_PROCESSOR -c AUEB_PROCESSOR
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file alu/sub_16bit.vhd
@@ -361,115 +1211,142 @@ Info (12021): Found 2 design units, including 1 entities, in source file process
     Info (12022): Found design unit 1: mux2to1-mux2to1Logic
     Info (12023): Found entity 1: mux2to1
 Info (12127): Elaborating entity "AUEB_PROCESSOR" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(10): used implicit default value for signal "printEnable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(10): used implicit default value for signal "keyEnable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(10): used implicit default value for signal "DataWriteFlag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(11): used implicit default value for signal "dataAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(11): used implicit default value for signal "toData" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(11): used implicit default value for signal "printCode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(11): used implicit default value for signal "printData" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(11): used implicit default value for signal "intstruction" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at AUEB_PROCESSOR.vhd(12): used implicit default value for signal "regOUT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at AUEB_PROCESSOR.vhd(248): object "IDEXREGWasJumpOut_IDEX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at AUEB_PROCESSOR.vhd(248): object "IDEXREGIsJump_IDEX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at AUEB_PROCESSOR.vhd(248): object "IDEXREGIsJR_IDEX" assigned a value but never read
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:result_MEMWB1"
+Info (10041): Inferred latch for "out0[0]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[1]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[2]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[3]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[4]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[5]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[6]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[7]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[8]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[9]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[10]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[11]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[12]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[13]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[14]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[15]" at mux2to1.vhd(17)
+Info (12128): Elaborating entity "trapunit" for hierarchy "trapunit:Trap"
+Info (12128): Elaborating entity "jrselector" for hierarchy "jrselector:JR"
+Warning (10492): VHDL Process Statement warning at jrselector.vhd(21): signal "PCP2AD" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at jrselector.vhd(23): signal "jumpAD" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at jrselector.vhd(25): signal "branchAD" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at jrselector.vhd(26): signal "PCP2AD" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "reg16b" for hierarchy "reg16b:PC"
+Info (12128): Elaborating entity "register_mem_wb" for hierarchy "register_mem_wb:MEMWBREG"
+Info (12128): Elaborating entity "register_if_id" for hierarchy "register_if_id:IFIDREG"
+Warning (10492): VHDL Process Statement warning at register_if_id.vhd(21): signal "inPC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at register_if_id.vhd(22): signal "inInstruction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at register_if_id.vhd(18): inferring latch(es) for signal or variable "outPC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at register_if_id.vhd(18): inferring latch(es) for signal or variable "outInstruction", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "outInstruction[0]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[1]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[2]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[3]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[4]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[5]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[6]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[7]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[8]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[9]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[10]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[11]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[12]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[13]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[14]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outInstruction[15]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[0]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[1]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[2]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[3]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[4]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[5]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[6]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[7]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[8]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[9]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[10]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[11]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[12]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[13]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[14]" at register_if_id.vhd(18)
+Info (10041): Inferred latch for "outPC[15]" at register_if_id.vhd(18)
+Info (12128): Elaborating entity "forwarder" for hierarchy "forwarder:ForwardUnit"
+Info (12128): Elaborating entity "selector" for hierarchy "selector:Selector1"
+Info (12128): Elaborating entity "ALUcontrol" for hierarchy "ALUcontrol:ALUController"
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:SignExtend"
+Info (12128): Elaborating entity "ALU_16bit" for hierarchy "ALU_16bit:ALU16"
+Info (12128): Elaborating entity "COMPLEMENT_GETTER_16bit" for hierarchy "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0"
+Warning (10036): Verilog HDL or VHDL warning at COMPLEMENT_GETTER_16bit.vhd(25): object "carry_out" assigned a value but never read
+Info (12128): Elaborating entity "NOT_gate" for hierarchy "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|NOT_gate:\main_loop:15:CG160"
+Info (12128): Elaborating entity "FULL_ADDER_16bit" for hierarchy "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161"
+Info (12128): Elaborating entity "FULL_ADDER_1bit" for hierarchy "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160"
+Info (12128): Elaborating entity "XOR_gate" for hierarchy "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|XOR_gate:FAO0"
+Info (12128): Elaborating entity "AND_gate" for hierarchy "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|AND_gate:FAO2"
+Info (12128): Elaborating entity "OR_gate" for hierarchy "ALU_16bit:ALU16|COMPLEMENT_GETTER_16bit:A0|FULL_ADDER_16bit:CG161|FULL_ADDER_1bit:FA160|OR_gate:FAO4"
+Info (12128): Elaborating entity "MULT_1bit" for hierarchy "ALU_16bit:ALU16|MULT_1bit:A1"
+Info (12128): Elaborating entity "AND_16bit" for hierarchy "ALU_16bit:ALU16|MULT_1bit:A1|AND_16bit:M11"
+Info (12128): Elaborating entity "OR_16bit" for hierarchy "ALU_16bit:ALU16|MULT_1bit:A1|OR_16bit:M13"
+Info (12128): Elaborating entity "GEQZ_16bit" for hierarchy "ALU_16bit:ALU16|GEQZ_16bit:A5"
+Info (12128): Elaborating entity "NOT_16bit" for hierarchy "ALU_16bit:ALU16|NOT_16bit:A6"
+Info (12128): Elaborating entity "MULT_3bit" for hierarchy "ALU_16bit:ALU16|MULT_3bit:A7"
+Info (12128): Elaborating entity "hazardunit" for hierarchy "hazardunit:Hazard"
+Warning (10541): VHDL Signal Declaration warning at hazardunit.vhd(6): used implicit default value for signal "wasJumpOut" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "control" for hierarchy "control:Controller"
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isR", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isMPFC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isLW", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isSW", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isBranch", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isReadDigit", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isPrintDigit", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isJumpD", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control.vhd(13): inferring latch(es) for signal or variable "isJR", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "isJR" at control.vhd(13)
+Info (10041): Inferred latch for "isJumpD" at control.vhd(13)
+Info (10041): Inferred latch for "isPrintDigit" at control.vhd(13)
+Info (10041): Inferred latch for "isReadDigit" at control.vhd(13)
+Info (10041): Inferred latch for "isBranch" at control.vhd(13)
+Info (10041): Inferred latch for "isSW" at control.vhd(13)
+Info (10041): Inferred latch for "isLW" at control.vhd(13)
+Info (10041): Inferred latch for "isMPFC" at control.vhd(13)
+Info (10041): Inferred latch for "isR" at control.vhd(13)
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:R2AD"
+Info (10041): Inferred latch for "out0[0]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[1]" at mux2to1.vhd(17)
+Info (10041): Inferred latch for "out0[2]" at mux2to1.vhd(17)
+Info (12128): Elaborating entity "regFile" for hierarchy "regFile:RegisterFile"
+Info (12128): Elaborating entity "decode3to8" for hierarchy "regFile:RegisterFile|decode3to8:G0"
+Info (12128): Elaborating entity "reg0" for hierarchy "regFile:RegisterFile|reg0:G1"
+Info (12128): Elaborating entity "gen_reg" for hierarchy "regFile:RegisterFile|gen_reg:G2"
+Info (12128): Elaborating entity "REG_1bit" for hierarchy "regFile:RegisterFile|gen_reg:G2|REG_1bit:\reg_loop:15:REG0"
+Info (12128): Elaborating entity "mux8to1" for hierarchy "regFile:RegisterFile|mux8to1:G9"
+Info (12128): Elaborating entity "register_id_ex" for hierarchy "register_id_ex:IDEXREG"
+Info (12128): Elaborating entity "register_ex_mem" for hierarchy "register_ex_mem:EXMEMREG"
+Warning (13012): Latch control:Controller|isJumpD has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
+Warning (13012): Latch control:Controller|isPrintDigit has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
+Warning (13012): Latch control:Controller|isReadDigit has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
+Warning (13012): Latch control:Controller|isSW has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
+Warning (13012): Latch control:Controller|isR has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
+Warning (13012): Latch control:Controller|isMPFC has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_if_id:IFIDREG|outInstruction[1]
+Warning (13012): Latch control:Controller|isJR has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
+Warning (13012): Latch control:Controller|isLW has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
+Warning (13012): Latch control:Controller|isBranch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal comb3out
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "printEnable" is stuck at GND
-    Warning (13410): Pin "keyEnable" is stuck at GND
-    Warning (13410): Pin "DataWriteFlag" is stuck at GND
-    Warning (13410): Pin "dataAD[0]" is stuck at GND
-    Warning (13410): Pin "dataAD[1]" is stuck at GND
-    Warning (13410): Pin "dataAD[2]" is stuck at GND
-    Warning (13410): Pin "dataAD[3]" is stuck at GND
-    Warning (13410): Pin "dataAD[4]" is stuck at GND
-    Warning (13410): Pin "dataAD[5]" is stuck at GND
-    Warning (13410): Pin "dataAD[6]" is stuck at GND
-    Warning (13410): Pin "dataAD[7]" is stuck at GND
-    Warning (13410): Pin "dataAD[8]" is stuck at GND
-    Warning (13410): Pin "dataAD[9]" is stuck at GND
-    Warning (13410): Pin "dataAD[10]" is stuck at GND
-    Warning (13410): Pin "dataAD[11]" is stuck at GND
-    Warning (13410): Pin "dataAD[12]" is stuck at GND
-    Warning (13410): Pin "dataAD[13]" is stuck at GND
-    Warning (13410): Pin "dataAD[14]" is stuck at GND
-    Warning (13410): Pin "dataAD[15]" is stuck at GND
-    Warning (13410): Pin "toData[0]" is stuck at GND
-    Warning (13410): Pin "toData[1]" is stuck at GND
-    Warning (13410): Pin "toData[2]" is stuck at GND
-    Warning (13410): Pin "toData[3]" is stuck at GND
-    Warning (13410): Pin "toData[4]" is stuck at GND
-    Warning (13410): Pin "toData[5]" is stuck at GND
-    Warning (13410): Pin "toData[6]" is stuck at GND
-    Warning (13410): Pin "toData[7]" is stuck at GND
-    Warning (13410): Pin "toData[8]" is stuck at GND
-    Warning (13410): Pin "toData[9]" is stuck at GND
-    Warning (13410): Pin "toData[10]" is stuck at GND
-    Warning (13410): Pin "toData[11]" is stuck at GND
-    Warning (13410): Pin "toData[12]" is stuck at GND
-    Warning (13410): Pin "toData[13]" is stuck at GND
-    Warning (13410): Pin "toData[14]" is stuck at GND
-    Warning (13410): Pin "toData[15]" is stuck at GND
-    Warning (13410): Pin "printCode[0]" is stuck at GND
-    Warning (13410): Pin "printCode[1]" is stuck at GND
-    Warning (13410): Pin "printCode[2]" is stuck at GND
-    Warning (13410): Pin "printCode[3]" is stuck at GND
-    Warning (13410): Pin "printCode[4]" is stuck at GND
-    Warning (13410): Pin "printCode[5]" is stuck at GND
-    Warning (13410): Pin "printCode[6]" is stuck at GND
-    Warning (13410): Pin "printCode[7]" is stuck at GND
-    Warning (13410): Pin "printCode[8]" is stuck at GND
-    Warning (13410): Pin "printCode[9]" is stuck at GND
-    Warning (13410): Pin "printCode[10]" is stuck at GND
-    Warning (13410): Pin "printCode[11]" is stuck at GND
-    Warning (13410): Pin "printCode[12]" is stuck at GND
-    Warning (13410): Pin "printCode[13]" is stuck at GND
-    Warning (13410): Pin "printCode[14]" is stuck at GND
-    Warning (13410): Pin "printCode[15]" is stuck at GND
-    Warning (13410): Pin "printData[0]" is stuck at GND
-    Warning (13410): Pin "printData[1]" is stuck at GND
-    Warning (13410): Pin "printData[2]" is stuck at GND
-    Warning (13410): Pin "printData[3]" is stuck at GND
-    Warning (13410): Pin "printData[4]" is stuck at GND
-    Warning (13410): Pin "printData[5]" is stuck at GND
-    Warning (13410): Pin "printData[6]" is stuck at GND
-    Warning (13410): Pin "printData[7]" is stuck at GND
-    Warning (13410): Pin "printData[8]" is stuck at GND
-    Warning (13410): Pin "printData[9]" is stuck at GND
-    Warning (13410): Pin "printData[10]" is stuck at GND
-    Warning (13410): Pin "printData[11]" is stuck at GND
-    Warning (13410): Pin "printData[12]" is stuck at GND
-    Warning (13410): Pin "printData[13]" is stuck at GND
-    Warning (13410): Pin "printData[14]" is stuck at GND
-    Warning (13410): Pin "printData[15]" is stuck at GND
-    Warning (13410): Pin "intstruction[0]" is stuck at GND
-    Warning (13410): Pin "intstruction[1]" is stuck at GND
-    Warning (13410): Pin "intstruction[2]" is stuck at GND
-    Warning (13410): Pin "intstruction[3]" is stuck at GND
-    Warning (13410): Pin "intstruction[4]" is stuck at GND
-    Warning (13410): Pin "intstruction[5]" is stuck at GND
-    Warning (13410): Pin "intstruction[6]" is stuck at GND
-    Warning (13410): Pin "intstruction[7]" is stuck at GND
-    Warning (13410): Pin "intstruction[8]" is stuck at GND
-    Warning (13410): Pin "intstruction[9]" is stuck at GND
-    Warning (13410): Pin "intstruction[10]" is stuck at GND
-    Warning (13410): Pin "intstruction[11]" is stuck at GND
-    Warning (13410): Pin "intstruction[12]" is stuck at GND
-    Warning (13410): Pin "intstruction[13]" is stuck at GND
-    Warning (13410): Pin "intstruction[14]" is stuck at GND
-    Warning (13410): Pin "intstruction[15]" is stuck at GND
-    Warning (13410): Pin "regOUT[0]" is stuck at GND
-    Warning (13410): Pin "regOUT[1]" is stuck at GND
-    Warning (13410): Pin "regOUT[2]" is stuck at GND
-    Warning (13410): Pin "regOUT[3]" is stuck at GND
-    Warning (13410): Pin "regOUT[4]" is stuck at GND
-    Warning (13410): Pin "regOUT[5]" is stuck at GND
-    Warning (13410): Pin "regOUT[6]" is stuck at GND
-    Warning (13410): Pin "regOUT[7]" is stuck at GND
-    Warning (13410): Pin "regOUT[8]" is stuck at GND
-    Warning (13410): Pin "regOUT[9]" is stuck at GND
-    Warning (13410): Pin "regOUT[10]" is stuck at GND
-    Warning (13410): Pin "regOUT[11]" is stuck at GND
-    Warning (13410): Pin "regOUT[12]" is stuck at GND
-    Warning (13410): Pin "regOUT[13]" is stuck at GND
-    Warning (13410): Pin "regOUT[14]" is stuck at GND
-    Warning (13410): Pin "regOUT[15]" is stuck at GND
     Warning (13410): Pin "regOUT[16]" is stuck at GND
     Warning (13410): Pin "regOUT[17]" is stuck at GND
     Warning (13410): Pin "regOUT[18]" is stuck at GND
@@ -486,178 +1363,16 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "regOUT[29]" is stuck at GND
     Warning (13410): Pin "regOUT[30]" is stuck at GND
     Warning (13410): Pin "regOUT[31]" is stuck at GND
-    Warning (13410): Pin "regOUT[32]" is stuck at GND
-    Warning (13410): Pin "regOUT[33]" is stuck at GND
-    Warning (13410): Pin "regOUT[34]" is stuck at GND
-    Warning (13410): Pin "regOUT[35]" is stuck at GND
-    Warning (13410): Pin "regOUT[36]" is stuck at GND
-    Warning (13410): Pin "regOUT[37]" is stuck at GND
-    Warning (13410): Pin "regOUT[38]" is stuck at GND
-    Warning (13410): Pin "regOUT[39]" is stuck at GND
-    Warning (13410): Pin "regOUT[40]" is stuck at GND
-    Warning (13410): Pin "regOUT[41]" is stuck at GND
-    Warning (13410): Pin "regOUT[42]" is stuck at GND
-    Warning (13410): Pin "regOUT[43]" is stuck at GND
-    Warning (13410): Pin "regOUT[44]" is stuck at GND
-    Warning (13410): Pin "regOUT[45]" is stuck at GND
-    Warning (13410): Pin "regOUT[46]" is stuck at GND
-    Warning (13410): Pin "regOUT[47]" is stuck at GND
-    Warning (13410): Pin "regOUT[48]" is stuck at GND
-    Warning (13410): Pin "regOUT[49]" is stuck at GND
-    Warning (13410): Pin "regOUT[50]" is stuck at GND
-    Warning (13410): Pin "regOUT[51]" is stuck at GND
-    Warning (13410): Pin "regOUT[52]" is stuck at GND
-    Warning (13410): Pin "regOUT[53]" is stuck at GND
-    Warning (13410): Pin "regOUT[54]" is stuck at GND
-    Warning (13410): Pin "regOUT[55]" is stuck at GND
-    Warning (13410): Pin "regOUT[56]" is stuck at GND
-    Warning (13410): Pin "regOUT[57]" is stuck at GND
-    Warning (13410): Pin "regOUT[58]" is stuck at GND
-    Warning (13410): Pin "regOUT[59]" is stuck at GND
-    Warning (13410): Pin "regOUT[60]" is stuck at GND
-    Warning (13410): Pin "regOUT[61]" is stuck at GND
-    Warning (13410): Pin "regOUT[62]" is stuck at GND
-    Warning (13410): Pin "regOUT[63]" is stuck at GND
-    Warning (13410): Pin "regOUT[64]" is stuck at GND
-    Warning (13410): Pin "regOUT[65]" is stuck at GND
-    Warning (13410): Pin "regOUT[66]" is stuck at GND
-    Warning (13410): Pin "regOUT[67]" is stuck at GND
-    Warning (13410): Pin "regOUT[68]" is stuck at GND
-    Warning (13410): Pin "regOUT[69]" is stuck at GND
-    Warning (13410): Pin "regOUT[70]" is stuck at GND
-    Warning (13410): Pin "regOUT[71]" is stuck at GND
-    Warning (13410): Pin "regOUT[72]" is stuck at GND
-    Warning (13410): Pin "regOUT[73]" is stuck at GND
-    Warning (13410): Pin "regOUT[74]" is stuck at GND
-    Warning (13410): Pin "regOUT[75]" is stuck at GND
-    Warning (13410): Pin "regOUT[76]" is stuck at GND
-    Warning (13410): Pin "regOUT[77]" is stuck at GND
-    Warning (13410): Pin "regOUT[78]" is stuck at GND
-    Warning (13410): Pin "regOUT[79]" is stuck at GND
-    Warning (13410): Pin "regOUT[80]" is stuck at GND
-    Warning (13410): Pin "regOUT[81]" is stuck at GND
-    Warning (13410): Pin "regOUT[82]" is stuck at GND
-    Warning (13410): Pin "regOUT[83]" is stuck at GND
-    Warning (13410): Pin "regOUT[84]" is stuck at GND
-    Warning (13410): Pin "regOUT[85]" is stuck at GND
-    Warning (13410): Pin "regOUT[86]" is stuck at GND
-    Warning (13410): Pin "regOUT[87]" is stuck at GND
-    Warning (13410): Pin "regOUT[88]" is stuck at GND
-    Warning (13410): Pin "regOUT[89]" is stuck at GND
-    Warning (13410): Pin "regOUT[90]" is stuck at GND
-    Warning (13410): Pin "regOUT[91]" is stuck at GND
-    Warning (13410): Pin "regOUT[92]" is stuck at GND
-    Warning (13410): Pin "regOUT[93]" is stuck at GND
-    Warning (13410): Pin "regOUT[94]" is stuck at GND
-    Warning (13410): Pin "regOUT[95]" is stuck at GND
-    Warning (13410): Pin "regOUT[96]" is stuck at GND
-    Warning (13410): Pin "regOUT[97]" is stuck at GND
-    Warning (13410): Pin "regOUT[98]" is stuck at GND
-    Warning (13410): Pin "regOUT[99]" is stuck at GND
-    Warning (13410): Pin "regOUT[100]" is stuck at GND
-    Warning (13410): Pin "regOUT[101]" is stuck at GND
-    Warning (13410): Pin "regOUT[102]" is stuck at GND
-    Warning (13410): Pin "regOUT[103]" is stuck at GND
-    Warning (13410): Pin "regOUT[104]" is stuck at GND
-    Warning (13410): Pin "regOUT[105]" is stuck at GND
-    Warning (13410): Pin "regOUT[106]" is stuck at GND
-    Warning (13410): Pin "regOUT[107]" is stuck at GND
-    Warning (13410): Pin "regOUT[108]" is stuck at GND
-    Warning (13410): Pin "regOUT[109]" is stuck at GND
-    Warning (13410): Pin "regOUT[110]" is stuck at GND
-    Warning (13410): Pin "regOUT[111]" is stuck at GND
-    Warning (13410): Pin "regOUT[112]" is stuck at GND
-    Warning (13410): Pin "regOUT[113]" is stuck at GND
-    Warning (13410): Pin "regOUT[114]" is stuck at GND
-    Warning (13410): Pin "regOUT[115]" is stuck at GND
-    Warning (13410): Pin "regOUT[116]" is stuck at GND
-    Warning (13410): Pin "regOUT[117]" is stuck at GND
-    Warning (13410): Pin "regOUT[118]" is stuck at GND
-    Warning (13410): Pin "regOUT[119]" is stuck at GND
-    Warning (13410): Pin "regOUT[120]" is stuck at GND
-    Warning (13410): Pin "regOUT[121]" is stuck at GND
-    Warning (13410): Pin "regOUT[122]" is stuck at GND
-    Warning (13410): Pin "regOUT[123]" is stuck at GND
-    Warning (13410): Pin "regOUT[124]" is stuck at GND
-    Warning (13410): Pin "regOUT[125]" is stuck at GND
-    Warning (13410): Pin "regOUT[126]" is stuck at GND
-    Warning (13410): Pin "regOUT[127]" is stuck at GND
-    Warning (13410): Pin "regOUT[128]" is stuck at GND
-    Warning (13410): Pin "regOUT[129]" is stuck at GND
-    Warning (13410): Pin "regOUT[130]" is stuck at GND
-    Warning (13410): Pin "regOUT[131]" is stuck at GND
-    Warning (13410): Pin "regOUT[132]" is stuck at GND
-    Warning (13410): Pin "regOUT[133]" is stuck at GND
-    Warning (13410): Pin "regOUT[134]" is stuck at GND
-    Warning (13410): Pin "regOUT[135]" is stuck at GND
-    Warning (13410): Pin "regOUT[136]" is stuck at GND
-    Warning (13410): Pin "regOUT[137]" is stuck at GND
-    Warning (13410): Pin "regOUT[138]" is stuck at GND
-    Warning (13410): Pin "regOUT[139]" is stuck at GND
-    Warning (13410): Pin "regOUT[140]" is stuck at GND
-    Warning (13410): Pin "regOUT[141]" is stuck at GND
-    Warning (13410): Pin "regOUT[142]" is stuck at GND
-    Warning (13410): Pin "regOUT[143]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 50 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "keyData[0]"
-    Warning (15610): No output dependent on input pin "keyData[1]"
-    Warning (15610): No output dependent on input pin "keyData[2]"
-    Warning (15610): No output dependent on input pin "keyData[3]"
-    Warning (15610): No output dependent on input pin "keyData[4]"
-    Warning (15610): No output dependent on input pin "keyData[5]"
-    Warning (15610): No output dependent on input pin "keyData[6]"
-    Warning (15610): No output dependent on input pin "keyData[7]"
-    Warning (15610): No output dependent on input pin "keyData[8]"
-    Warning (15610): No output dependent on input pin "keyData[9]"
-    Warning (15610): No output dependent on input pin "keyData[10]"
-    Warning (15610): No output dependent on input pin "keyData[11]"
-    Warning (15610): No output dependent on input pin "keyData[12]"
-    Warning (15610): No output dependent on input pin "keyData[13]"
-    Warning (15610): No output dependent on input pin "keyData[14]"
-    Warning (15610): No output dependent on input pin "keyData[15]"
-    Warning (15610): No output dependent on input pin "fromData[0]"
-    Warning (15610): No output dependent on input pin "fromData[1]"
-    Warning (15610): No output dependent on input pin "fromData[2]"
-    Warning (15610): No output dependent on input pin "fromData[3]"
-    Warning (15610): No output dependent on input pin "fromData[4]"
-    Warning (15610): No output dependent on input pin "fromData[5]"
-    Warning (15610): No output dependent on input pin "fromData[6]"
-    Warning (15610): No output dependent on input pin "fromData[7]"
-    Warning (15610): No output dependent on input pin "fromData[8]"
-    Warning (15610): No output dependent on input pin "fromData[9]"
-    Warning (15610): No output dependent on input pin "fromData[10]"
-    Warning (15610): No output dependent on input pin "fromData[11]"
-    Warning (15610): No output dependent on input pin "fromData[12]"
-    Warning (15610): No output dependent on input pin "fromData[13]"
-    Warning (15610): No output dependent on input pin "fromData[14]"
-    Warning (15610): No output dependent on input pin "fromData[15]"
-    Warning (15610): No output dependent on input pin "instr[0]"
-    Warning (15610): No output dependent on input pin "instr[1]"
-    Warning (15610): No output dependent on input pin "instr[2]"
-    Warning (15610): No output dependent on input pin "instr[3]"
-    Warning (15610): No output dependent on input pin "instr[4]"
-    Warning (15610): No output dependent on input pin "instr[5]"
-    Warning (15610): No output dependent on input pin "instr[6]"
-    Warning (15610): No output dependent on input pin "instr[7]"
-    Warning (15610): No output dependent on input pin "instr[8]"
-    Warning (15610): No output dependent on input pin "instr[9]"
-    Warning (15610): No output dependent on input pin "instr[10]"
-    Warning (15610): No output dependent on input pin "instr[11]"
-    Warning (15610): No output dependent on input pin "instr[12]"
-    Warning (15610): No output dependent on input pin "instr[13]"
-    Warning (15610): No output dependent on input pin "instr[14]"
-    Warning (15610): No output dependent on input pin "instr[15]"
-    Warning (15610): No output dependent on input pin "clock"
-    Warning (15610): No output dependent on input pin "clock2"
-Info (21057): Implemented 277 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1178 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 227 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 289 warnings
-    Info: Peak virtual memory: 4638 megabytes
-    Info: Processing ended: Sun May 29 12:39:19 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 901 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4650 megabytes
+    Info: Processing ended: Mon May 30 14:03:44 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 

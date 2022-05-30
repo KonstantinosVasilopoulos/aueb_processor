@@ -2,9 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity ALU_16bit is
-port(in1, in2: in std_logic_vector(15 downto 0);
-	operation: in std_logic_vector(2 downto 0);
-	out1: out std_logic_vector(15 downto 0));
+port(carry_in : in std_logic;
+	in1, in2: in std_logic_vector(15 downto 0);
+	operation: in std_logic_vector(3 downto 0);
+	out1: out std_logic_vector(15 downto 0);
+	carry_out : out std_logic);
 end ALU_16bit;
 
 architecture ALULogic of ALU_16bit is
@@ -55,7 +57,7 @@ architecture ALULogic of ALU_16bit is
 	end component MULT_3bit;
 
 	signal complement_one_in2, addition_in2, full_adder_result: std_logic_vector(15 downto 0);
-	signal carry_out: std_logic;
+	signal co: std_logic;
 	signal and_result, or_result, geq_result, not_result: std_logic_vector(15 downto 0);
 	signal final_result: std_logic_vector(15 downto 0);
 
@@ -64,7 +66,7 @@ begin
 	-- Produce the negative number of in2
 	A0: COMPLEMENT_GETTER_16bit port map(in2, complement_one_in2);
 	A1: MULT_1bit port map(in2, complement_one_in2, operation(0), addition_in2);
-	A2: FULL_ADDER_16bit port map(in1, addition_in2, '0', full_adder_result, carry_out);
+	A2: FULL_ADDER_16bit port map(in1, addition_in2, carry_in, full_adder_result, co);
 
 	-- Logic Unit
 	A3: AND_16bit port map(in1, in2, and_result);
@@ -73,6 +75,7 @@ begin
 	A6: NOT_16bit port map(in1, not_result);
 
 	-- Operation Multiplexer
-	A7: MULT_3bit port map(full_adder_result, full_adder_result, and_result, or_result, geq_result, not_result, operation, final_result);
+	A7: MULT_3bit port map(full_adder_result, full_adder_result, and_result, or_result, geq_result, not_result, operation(2 downto 0), final_result);
 	out1 <= final_result;
+	carry_out <= co;
 end ALULogic;

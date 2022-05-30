@@ -7,12 +7,12 @@ entity register_id_ex is
         addressSize : integer := 3
     );
     port (
-        clock, isEOR, wasJumpOut, isJR, isBranch, isR, isMFPC, isLW, isSW, isReadDigit, isPrintDigit : in std_logic;
+        clock, isEOR, wasJumpOut, isJump, isJR, isBranch, isR, isMFPC, isLW, isSW, isReadDigit, isPrintDigit : in std_logic;
         ALUFunc: in std_logic_vector(3 downto 0);
         R1Reg, R2Reg, immediate16 : in std_logic_vector(n - 1 downto 0);
         R1AD, R2AD : in std_logic_vector(addressSize - 1 downto 0);
         jumpShortAddress : in std_logic_vector(11 downto 0);
-        isEOR_IDEX, wasJumpOut_IDEX, isJR_IDEX, isBranch_IDEX, isR_IDEX, isMFPC_IDEX, isLW_IDEX, isSW_IDEX, isReadDigit_IDEX, isPrintDigit_IDEX : out std_logic;
+        isEOR_IDEX, wasJumpOut_IDEX, isJump_IDEX, isJR_IDEX, isBranch_IDEX, isR_IDEX, isMFPC_IDEX, isLW_IDEX, isSW_IDEX, isReadDigit_IDEX, isPrintDigit_IDEX : out std_logic;
         ALUFunc_IDEX: out std_logic_vector(3 downto 0);
         R1Reg_IDEX, R2Reg_IDEX, immediate16_IDEX : out std_logic_vector(n - 1 downto 0);
         R1AD_IDEX, R2AD_IDEX : out std_logic_vector(addressSize - 1 downto 0);
@@ -27,6 +27,7 @@ begin
         if clock = '1' then
             isEOR_IDEX <= isEOR;
             wasJumpOut_IDEX <= wasJumpOut;
+            isJump_IDEX <= isJump;
             isJR_IDEX <= isJR;
             isBranch_IDEX <= isBranch;
             isR_IDEX <= isR;

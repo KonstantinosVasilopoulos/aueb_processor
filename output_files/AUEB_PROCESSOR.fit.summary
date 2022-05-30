@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun May 29 12:39:25 2022
+Fitter Status : Successful - Mon May 30 14:04:00 2022
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : AUEB_PROCESSOR
 Top-level Entity Name : AUEB_PROCESSOR
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 0 / 33,216 ( 0 % )
-    Total combinational functions : 0 / 33,216 ( 0 % )
-    Dedicated logic registers : 0 / 33,216 ( 0 % )
-Total registers : 0
+Total logic elements : 843 / 33,216 ( 3 % )
+    Total combinational functions : 836 / 33,216 ( 3 % )
+    Dedicated logic registers : 132 / 33,216 ( < 1 % )
+Total registers : 132
 Total pins : 277 / 475 ( 58 % )
 Total virtual pins : 0
 Total memory bits : 0 / 483,840 ( 0 % )
