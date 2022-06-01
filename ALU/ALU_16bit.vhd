@@ -51,7 +51,7 @@ architecture ALULogic of ALU_16bit is
 
 	-- 8 to 1 multiplexer
 	component MULT_3bit is
-	port(in1, in2, in3, in4, in5, in6: in std_logic_vector(15 downto 0);
+	port(in1, in2, in3, in4, in5, in6, in7, in8: in std_logic_vector(15 downto 0);
 		select_bits: in std_logic_vector(2 downto 0);
 		out1: out std_logic_vector(15 downto 0));
 	end component MULT_3bit;
@@ -75,7 +75,7 @@ begin
 	A6: NOT_16bit port map(in1, not_result);
 
 	-- Operation Multiplexer
-	A7: MULT_3bit port map(full_adder_result, full_adder_result, and_result, or_result, geq_result, not_result, operation(2 downto 0), final_result);
+	A7: MULT_3bit port map(and_result, or_result, full_adder_result, full_adder_result, "0000000000000000", geq_result, not_result, in1, operation(2 downto 0), final_result);
 	out1 <= final_result;
 	carry_out <= co;
 end ALULogic;

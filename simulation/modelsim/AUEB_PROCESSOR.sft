@@ -1,1 +1,5 @@
 set tool_name "ModelSim-Altera (Verilog)"
+set corner_file_list {
+	{{"Slow Model"} {AUEB_PROCESSOR.vo AUEB_PROCESSOR_v.sdo}}
+	{{"Fast Model"} {AUEB_PROCESSOR_fast.vo AUEB_PROCESSOR_v_fast.sdo}}
+}

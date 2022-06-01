@@ -1,8 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Κωνσταντινος Βασιλοπουλος 3180018
--- Ευθυμιος Παπαγεωργιου 3180144
+-- Κωνσταντίνος Βασιλόπουλος 3180018
+-- Ευθυμίος Παπαγεωργίου 3180144
+-- Αλέξανδρος Καράλης 3180070
 
 entity AUEB_PROCESSOR is
 port(keyData, fromData, instr: in std_logic_vector(15 downto 0);
