@@ -61,6 +61,7 @@ source_file = 1, C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCES
 source_file = 1, register_mem_wb.vwf
 source_file = 1, C:/Users/Efthimis/Desktop/quartus project/aueb_processor/jrselector.vwf
 source_file = 1, C:/Users/Efthimis/Desktop/quartus project/aueb_processor/pcregister.vwf
+source_file = 1, C:/Users/Efthimis/Desktop/quartus project/aueb_processor/PROCESSOR/waveforms/processor.vwf
 source_file = 1, C:/Users/Efthimis/Desktop/quartus project/aueb_processor/db/AUEB_PROCESSOR.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
